@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - NpcMulher
+  - NpcHomem
+  - NpcOutro
+  - QuadIC
+  - Chao
+  - Cronometro
+  - Vovo
+  - Part4
+  - Povo
+  - FogoArbusto
+  - FogoVoador
+  - FogoHumanoide
+  - FogoChefe
+  - CarasMals
+  - Ultrapassar
+  - SoundController
+  - ControllerEffects
+  - Poder
+  - PoderBasico
+  - Cura
+  - SceneController
+  - CDB
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Chao
+  - Borda
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 3751437437
+    locked: 0
+  - name: ForeGround
+    uniqueID: 2547102675
+    locked: 0
+  - name: DecorationBack
+    uniqueID: 1602644853
+    locked: 0
+  - name: Player
+    uniqueID: 2377669251
+    locked: 0
+  - name: DecorationFront
+    uniqueID: 3953212425
+    locked: 0
+  - name: Cura
+    uniqueID: 394753637
+    locked: 0

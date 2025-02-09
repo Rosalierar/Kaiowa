@@ -1,0 +1,449 @@
+fileFormatVersion: 2
+guid: 9402550280591774a9b2c0d927a58c09
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3390972667471195404
+    second: Human fire punch_0
+  - first:
+      213: -3170596037465740323
+    second: Human fire punch_1
+  - first:
+      213: -7275743892824272664
+    second: Human fire punch_2
+  - first:
+      213: 4242149685870496733
+    second: Human fire punch_3
+  - first:
+      213: -1581023755509599960
+    second: Human fire punch_4
+  - first:
+      213: -6718843155944351178
+    second: Human fire punch_5
+  - first:
+      213: -6005670853868942697
+    second: Human fire punch_6
+  - first:
+      213: 8518446152772414780
+    second: Human fire punch_7
+  - first:
+      213: -2300186933471872816
+    second: Human fire punch_8
+  - first:
+      213: 7481065891137599460
+    second: Human fire punch_9
+  - first:
+      213: 6225613955389472643
+    second: Human fire punch_10
+  - first:
+      213: 8950084600652630011
+    second: Human fire punch_11
+  - first:
+      213: 4884483094693943731
+    second: Human fire punch_12
+  - first:
+      213: -6293638878087203807
+    second: Human fire punch_13
+  - first:
+      213: 806530714085406202
+    second: Human fire punch_14
+  - first:
+      213: -4871214109074825474
+    second: Human fire punch_15
+  - first:
+      213: 8621813059042569325
+    second: Human fire punch_16
+  - first:
+      213: -3184706968575508137
+    second: Human fire punch_17
+  - first:
+      213: 6993700283368818313
+    second: Human fire punch_18
+  - first:
+      213: 6567067844313999573
+    second: Human fire punch_19
+  - first:
+      213: -9183388333864818696
+    second: Human fire punch_20
+  - first:
+      213: 3268279505976863149
+    second: Human fire punch_21
+  - first:
+      213: -1688588021096707087
+    second: Human fire punch_22
+  - first:
+      213: -3629325590537999524
+    second: Human fire punch_23
+  - first:
+      213: 559397433819363914
+    second: Human fire punch_24
+  - first:
+      213: -8001976545865234986
+    second: Human fire punch_25
+  - first:
+      213: -1352763037029955931
+    second: Human fire punch_26
+  - first:
+      213: -4748125167195646288
+    second: Human fire punch_27
+  - first:
+      213: -5945604656784870269
+    second: Human fire punch_28
+  - first:
+      213: 9211014851772802870
+    second: Human fire punch_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Human fire punch_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbe794d3b7cff3d0800000000000000
+      internalID: -3170596037465740323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human fire punch_4
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821756f55431f0ae0800000000000000
+      internalID: -1581023755509599960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human fire punch_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 34
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3dea4ea4a9973670800000000000000
+      internalID: 8518446152772414780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human fire punch_10
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f34bf58e2d56650800000000000000
+      internalID: 6225613955389472643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human fire punch_12
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 0
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b912aade7b29c340800000000000000
+      internalID: 4884483094693943731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human fire punch_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe59bb9398f56cb0800000000000000
+      internalID: -4871214109074825474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human fire punch_16
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 0
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c6e000c45d6a770800000000000000
+      internalID: 8621813059042569325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human fire punch_17
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 0
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7518858a2e5adc3d0800000000000000
+      internalID: -3184706968575508137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human fire punch_18
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9864fbf7a5d9e0160800000000000000
+      internalID: 6993700283368818313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fea6b01902d36c346ba69663b084b2e6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Human fire punch_0: -3390972667471195404
+      Human fire punch_1: -3170596037465740323
+      Human fire punch_10: 6225613955389472643
+      Human fire punch_11: 8950084600652630011
+      Human fire punch_12: 4884483094693943731
+      Human fire punch_13: -6293638878087203807
+      Human fire punch_14: 806530714085406202
+      Human fire punch_15: -4871214109074825474
+      Human fire punch_16: 8621813059042569325
+      Human fire punch_17: -3184706968575508137
+      Human fire punch_18: 6993700283368818313
+      Human fire punch_19: 6567067844313999573
+      Human fire punch_2: -7275743892824272664
+      Human fire punch_20: -9183388333864818696
+      Human fire punch_21: 3268279505976863149
+      Human fire punch_22: -1688588021096707087
+      Human fire punch_23: -3629325590537999524
+      Human fire punch_24: 559397433819363914
+      Human fire punch_25: -8001976545865234986
+      Human fire punch_26: -1352763037029955931
+      Human fire punch_27: -4748125167195646288
+      Human fire punch_28: -5945604656784870269
+      Human fire punch_29: 9211014851772802870
+      Human fire punch_3: 4242149685870496733
+      Human fire punch_4: -1581023755509599960
+      Human fire punch_5: -6718843155944351178
+      Human fire punch_6: -6005670853868942697
+      Human fire punch_7: 8518446152772414780
+      Human fire punch_8: -2300186933471872816
+      Human fire punch_9: 7481065891137599460
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
