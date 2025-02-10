@@ -34,7 +34,7 @@ public class Cronometro : MonoBehaviour
 
         InvokeRepeating(decOrInc, 1f,1f);
         //tempo que dura a animacao do ataque
-        RechargeTimer[0] = 0.8f;
+        RechargeTimer[0] = 0.2f;
         RechargeTimer[1] = 2f;
 
         //atribuindo uma variavel que sera mudada para o valor inicial
@@ -51,13 +51,13 @@ public class Cronometro : MonoBehaviour
         if (comecou)
             Tempo();
 
-        if (Input.GetKeyDown(KeyCode.K) && !CountDown[0])
-        {
-            StartCoroutine(Recarga(KeyCode.K, 0));
-        }
         if (Input.GetKeyDown(KeyCode.L) && !CountDown[1])
         {
             StartCoroutine(Recarga(KeyCode.L, 1));
+        }
+        if (Input.GetKeyDown(KeyCode.K) && !CountDown[0])
+        {
+            StartCoroutine(Recarga(KeyCode.K, 0));
         }
 
     }

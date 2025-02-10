@@ -79,17 +79,10 @@ public class PlayerDamage : MonoBehaviour
         poderbasico.SetActive(true);
 
         // Aguarda a animação de ataque super terminar antes de desativar
-        yield return new WaitForSeconds(0.5f); // Ajuste o tempo para o tempo da animação de ataque
+        yield return new WaitForSeconds(0.2f); // Ajuste o tempo para o tempo da animação de ataque
 
         // Desativa o GameObject após o tempo da animação
         poderbasico.SetActive(false);
-    }
-
-    private IEnumerator AtivarPoderPesado()
-    {
-        // Aguarda a animação de ataque Pesado chegar quase ao fim para lancar o projetil
-        yield return new WaitForSeconds(0.1f); // Ajuste o tempo para o tempo da animação de ataque
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -39,40 +39,30 @@ public class BulletBush : MonoBehaviour
     }
     void InicializandoBullets()
     {
-        if (whoSpawn == 0) //Virar direita
+        if (whoSpawn == 0) // Direita
         {
             rig.velocity = transform.right * speed;
-
             Debug.Log("Bullet moving right");
         }
-        if (whoSpawn == 1) // Virar Esquerda
+        if (whoSpawn == 1) // Esquerda
         {
             rig.velocity = -transform.right * speed;
-
             Debug.Log("Bullet moving left");
         }
-        if (whoSpawn == 2) // cima esq
+        if (whoSpawn == 2) // Cima à esquerda
         {
-            float angle = 15f; // Ângulo de 15 graus
-            float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
-
-            // Calcular a direção usando seno e cosseno, mas invertendo a direção X
+            float angle = 15f;
+            float radians = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(-Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
-
             rig.velocity = direction * speed;
-
             Debug.Log("Bullet moving up left");
         }
-        if (whoSpawn == 3) // cima dir
+        if (whoSpawn == 3) // Cima à direita
         {
-            float angle = 15f; // Ângulo de 15 graus
-            float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
-
-            // Calcular a direção usando seno e cosseno
+            float angle = 15f;
+            float radians = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
-
             rig.velocity = direction * speed;
-
             Debug.Log("Bullet moving up right");
         }
     }

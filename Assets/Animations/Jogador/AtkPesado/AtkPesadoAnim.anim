@@ -31,7 +31,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.1875
+        time: 0.055555556
         value: -0.22
         inSlope: 0
         outSlope: 0
@@ -40,16 +40,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4375
+        time: 0.33333334
         value: -0.04
-        inSlope: 0.98
-        outSlope: 0.98
+        inSlope: 0.26999995
+        outSlope: 0.26999995
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.6875
+        time: 0.5
+        value: -0.01
+        inSlope: 0.35999998
+        outSlope: 0.35999998
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6666667
         value: 0.27
         inSlope: 0
         outSlope: 0
@@ -58,7 +67,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.875
+        time: 0.7777778
         value: 0.24
         inSlope: 0
         outSlope: 0
@@ -88,7 +97,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.875
+        time: 0.7777778
         value: -0.0034707785
         inSlope: 0
         outSlope: 0
@@ -109,20 +118,20 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 6438066486037743170, guid: c362ef9671c5c634d93f2bd642dbb7ce, type: 3}
-    - time: 0.1875
+    - time: 0.055555556
       value: {fileID: 4916779707814834968, guid: c362ef9671c5c634d93f2bd642dbb7ce, type: 3}
-    - time: 0.4375
+    - time: 0.33333334
       value: {fileID: -7920177848832657726, guid: c362ef9671c5c634d93f2bd642dbb7ce, type: 3}
-    - time: 0.6875
+    - time: 0.6666667
       value: {fileID: -3061515470828053557, guid: c362ef9671c5c634d93f2bd642dbb7ce, type: 3}
-    - time: 0.875
+    - time: 0.7777778
       value: {fileID: 2629569834598416030, guid: c362ef9671c5c634d93f2bd642dbb7ce, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 16
+  m_SampleRate: 18
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -167,7 +176,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.9375
+    m_StopTime: 0.8333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -197,7 +206,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.1875
+        time: 0.055555556
         value: -0.22
         inSlope: 0
         outSlope: 0
@@ -206,16 +215,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4375
+        time: 0.33333334
         value: -0.04
-        inSlope: 0.98
-        outSlope: 0.98
+        inSlope: 0.26999995
+        outSlope: 0.26999995
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.6875
+        time: 0.5
+        value: -0.01
+        inSlope: 0.35999998
+        outSlope: 0.35999998
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6666667
         value: 0.27
         inSlope: 0
         outSlope: 0
@@ -224,7 +242,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.875
+        time: 0.7777778
         value: 0.24
         inSlope: 0
         outSlope: 0
@@ -254,7 +272,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.875
+        time: 0.7777778
         value: -0.0034707785
         inSlope: 0
         outSlope: 0

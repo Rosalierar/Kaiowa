@@ -135,29 +135,25 @@ public class EnemyDamage : MonoBehaviour
             Debug.Log("INSTANCIAMENTE EM PROCESSO");
 
             // Criando as balas
+            // Instanciando as balas nas posições armazenadas, sem fazer parentagem
             GameObject ObjbulletBush0 = Instantiate(bullet, ArmazenarbulletPos0.position, Quaternion.identity);
             BulletBush bulletBush0 = ObjbulletBush0.GetComponent<BulletBush>();
-            bulletBush0.transform.SetParent(ArmazenarbulletPos0);
+            bulletBush0.GetInformationsBulletpos(0, ArmazenarbulletPos0);
 
             GameObject ObjbulletBush1 = Instantiate(bullet, ArmazenarbulletPos1.position, Quaternion.identity);
             BulletBush bulletBush1 = ObjbulletBush1.GetComponent<BulletBush>();
-            bulletBush1.transform.SetParent(ArmazenarbulletPos1);
+            bulletBush1.GetInformationsBulletpos(1, ArmazenarbulletPos1);
 
             GameObject ObjbulletBush2 = Instantiate(bullet, ArmazenarbulletPos2.position, Quaternion.identity);
             BulletBush bulletBush2 = ObjbulletBush2.GetComponent<BulletBush>();
-            bulletBush2.transform.SetParent(ArmazenarbulletPos2);
+            bulletBush2.GetInformationsBulletpos(2, ArmazenarbulletPos2);
 
             GameObject ObjbulletBush3 = Instantiate(bullet, ArmazenarbulletPos3.position, Quaternion.identity);
             BulletBush bulletBush3 = ObjbulletBush3.GetComponent<BulletBush>();
-            bulletBush3.transform.SetParent(ArmazenarbulletPos3);
-
-            bulletBush0.GetInformationsBulletpos(0, ArmazenarbulletPos0);
-            bulletBush1.GetInformationsBulletpos(1, ArmazenarbulletPos1);
-            bulletBush2.GetInformationsBulletpos(2, ArmazenarbulletPos2);
             bulletBush3.GetInformationsBulletpos(3, ArmazenarbulletPos3);
 
-            bulletInstance = true;
-        }
+        bulletInstance = true;
+    }
     
 
 
