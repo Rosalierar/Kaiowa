@@ -125,6 +125,7 @@ public class EnemyDamage : MonoBehaviour
 
         if (!bulletInstance)
         {
+            Debug.Log("INSTANCIAMENTE EM PROCESSO");
             GameObject ObjbulletBush0 = Instantiate(bullet, ArmazenarbulletPos0.position, Quaternion.identity);
             BulletBush bulletBush0 = ObjbulletBush0.GetComponent<BulletBush>();
             bulletBush0.transform.SetParent(ArmazenarbulletPos0);
@@ -143,7 +144,7 @@ public class EnemyDamage : MonoBehaviour
 
             bulletBush0.GetInformationsBulletpos(bulletInstanceTotal = 0, ArmazenarbulletPos0);
             bulletBush1.GetInformationsBulletpos(bulletInstanceTotal = 1, ArmazenarbulletPos1);
-            bulletBush2.GetInformationsBulletpos(bulletInstanceTotal = 2 , ArmazenarbulletPos2);
+            bulletBush2.GetInformationsBulletpos(bulletInstanceTotal = 2, ArmazenarbulletPos2);
             bulletBush3.GetInformationsBulletpos(bulletInstanceTotal = 3, ArmazenarbulletPos3);
 
             bulletInstance = true;
