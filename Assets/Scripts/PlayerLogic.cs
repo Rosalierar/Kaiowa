@@ -86,7 +86,7 @@ public class PlayerLogic : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveSides();
+        KnockLogic();
         CheckArea();
     }
 
@@ -95,7 +95,7 @@ public class PlayerLogic : MonoBehaviour
     {
         if (kBCount < 0)
         {
-           // MoveLogic();
+            MoveSides();
         }
         else
         {
@@ -109,6 +109,7 @@ public class PlayerLogic : MonoBehaviour
                 rb.velocity = new Vector2(kBForce, kBForce);
             }
         }
+
         kBCount -= Time.deltaTime;
     }
     #endregion knock 

@@ -105,9 +105,20 @@ public class EnemyDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Vector2 localDamage = (transform.position - collision.transform.position).normalized;
-            Debug.Log("tomei dano");
-            playerHealth.TakeDamage(enemyData.enemyData[1], localDamage);
+            playerLogic.kBCount = playerLogic.kBTime;
+
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = false;
+            }
+
+            playerHealth.TakeDamage(enemyData.enemyData[1]);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -123,16 +134,17 @@ public class EnemyDamage : MonoBehaviour
             
             if (collision.transform.position.x <= transform.position.x)
             {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
                 playerLogic.isKnockRight = true;
             }
             if (collision.transform.position.x > transform.position.x)
             {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
                 playerLogic.isKnockRight = false;
             }
 
-            Vector2 localDamage = (transform.position - collision.transform.position).normalized;
             Debug.Log("tomei dano");
-            playerHealth.TakeDamage(enemyData.enemyData[1], localDamage);
+            playerHealth.TakeDamage(enemyData.enemyData[1]);
         }
     }
     /// <summary>
