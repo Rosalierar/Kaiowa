@@ -96,7 +96,7 @@ public class ControlScene : MonoBehaviour
     {
         Debug.Log("Monstros derrotados: " + defeatedMonsters + " / Total de monstros: " + totalMonsters);
 
-        if (collision.gameObject.CompareTag(("Player")) && defeatedMonsters >= totalMonsters)
+        if (collision.gameObject.CompareTag(("Player")) && ((defeatedMonsters >= totalMonsters) || (PlayerPrefs.GetInt("MonstrosDerrotados") >= totalMonsters)))
         {
             StartCoroutine(TimeForScore());
         }

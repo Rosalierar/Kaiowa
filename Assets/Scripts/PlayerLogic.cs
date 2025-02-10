@@ -157,14 +157,13 @@ public class PlayerLogic : MonoBehaviour
             anim.SetBool(doFirstMovimentHash, true);
             entrou = true;
             
-            try
+            if (inicio >= 3f)
             {
-                anim.SetTrigger("GettingUp");
-            }
-            catch { Debug.Log("nao tem"); }
-
-            if (inicio >= 1.10f)
-            {
+                try
+                {
+                    anim.SetTrigger("GettingUp");
+                }
+                catch { Debug.Log("nao tem"); }
                 doFirstMoviment = true;
                 podesemover = true;
                 inicio = 0f;

@@ -29,6 +29,9 @@ public class EnemyData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //variavel global para monstros derrotados
+        PlayerPrefs.SetInt("MonstrosDerrotados", 0);
+
         TranformFalseCharacter();
         KnowCharacter();
         AssignAttributes();
@@ -116,6 +119,10 @@ public class EnemyData : MonoBehaviour
 
         if (enemyData[0] <= 0)
         {
+            PlayerPrefs.SetInt("MonstrosDerrotados", PlayerPrefs.GetInt("MonstrosDerrotados", 0) +1);
+            
+            Debug.Log("Prefebs: " + PlayerPrefs.GetInt("MonstrosDerrotados"));
+
             anim.SetTrigger("isDeath");
             StartCoroutine(DestroyEnemy());
         }

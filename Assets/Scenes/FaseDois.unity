@@ -53355,6 +53355,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3300922455801019508, guid: b9ce543602a377c4ca3754e416594381, type: 3}
   m_PrefabInstance: {fileID: 1204409103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1204409105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7886885634598588197, guid: b9ce543602a377c4ca3754e416594381, type: 3}
+  m_PrefabInstance: {fileID: 1204409103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1215281742
 GameObject:
   m_ObjectHideFlags: 0
@@ -79268,6 +79273,10 @@ PrefabInstance:
       propertyPath: totalCages
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5698877434951545017, guid: 2b3f8f261c06894459d88287a75c5ec7, type: 3}
+      propertyPath: HealthPainel
+      value: 
+      objectReference: {fileID: 1204409105}
     - target: {fileID: 5698877434951545017, guid: 2b3f8f261c06894459d88287a75c5ec7, type: 3}
       propertyPath: dialogueText
       value: 

@@ -81,6 +81,7 @@ public class DialogueLogic2024 : MonoBehaviour
             else if (index <= speaker.Length && !finishpart1[0])
             {
                 playerLogic = player.GetComponent<PlayerLogic>();
+                playerLogic.rb.velocity = Vector2.zero;
                 playerLogic.podesemover = false;
                 dialoguePainel.SetActive(true);
                 AtualizarTexto();

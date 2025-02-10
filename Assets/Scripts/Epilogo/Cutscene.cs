@@ -18,6 +18,8 @@ public class Cutscene : MonoBehaviour
     public GameObject Parte4;
 
     PlayerLogic playerLogic;
+    public GameObject player;
+
     Cronometro cronometro;
     DialogueLogic dialogueLogic;
     ContinueWithoutPainel continueWithoutPainel;
@@ -28,7 +30,7 @@ public class Cutscene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>();
+        playerLogic = player.GetComponent<PlayerLogic>();
         cronometro = GameObject.FindGameObjectWithTag("Cronometro").GetComponent<Cronometro>();
         dialogueLogic = Npc.GetComponent<DialogueLogic>();
         continueWithoutPainel = GameObject.FindGameObjectWithTag("Player").GetComponent<ContinueWithoutPainel>();
@@ -58,6 +60,8 @@ public class Cutscene : MonoBehaviour
         {
             if (!continueWithoutPainel.sawAll)
             {
+                playerLogic.rb.velocity = Vector2.zero;
+                playerLogic.podesemover = false;
                 playerLogic.SetPodeMover(false);
                 ConfirmarPainel.SetActive(true);
             }
@@ -90,7 +94,14 @@ public class Cutscene : MonoBehaviour
 
     public void FecharPainel()
     {
+        PlayerLogic playerLogic;
+        GameObject player = GameObject.Find("Player");
+
+        playerLogic = player.GetComponent<PlayerLogic>();
+
         ConfirmarPainel.SetActive(false);
+        playerLogic.podesemover = true;
+
         playerLogic.SetPodeMover(true);
     }
 

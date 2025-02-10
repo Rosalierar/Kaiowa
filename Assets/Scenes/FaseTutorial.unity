@@ -977,6 +977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258169519}
   - component: {fileID: 258169520}
+  - component: {fileID: 258169521}
   m_Layer: 0
   m_Name: Jaryi
   m_TagString: Povo
@@ -1042,7 +1043,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 307740, guid: f71c1c6c013e6ae48a3e87eb296da67e, type: 3}
+  m_Sprite: {fileID: 7295553088183395611, guid: aaf335411a41cf8429574b896509a025, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1053,6 +1054,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &258169521
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258169518}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f3130995f9c16e4f91f916f2aa4ea2e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &289174044 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2500287107580937154, guid: b9ce543602a377c4ca3754e416594381, type: 3}
@@ -2040,7 +2063,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1045215575903473186, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.89
+      value: -17.31
       objectReference: {fileID: 0}
     - target: {fileID: 1045215575903473186, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2204,8 +2227,9 @@ GameObject:
   m_Component:
   - component: {fileID: 560206416}
   - component: {fileID: 560206415}
+  - component: {fileID: 560206417}
   m_Layer: 0
-  m_Name: Criancas
+  m_Name: Jaryi
   m_TagString: Povo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2254,7 +2278,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 355814148, guid: f71c1c6c013e6ae48a3e87eb296da67e, type: 3}
+  m_Sprite: {fileID: 7295553088183395611, guid: aaf335411a41cf8429574b896509a025, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2274,12 +2298,34 @@ Transform:
   m_GameObject: {fileID: 560206412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -535.5, y: -1346, z: 2.6786222}
-  m_LocalScale: {x: 3.96868, y: 3.96868, z: 3.96868}
+  m_LocalPosition: {x: -538.19, y: -1346.56, z: 2.6786222}
+  m_LocalScale: {x: 3, y: 3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 624768469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &560206417
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560206412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f3130995f9c16e4f91f916f2aa4ea2e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &563572767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,9 +2612,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 560206416}
   - {fileID: 779108608}
   - {fileID: 1965104548}
-  - {fileID: 560206416}
   - {fileID: 1784409814}
   - {fileID: 101460554}
   m_Father: {fileID: 922810738}
@@ -3100,8 +3146,9 @@ GameObject:
   m_Component:
   - component: {fileID: 779108608}
   - component: {fileID: 779108607}
+  - component: {fileID: 779108609}
   m_Layer: 0
-  m_Name: Jaryi
+  m_Name: Crianca1
   m_TagString: Povo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3150,7 +3197,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 307740, guid: f71c1c6c013e6ae48a3e87eb296da67e, type: 3}
+  m_Sprite: {fileID: 8879239674256066741, guid: 8d54452f11b058142b0cc5b0c8f1b542, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3170,12 +3217,34 @@ Transform:
   m_GameObject: {fileID: 779108604}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -528, y: -1346, z: 2.6786222}
-  m_LocalScale: {x: 3.96868, y: 3.96868, z: 3.96868}
+  m_LocalPosition: {x: -528, y: -1346.81, z: 2.6786222}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 624768469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &779108609
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779108604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8aaab9fe79dd269458e66a36c7082218, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &783142003
 GameObject:
   m_ObjectHideFlags: 0
@@ -33369,6 +33438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172377115}
   - component: {fileID: 1172377116}
+  - component: {fileID: 1172377117}
   m_Layer: 0
   m_Name: Criancas (1)
   m_TagString: Povo
@@ -33385,8 +33455,8 @@ Transform:
   m_GameObject: {fileID: 1172377114}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -568.77, y: -1346.7, z: 2.6786222}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: -567.83, y: -1346.82, z: 2.6786222}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 99875672}
@@ -33434,7 +33504,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 307740, guid: f71c1c6c013e6ae48a3e87eb296da67e, type: 3}
+  m_Sprite: {fileID: -3696823243106074033, guid: 8d54452f11b058142b0cc5b0c8f1b542, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -33445,6 +33515,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1172377117
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172377114}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8aaab9fe79dd269458e66a36c7082218, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1185052548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35327,6 +35419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637422055}
   - component: {fileID: 1637422056}
+  - component: {fileID: 1637422057}
   m_Layer: 0
   m_Name: Criancas
   m_TagString: Povo
@@ -35343,8 +35436,8 @@ Transform:
   m_GameObject: {fileID: 1637422054}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -570.6, y: -1346.7, z: 2.6786222}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: -570.6, y: -1347.15, z: 2.6786222}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 99875672}
@@ -35392,7 +35485,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 307740, guid: f71c1c6c013e6ae48a3e87eb296da67e, type: 3}
+  m_Sprite: {fileID: 890992289187590110, guid: cfb5a5c50e0d22e4e95f4417c6a934ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35403,6 +35496,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1637422057
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637422054}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ea04b37a9cbc8a44802e9463a34546e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1644766215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7230613960437456398, guid: b9ce543602a377c4ca3754e416594381, type: 3}
@@ -44721,6 +44836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965104548}
   - component: {fileID: 1965104547}
+  - component: {fileID: 1965104549}
   m_Layer: 0
   m_Name: Criancas
   m_TagString: Povo
@@ -44771,7 +44887,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 307740, guid: f71c1c6c013e6ae48a3e87eb296da67e, type: 3}
+  m_Sprite: {fileID: 890992289187590110, guid: cfb5a5c50e0d22e4e95f4417c6a934ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -44791,12 +44907,34 @@ Transform:
   m_GameObject: {fileID: 1965104544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -525.2212, y: -1346, z: 2.6786222}
-  m_LocalScale: {x: 3.96868, y: 3.96868, z: 3.96868}
+  m_LocalPosition: {x: -524.76, y: -1347.1, z: 2.6786222}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 624768469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1965104549
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965104544}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ea04b37a9cbc8a44802e9463a34546e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1981686084
 GameObject:
   m_ObjectHideFlags: 0
@@ -45016,7 +45154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8826498637210810466, guid: 2a9e298953a3d6540b001039ae7f3a42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1346.303
+      value: -1346.36
       objectReference: {fileID: 0}
     - target: {fileID: 8826498637210810466, guid: 2a9e298953a3d6540b001039ae7f3a42, type: 3}
       propertyPath: m_LocalPosition.z
