@@ -58,8 +58,9 @@ public class Health : MonoBehaviour
         health -= amount;
         slider.value = health;
 
-        // Calcular a direção do empuxo
-        Vector2 pushDirection = (transform.position - (Vector3)localDamage).normalized;
+        // Calcular a direção do empurrao
+
+        /*Vector2 pushDirection = (transform.position - (Vector3)localDamage).normalized;
         if (Mathf.Abs(transform.position.x - localDamage.x) > Mathf.Abs(transform.position.y - localDamage.y))
         {
             Debug.Log("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
@@ -74,7 +75,7 @@ public class Health : MonoBehaviour
         }
 
         // Move o jogador para trás (deslocamento gradual)
-        StartCoroutine(PushPlayerBack(pushDirection));
+        StartCoroutine(PushPlayerBack(pushDirection));*/
 
         StartCoroutine(TakeHit());
 

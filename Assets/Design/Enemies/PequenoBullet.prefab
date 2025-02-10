@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
-  playerTransform: {fileID: 0}
+  valueDamage: 20
   Force: 10
 --- !u!61 &2034604926605853734
 BoxCollider2D:

@@ -6,6 +6,10 @@ public class BulletEnemies : MonoBehaviour
 {
     ControlScene controlScene;
     public Health playerHealth;
+
+
+    [SerializeField] int valueDamage;
+
     private GameObject player;
     private Rigidbody2D rig;
     public float Force;
@@ -32,33 +36,27 @@ public class BulletEnemies : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (reiniciar)
+
+        /*if (reiniciar)
         {
             timerspawn += Time.deltaTime;
         }
-        CarregarCena();
+        CarregarCena();*/
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.gameObject.CompareTag("Player"))
         {
             playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
-            playerHealth.health -= 20;
-            playerHealth.slider.value = playerHealth.health;
-            //other.gameObject.GetComponent<Health>().health -= 20;
-            //other.gameObject.GetComponent<Health>().slider.value -= 20;
-            if (playerHealth.health <= 0)
-            {
-                reiniciar = true;
-                StartCoroutine(playerHealth.TimeForRespawn());
-                Debug.Log("Morri!");
-                playerHealth.textRespawnGameObj.SetActive(true);
-            }
+
+            Vector2 localDamage = (transform.position - other.transform.position).normalized;
+            Debug.Log("tomei dano");
+
+            playerHealth.TakeDamage(valueDamage, localDamage);
+
             if (playerHealth.health > 0)
             Destroy(gameObject);
         }
-        
     }
     void CarregarCena()
     {
