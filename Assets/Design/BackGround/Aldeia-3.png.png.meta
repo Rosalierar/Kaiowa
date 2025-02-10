@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eaee5e2f97dc2c2469514bfd1625feb4
+guid: 54e78ab703104e745875c4955461602e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8934980881479442563
-    second: Aldeia-4.png_0
+      213: 1446810358841443619
+    second: Aldeia-3.png_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Aldeia-4.png_0
+      name: Aldeia-3.png_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 320
-        height: 155
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3802d7ba5cd6ffb70800000000000000
-      internalID: 8934980881479442563
+      spriteID: 32589181b5a141410800000000000000
+      internalID: 1446810358841443619
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Aldeia-4.png_0: 8934980881479442563
+      Aldeia-3.png_0: 1446810358841443619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
