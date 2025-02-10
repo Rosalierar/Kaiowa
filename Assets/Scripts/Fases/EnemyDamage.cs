@@ -126,6 +126,13 @@ public class EnemyDamage : MonoBehaviour
         if (!bulletInstance)
         {
             Debug.Log("INSTANCIAMENTE EM PROCESSO");
+
+            // Verifique as posições de spawn para garantir que estão corretas
+            Debug.Log("ArmazenarbulletPos0: " + ArmazenarbulletPos0.position);
+            Debug.Log("ArmazenarbulletPos1: " + ArmazenarbulletPos1.position);
+            Debug.Log("ArmazenarbulletPos2: " + ArmazenarbulletPos2.position);
+            Debug.Log("ArmazenarbulletPos3: " + ArmazenarbulletPos3.position);
+
             GameObject ObjbulletBush0 = Instantiate(bullet, ArmazenarbulletPos0.position, Quaternion.identity);
             BulletBush bulletBush0 = ObjbulletBush0.GetComponent<BulletBush>();
             bulletBush0.transform.SetParent(ArmazenarbulletPos0);
@@ -142,10 +149,10 @@ public class EnemyDamage : MonoBehaviour
             BulletBush bulletBush3 = ObjbulletBush3.GetComponent<BulletBush>();
             bulletBush3.transform.SetParent(ArmazenarbulletPos3);
 
-            bulletBush0.GetInformationsBulletpos(bulletInstanceTotal = 0, ArmazenarbulletPos0);
-            bulletBush1.GetInformationsBulletpos(bulletInstanceTotal = 1, ArmazenarbulletPos1);
-            bulletBush2.GetInformationsBulletpos(bulletInstanceTotal = 2, ArmazenarbulletPos2);
-            bulletBush3.GetInformationsBulletpos(bulletInstanceTotal = 3, ArmazenarbulletPos3);
+            bulletBush0.GetInformationsBulletpos(0, ArmazenarbulletPos0);
+            bulletBush1.GetInformationsBulletpos(1, ArmazenarbulletPos1);
+            bulletBush2.GetInformationsBulletpos(2, ArmazenarbulletPos2);
+            bulletBush3.GetInformationsBulletpos(3, ArmazenarbulletPos3);
 
             bulletInstance = true;
         }
