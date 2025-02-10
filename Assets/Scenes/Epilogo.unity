@@ -17092,6 +17092,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 789663493}
+    - target: {fileID: 1387368333940811316, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: levelDeJogo
+      value: Epilogo
+      objectReference: {fileID: 0}
     - target: {fileID: 3947609023207910585, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_Name
       value: CanvaConfiguracao

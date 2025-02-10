@@ -1435,9 +1435,25 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 54078892}
+    - target: {fileID: 1387368333940811316, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: levelDeJogo
+      value: PhaseThree
+      objectReference: {fileID: 0}
     - target: {fileID: 3947609023207910585, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_Name
       value: CanvaConfiguracao
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187487818284854868, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.441
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187487818284854868, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187487818284854868, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.441
       objectReference: {fileID: 0}
     - target: {fileID: 4523862635570193581, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_Pivot.x
@@ -1521,10 +1537,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5045454042852579343, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.441
       objectReference: {fileID: 0}
     - target: {fileID: 5045454042852579343, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244838924469939937, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
