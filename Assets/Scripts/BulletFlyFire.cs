@@ -36,19 +36,31 @@ public class BulletEnemies : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
+            PlayerLogic playerLogic = GameObject.FindWithTag("Player").GetComponent<PlayerLogic>();
             playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
 
-            Vector2 localDamage = (transform.position - other.transform.position).normalized;
-            Debug.Log("tomei dano");
+            playerLogic.kBCount = playerLogic.kBTime;
 
-            playerHealth.TakeDamage(valueDamage, localDamage);
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = false;
+            }
+
+
+            playerHealth.TakeDamage(valueDamage);
 
             if (playerHealth.health > 0)
-            Destroy(gameObject);
+                Destroy(gameObject);
         }
     }
 

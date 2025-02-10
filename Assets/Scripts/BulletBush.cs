@@ -79,12 +79,25 @@ public class BulletBush : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            PlayerLogic playerLogic=GameObject.FindWithTag("Player").GetComponent<PlayerLogic>(); 
             Health playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
 
-            Vector2 localDamage = (transform.position - collision.transform.position).normalized;
-            Debug.Log("tomei dano");
+            Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+            //Vector2 localDamage = (transform.position - collision.transform.position).normalized;
+            playerLogic.kBCount = playerLogic.kBTime;
 
-            playerHealth.TakeDamage(valueDamage, localDamage);
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = false;
+            }
+
+            playerHealth.TakeDamage(valueDamage);
 
             if (playerHealth.health > 0)
                 Destroy(gameObject);

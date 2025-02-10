@@ -54,7 +54,7 @@ public class Health : MonoBehaviour
 
         invincible = false;
     }
-    public void TakeDamage(int amount, Vector2 localDamage)
+    public void TakeDamage(int amount)
     {
         if (invincible) return;
         animator.SetTrigger("isHit");
@@ -80,6 +80,7 @@ public class Health : MonoBehaviour
         // Move o jogador para trás (deslocamento gradual)
         StartCoroutine(PushPlayerBack(pushDirection));
         */
+
         StartCoroutine(TakeHit());
 
         Debug.Log(amount +"/" + health);
