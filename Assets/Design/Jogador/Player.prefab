@@ -403,9 +403,9 @@ MonoBehaviour:
   doFirstMoviment: 1
   inicio: 0
   entrou: 1
-  kBForce: 10
+  kBForce: 20
   kBCount: 0
-  kBTime: 0.5
+  kBTime: 0.25
   isKnockRight: 0
 --- !u!114 &4736952486337970836
 MonoBehaviour:

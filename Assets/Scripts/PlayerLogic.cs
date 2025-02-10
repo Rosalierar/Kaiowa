@@ -7,7 +7,7 @@ public class PlayerLogic : MonoBehaviour
 {
     //pegar Propriedades
     public Rigidbody2D rb;
-    [SerializeField] private SpriteRenderer spritePlayer;
+    [SerializeField] public SpriteRenderer spritePlayer;
     Animator anim;
     
     //movimentacao
@@ -95,10 +95,6 @@ public class PlayerLogic : MonoBehaviour
     {
         if (kBCount < 0)
         {
-            Color color = spritePlayer.color;
-            color.a = 1f;  // Ajusta a transparência para 100%
-            spritePlayer.color = color;
-
             MoveSides();
         }
         else
@@ -106,18 +102,10 @@ public class PlayerLogic : MonoBehaviour
             if (isKnockRight == true)
             {
                 rb.velocity = new Vector2(-kBForce, kBForce);
-                Color color = spritePlayer.color;
-                color.a = 0.5f;  // Ajusta a transparência para 50%
-                spritePlayer.color = color;
-
             }
 
             if (isKnockRight == false)
             {
-                spritePlayer.color = spritePlayer.color;
-                Color color = spritePlayer.color;
-                color.a = 0.5f;  // Ajusta a transparência para 50%
-
                 rb.velocity = new Vector2(kBForce, kBForce);
             }
         }
