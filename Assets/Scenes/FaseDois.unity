@@ -79263,6 +79263,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1240677539143156147, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
+      propertyPath: pushBackDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240677539143156147, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: textRespawnGameObj
       value: 
       objectReference: {fileID: 1648957522}
