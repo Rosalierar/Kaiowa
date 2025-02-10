@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_text: "\u201CElenir, que tal agora demonstrar para as crian\xE7as ao vivo agora?
     Destrua esses alvos!\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &338585293
@@ -2767,7 +2767,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CEla pode interagir e coletar apertando o J.\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2833,7 +2833,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &636979062
@@ -32931,7 +32931,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CEla consegue alcan\xE7ar a lua se apertar o W duas vezes.\u201D\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -32997,7 +32997,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1107868980
@@ -33332,7 +33332,7 @@ MonoBehaviour:
     de Elenir \xE9 o tanque d\u2019\xE1gua, isso \xE9 muito importante, para o combate
     ao fogo e n\xE3o deve ser zerado.\u201D (Aperte J)"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -33398,7 +33398,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1152526102
@@ -43638,7 +43638,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CE pode usar o canh\xE3o d\u2019\xE1gua apertando o L.\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -43704,7 +43704,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1759749104
@@ -44669,7 +44669,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CElenir pode utilizar uma manobra divertida apertando o K.\u201D\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -44735,7 +44735,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1897478854
