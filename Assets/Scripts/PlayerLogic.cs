@@ -24,7 +24,6 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] private float gravityScale = 5;
     [SerializeField] private float fallGravityScale = 15;
 
-
     private int jumpless;
 
     private bool canJump;
@@ -42,6 +41,12 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] private bool doFirstMoviment;//nao usado
     [SerializeField] float inicio = 0f;
     [SerializeField] bool entrou = false;
+
+    //causar repulsao ao colidir com o inimigo
+    public float kBForce;
+    public float kBCount;
+    public float kBTime;
+    public bool isKnockRight;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +89,29 @@ public class PlayerLogic : MonoBehaviour
         MoveSides();
         CheckArea();
     }
+
+    #region Konck
+    void KnockLogic()
+    {
+        if (kBCount < 0)
+        {
+           // MoveLogic();
+        }
+        else
+        {
+            if (isKnockRight == true)
+            {
+                rb.velocity = new Vector2(-kBForce, kBForce);
+            }
+
+            if (isKnockRight == true)
+            {
+                rb.velocity = new Vector2(kBForce, kBForce);
+            }
+        }
+        kBCount -= Time.deltaTime;
+    }
+    #endregion knock 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(GroundCheck.position, groundDist);
@@ -202,4 +230,5 @@ public class PlayerLogic : MonoBehaviour
         anim.SetBool("GroundCheck", isGroundCheck);
     }
     #endregion MoverVertical
+
 }

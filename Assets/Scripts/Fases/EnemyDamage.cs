@@ -8,7 +8,7 @@ public class EnemyDamage : MonoBehaviour
     public GameObject powerBush;
     BulletBush bulletBush;
     EnemyMovement enemyMovement;
-
+    PlayerLogic playerLogic;
     EnemyData enemyData;
 
     public Health playerHealth;
@@ -45,11 +45,12 @@ public class EnemyDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         enemyData = GetComponent<EnemyData>();
         circleCollider = GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
-        Player = GameObject.FindGameObjectWithTag("Player");
+        playerLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>();
     }
 
     // Update is called once per frame
@@ -118,6 +119,17 @@ public class EnemyDamage : MonoBehaviour
         }
         if (collision.gameObject.tag == "Player")
         {
+            playerLogic.kBCount = playerLogic.kBTime;
+            
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                playerLogic.isKnockRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                playerLogic.isKnockRight = false;
+            }
+
             Vector2 localDamage = (transform.position - collision.transform.position).normalized;
             Debug.Log("tomei dano");
             playerHealth.TakeDamage(enemyData.enemyData[1], localDamage);

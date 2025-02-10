@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    PlayerLogic playerLogic;
+
     public float pushBackDistance;  // Distância que o jogador será empurrado para trás
     public float pushBackSpeed;
     public float Force = 5f;
-
 
     Animator animator;
     public GameObject textRespawnGameObj;
@@ -34,6 +35,7 @@ public class Health : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        playerLogic = GetComponent<PlayerLogic>();
     }
 
     // Update is called once per frame
@@ -58,7 +60,7 @@ public class Health : MonoBehaviour
         animator.SetTrigger("isHit");
         health -= amount;
         slider.value = health;
-
+        
         // Calcular a direção do empurrao
         /*
         Vector2 pushDirection = (transform.position - (Vector3)localDamage).normalized;
