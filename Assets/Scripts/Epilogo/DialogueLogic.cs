@@ -36,6 +36,8 @@ public class DialogueLogic : MonoBehaviour
 
     [SerializeField] public bool playerisClose;
 
+    Animator animVovo;
+
     void Start()
     {
         cronometro = GameObject.FindGameObjectWithTag("Cronometro").GetComponent<Cronometro>();
@@ -97,6 +99,8 @@ public class DialogueLogic : MonoBehaviour
         }
         if (other.CompareTag("Player") && isVovo)
         {
+            animVovo = GetComponent<Animator>();
+            animVovo.SetTrigger("Stopped");
             playerisClose = true;
             finishVovo[0] = true;
             cronometro.progressao++;

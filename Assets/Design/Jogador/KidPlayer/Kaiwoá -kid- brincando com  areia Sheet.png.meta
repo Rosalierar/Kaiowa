@@ -147,7 +147,7 @@ TextureImporter:
         width: 32
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,9 +166,9 @@ TextureImporter:
         x: 77
         y: 0
         width: 36
-        height: 37
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,9 +187,9 @@ TextureImporter:
         x: 142
         y: 0
         width: 36
-        height: 37
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,9 +208,9 @@ TextureImporter:
         x: 206
         y: 0
         width: 36
-        height: 37
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,9 +229,9 @@ TextureImporter:
         x: 270
         y: 0
         width: 36
-        height: 37
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,9 +250,9 @@ TextureImporter:
         x: 334
         y: 0
         width: 36
-        height: 37
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -271,9 +271,9 @@ TextureImporter:
         x: 398
         y: 0
         width: 36
-        height: 37
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -292,9 +292,9 @@ TextureImporter:
         x: 460
         y: 0
         width: 38
-        height: 39
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,9 +313,9 @@ TextureImporter:
         x: 524
         y: 0
         width: 38
-        height: 39
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -334,9 +334,9 @@ TextureImporter:
         x: 588
         y: 0
         width: 38
-        height: 39
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -355,9 +355,9 @@ TextureImporter:
         x: 652
         y: 0
         width: 38
-        height: 39
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -376,9 +376,9 @@ TextureImporter:
         x: 716
         y: 0
         width: 38
-        height: 39
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -397,9 +397,9 @@ TextureImporter:
         x: 781
         y: 0
         width: 36
-        height: 37
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +420,7 @@ TextureImporter:
         width: 32
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -445,18 +445,18 @@ TextureImporter:
     nameFileIdTable:
       "Kaiwo\xE1 -kid- brincando com  areia Sheet_0": 6034936867069376315
       "Kaiwo\xE1 -kid- brincando com  areia Sheet_1": 984255581945347335
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_10": 8426934851051562851
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_11": -7815299477294744778
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_12": -7916227269464254851
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_13": 1399256861003647411
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_2": 5847904505602199595
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_3": 2984873264016656620
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_4": -6433253319723639907
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_5": 4876381971778920123
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_6": 6442572925758899221
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_7": -8848671457382554771
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_8": -4315065070197232918
-      "Kaiwo\xE1 -kid- brincando com  areia Sheet_9": -6057634726216326824
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_10": 5847904505602199595
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_11": 2984873264016656620
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_12": -6433253319723639907
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_13": 4876381971778920123
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_2": 6442572925758899221
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_3": -8848671457382554771
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_4": -4315065070197232918
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_5": -6057634726216326824
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_6": 8426934851051562851
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_7": -7815299477294744778
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_8": -7916227269464254851
+      "Kaiwo\xE1 -kid- brincando com  areia Sheet_9": 1399256861003647411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
