@@ -163,7 +163,7 @@ public class PlayerLogic : MonoBehaviour
             }
             catch { Debug.Log("nao tem"); }
 
-            if (inicio >= 1f)
+            if (inicio >= 1.10f)
             {
                 doFirstMoviment = true;
                 podesemover = true;

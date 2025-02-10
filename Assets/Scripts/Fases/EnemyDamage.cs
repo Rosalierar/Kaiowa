@@ -23,6 +23,12 @@ public class EnemyDamage : MonoBehaviour
 
     private float timer;
 
+    //fogo arusto
+    public Transform bulletPos1;
+    public Transform bulletPos2;
+    public Transform bulletPos3;
+
+
     //fogo humano ataque
     public bool isRight = true;
     [SerializeField] private float timerHumanFire;
@@ -47,7 +53,12 @@ public class EnemyDamage : MonoBehaviour
         // SE FOR O FOGO ARBUSTO
         if (enemyData.character[0])
         {
-           
+
+            float distance = Vector2.Distance(transform.position, Player.transform.position);
+            if (distance < 10)
+            {
+                AttackfireBush();
+            }
             //COLOCAR O VOID DO METODO
         }
 
@@ -109,6 +120,9 @@ public class EnemyDamage : MonoBehaviour
     {
         anim.SetTrigger("isShot");
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        Instantiate(bullet, bulletPos1.position, Quaternion.identity);
+        Instantiate(bullet, bulletPos2.position, Quaternion.identity);
+        Instantiate(bullet, bulletPos3.position, Quaternion.identity);
     }
 
 
