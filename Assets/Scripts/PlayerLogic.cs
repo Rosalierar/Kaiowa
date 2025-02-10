@@ -154,10 +154,16 @@ public class PlayerLogic : MonoBehaviour
         }
         else if (!doFirstMoviment && dirX != 0)
         {
+            try
+            {
+                anim.SetTrigger("GettingUp");
+            }
+            catch { Debug.Log("nao tem"); }
+
             entrou = true;
             anim.SetBool(doFirstMovimentHash, true);
             if (inicio >= 1f)
-            { 
+            {
                 doFirstMoviment = true;
                 podesemover = true;
                 inicio = 0f;
