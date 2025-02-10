@@ -24,9 +24,14 @@ public class EnemyDamage : MonoBehaviour
     private float timer;
 
     //fogo arusto
-    public Transform bulletPos1;
-    public Transform bulletPos2;
-    public Transform bulletPos3;
+    bool bulletInstance = false;
+
+    int  bulletInstanceTotal;
+
+    public Transform ArmazenarbulletPos0;
+    public Transform ArmazenarbulletPos1;
+    public Transform ArmazenarbulletPos2;
+    public Transform ArmazenarbulletPos3;
 
 
     //fogo humano ataque
@@ -47,13 +52,11 @@ public class EnemyDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         Debug.Log(enemyData.character[0]);
         
         // SE FOR O FOGO ARBUSTO
         if (enemyData.character[0])
         {
-
             float distance = Vector2.Distance(transform.position, Player.transform.position);
             if (distance < 10)
             {
@@ -119,10 +122,33 @@ public class EnemyDamage : MonoBehaviour
     void AttackfireBush()
     {
         anim.SetTrigger("isShot");
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
-        Instantiate(bullet, bulletPos1.position, Quaternion.identity);
-        Instantiate(bullet, bulletPos2.position, Quaternion.identity);
-        Instantiate(bullet, bulletPos3.position, Quaternion.identity);
+
+        if (!bulletInstance)
+        {
+            Debug.Log("INSTANCIAMENTE EM PROCESSO");
+            GameObject ObjbulletBush0 = Instantiate(bullet, ArmazenarbulletPos0.position, Quaternion.identity);
+            BulletBush bulletBush0 = ObjbulletBush0.GetComponent<BulletBush>();
+            bulletBush0.transform.SetParent(ArmazenarbulletPos0);
+
+            GameObject ObjbulletBush1 = Instantiate(bullet, ArmazenarbulletPos1.position, Quaternion.identity);
+            BulletBush bulletBush1 = ObjbulletBush1.GetComponent<BulletBush>();
+            bulletBush1.transform.SetParent(ArmazenarbulletPos1);
+
+            GameObject ObjbulletBush2 = Instantiate(bullet, ArmazenarbulletPos2.position, Quaternion.identity);
+            BulletBush bulletBush2 = ObjbulletBush2.GetComponent<BulletBush>();
+            bulletBush2.transform.SetParent(ArmazenarbulletPos2);
+
+            GameObject ObjbulletBush3 = Instantiate(bullet, ArmazenarbulletPos3.position, Quaternion.identity);
+            BulletBush bulletBush3 = ObjbulletBush3.GetComponent<BulletBush>();
+            bulletBush3.transform.SetParent(ArmazenarbulletPos3);
+
+            bulletBush0.GetInformationsBulletpos(bulletInstanceTotal = 0, ArmazenarbulletPos0);
+            bulletBush1.GetInformationsBulletpos(bulletInstanceTotal = 1, ArmazenarbulletPos1);
+            bulletBush2.GetInformationsBulletpos(bulletInstanceTotal = 2, ArmazenarbulletPos2);
+            bulletBush3.GetInformationsBulletpos(bulletInstanceTotal = 3, ArmazenarbulletPos3);
+
+            bulletInstance = true;
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class EnemyDamage : MonoBehaviour
     void shooting()
     {
         anim.SetTrigger("isShot");
+
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
     }
 }

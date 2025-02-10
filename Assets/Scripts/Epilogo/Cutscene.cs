@@ -18,7 +18,7 @@ public class Cutscene : MonoBehaviour
     public GameObject Parte4;
 
     PlayerLogic playerLogic;
-    public GameObject player;
+    GameObject player;
 
     Cronometro cronometro;
     DialogueLogic dialogueLogic;
@@ -30,7 +30,11 @@ public class Cutscene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject player = GameObject.Find("Player");
+
         playerLogic = player.GetComponent<PlayerLogic>();
+
+        //playerLogic = player.GetComponent<PlayerLogic>();
         cronometro = GameObject.FindGameObjectWithTag("Cronometro").GetComponent<Cronometro>();
         dialogueLogic = Npc.GetComponent<DialogueLogic>();
         continueWithoutPainel = GameObject.FindGameObjectWithTag("Player").GetComponent<ContinueWithoutPainel>();
@@ -107,6 +111,7 @@ public class Cutscene : MonoBehaviour
 
     void TerminouVideo()
     {
+
         Parte2.SetActive(true);
         InicarCutscenePainel.SetActive(false);
 
@@ -114,7 +119,10 @@ public class Cutscene : MonoBehaviour
         cronometro.contador = 0f;
         cronometro.valorMaximo = 10f;
 
-        playerLogic.SetPodeMover(false);
+        GameObject player = GameObject.Find("Player");
+        playerLogic = player.GetComponent<PlayerLogic>();
+        playerLogic.podesemover = false;
+        //playerLogic.SetPodeMover(false);
     }
     #endregion primeiraparte
 

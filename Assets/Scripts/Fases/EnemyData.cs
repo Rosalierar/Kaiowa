@@ -84,28 +84,28 @@ public class EnemyData : MonoBehaviour
         if (character[0])
         {
             enemyName = "FogoArbusto";
-            enemyData[0] = 30;
+            enemyData[0] = 100;
             enemyData[1] = 10;
         }
         //fagovoador
         if (character[1])
         {
             enemyName = "FogoVoador";
-            enemyData[0] = 40;
+            enemyData[0] = 150;
             enemyData[1] = 5;
         }
         //vogo humanoide
         if (character[2])
         {
             enemyName = "FogoHumanoide";
-            enemyData[0] = 100;
+            enemyData[0] = 200;
             enemyData[1] = 15;
         }
         //fogo chefe
         if (character[3])
         {
             enemyName = "FogoChefe";
-            enemyData[0] = 200;
+            enemyData[0] = 1000;
             enemyData[1] = 25;
         }
     }
