@@ -58,11 +58,13 @@ public class BulletEnemies : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void CarregarCena()
+
+
+    /*void CarregarCena()
     {
         if (timerspawn > 2)
         {
             playerHealth.controlScene.LoadScene();
         }
-    }
+    }*/
 }

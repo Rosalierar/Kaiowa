@@ -77079,7 +77079,6 @@ GameObject:
   m_Component:
   - component: {fileID: 627823849}
   - component: {fileID: 627823853}
-  - component: {fileID: 627823854}
   m_Layer: 0
   m_Name: PointFlyFire
   m_TagString: FogoVoador
@@ -77134,25 +77133,6 @@ MonoBehaviour:
   armazenarLocalizacaoDePatrolPointPrimeiroFase2: []
   armazenarLocalizacaoDePatrolPointSegundoFase2: []
   patrolPoints: []
---- !u!114 &627823854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627823848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f003d481d438074b9e035f757c7531a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
-  bullet: {fileID: 8598113280753931974, guid: 2c7be5f2e948599408799f97856cb343, type: 3}
-  bulletPos: {fileID: 0}
-  playerTransform: {fileID: 0}
-  isRight: 1
-  timerHumanFire: 0
-  canAtk: 1
 --- !u!1 &661660091
 GameObject:
   m_ObjectHideFlags: 0

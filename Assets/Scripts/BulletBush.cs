@@ -7,37 +7,49 @@ public class BulletBush : MonoBehaviour
     ControlScene controlScene;
     public Health playerHealth;
 
-
-    //public GameObject left, right, upleft, upright;//DirectionLeft, DirectioRight, DirectionUpLeft, DirectionUpRight;
+    private float timer;
+    public float speed;
 
     private Rigidbody2D rig;
-    public float speed;
-    private float timer;
-    private float timerspawn;
+    //public GameObject left, right, upleft, upright;//DirectionLeft, DirectioRight, DirectionUpLeft, DirectionUpRight;
+
     bool reiniciar = false;
 
-    GameObject[] bulletsFireBush;
+    Transform bulletPos;
 
-    Rigidbody2D[] rigbullets;
+    bool bulletsInstance = false;
+
+    int whoSpawn;
 
     void Start()
     {
+        rig = GetComponent<Rigidbody2D>();
+
         InicializandoBullets();
     }
-    
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+
+        if (timer > 10)
+        {
+            Destroy(gameObject);
+        }
+    }
     void InicializandoBullets()
     {
-        for (int i = 0; i < bulletsFireBush.Length; i++)
+        for (int i = 0; i < 5; i++)
         {
-            if (i == 0) //Virar direita
+            if (i == 0 && whoSpawn == 0) //Virar direita
             {
-               rigbullets[i].velocity = transform.right * speed;
+                rig.velocity = transform.right * speed;
             }
-            if (i == 1) // Virar Esquerda
+            if (i == 1 && whoSpawn== 1) // Virar Esquerda
             {
-                rigbullets[i].velocity = -transform.right * speed;
+                rig.velocity = -transform.right * speed;
             }
-            if (i == 2) // cima esq
+            if (i == 2 && whoSpawn == 2) // cima esq
             {
                 float angle = 15f; // Ângulo de 15 graus
                 float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
@@ -45,9 +57,9 @@ public class BulletBush : MonoBehaviour
                 // Calcular a direção usando seno e cosseno, mas invertendo a direção X
                 Vector2 direction = new Vector2(-Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
-                rigbullets[i].velocity = direction * speed;
+                rig.velocity = direction * speed;
             }
-            if (i == 3) // cima dir
+            if (i == 3 && whoSpawn == 3) // cima dir
             {
                 float angle = 15f; // Ângulo de 15 graus
                 float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
@@ -55,12 +67,13 @@ public class BulletBush : MonoBehaviour
                 // Calcular a direção usando seno e cosseno
                 Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
-                rigbullets[i].velocity = direction * speed;
+                rig.velocity = direction * speed;
             }
         }
     }
-    void Update()
+    public void GetInformationsBulletpos(int localWhereSpawn, Transform shotPos)
     {
-      
+        whoSpawn = localWhereSpawn;
+        bulletPos = shotPos;
     }
 }
