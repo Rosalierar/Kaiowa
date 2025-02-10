@@ -25,8 +25,8 @@ public class EnemyDamage : MonoBehaviour
 
     private float timer;
 
-    //fogo arusto
-    private float timerBush = 0f;
+    //fogo arbusto
+    public float timerBush = 0f;
 
     bool bulletInstance = false;
 
@@ -61,14 +61,15 @@ public class EnemyDamage : MonoBehaviour
         if (enemyData.character[0])
         {
             float distance = Vector2.Distance(transform.position, Player.transform.position);
-            if (distance < 10)
+            if (distance < 15)
             {
                 AttackfireBush();
-                timerBush += Time.deltaTime;
             }
-            if (timerBush > 10)
+            if (timerBush >= 5)
             {
-                //bulletInstance = false;
+                timerBush = 0;
+                bulletInstance = false;
+                AttackfireBush();
             }
             //COLOCAR O VOID DO METODO
         }
@@ -154,20 +155,13 @@ public class EnemyDamage : MonoBehaviour
             BulletBush bulletBush3 = ObjbulletBush3.GetComponent<BulletBush>();
             bulletBush3.GetInformationsBulletpos(3, ArmazenarbulletPos3);
 
-            bulletBush = powerBush.GetComponent<BulletBush>();
+
             bulletInstance = true;
         }
+
+        timerBush += Time.deltaTime;
     }
     
-
-
-
-
-
-
-
-
-
     /// <summary>
     /// ///////////////// FOGO HUMANOIDE
     /// </summary>

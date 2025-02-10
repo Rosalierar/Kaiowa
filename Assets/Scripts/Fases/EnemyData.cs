@@ -23,8 +23,8 @@ public class EnemyData : MonoBehaviour
 
 
     // Definindo o evento de monstro derrotado
-    public delegate void OnMonsterDefeated();
-    public event OnMonsterDefeated MonsterDefeated;
+    //public delegate void OnMonsterDefeated();
+    //public event OnMonsterDefeated MonsterDefeated;
 
     // Start is called before the first frame update
     void Start()
@@ -133,7 +133,7 @@ public class EnemyData : MonoBehaviour
     {
         // Aguarda a animação de ataque super terminar antes de desativar
         yield return new WaitForSeconds(1f); // Ajuste o tempo para o tempo da animação de ataque
-        MonsterDefeated?.Invoke();
+        //MonsterDefeated?.Invoke();
         //controlScene.defeatedMonsters++;
         Debug.Log("Monstros derrotados: " + controlScene.defeatedMonsters);
         Destroy(gameObject);

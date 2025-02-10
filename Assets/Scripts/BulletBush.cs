@@ -7,7 +7,6 @@ public class BulletBush : MonoBehaviour
     [SerializeField] int valueDamage = 30;
 
     private float timerBush;
-    public float CountDownBush;
 
     public float speed = 20;
 
@@ -31,7 +30,7 @@ public class BulletBush : MonoBehaviour
     {
         timerBush += Time.deltaTime;
 
-        if (timerBush > 5)
+        if (timerBush > 3)
         {
             Destroy(gameObject);
         }
@@ -65,8 +64,6 @@ public class BulletBush : MonoBehaviour
             rig.velocity = direction * speed;
             Debug.Log("Bullet moving up right");
         }
-
-        CountDownBush += Time.deltaTime;
     }
 
     public void GetInformationsBulletpos(int localWhereSpawn, Transform shotPos)
