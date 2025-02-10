@@ -47,16 +47,7 @@ public class EnemyDamage : MonoBehaviour
         // SE FOR O FOGO ARBUSTO
         if (enemyData.character[0])
         {
-            float distance = Vector2.Distance(transform.position, Player.transform.position);
-            if (distance < 35)
-            {
-                timer += Time.deltaTime;
-                if (timer > 3)
-                {
-                    timer = 0;
-                    shooting();
-                }
-            }
+           
             //COLOCAR O VOID DO METODO
         }
 
@@ -114,7 +105,10 @@ public class EnemyDamage : MonoBehaviour
     /// </summary>
     /// 
 
+    void AttackfireBush()
+    {
 
+    }
 
 
 

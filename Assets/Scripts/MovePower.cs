@@ -9,6 +9,8 @@ public class MovePower : MonoBehaviour
     public float time;
 
     public Rigidbody2D rbPoder;
+
+
     // Start is called before the first frame update
     void Start()
     {
