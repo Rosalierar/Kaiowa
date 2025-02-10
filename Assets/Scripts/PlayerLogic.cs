@@ -104,7 +104,7 @@ public class PlayerLogic : MonoBehaviour
                 rb.velocity = new Vector2(-kBForce, kBForce);
             }
 
-            if (isKnockRight == true)
+            if (isKnockRight == false)
             {
                 rb.velocity = new Vector2(kBForce, kBForce);
             }

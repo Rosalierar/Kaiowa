@@ -84243,15 +84243,15 @@ PrefabInstance:
       objectReference: {fileID: 1762502607}
     - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: kBTime
-      value: 0.2
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: kBForce
-      value: 6
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: isKnockRight
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4664561020398746964, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: m_Size.y

@@ -61,26 +61,6 @@ public class Health : MonoBehaviour
         health -= amount;
         slider.value = health;
         
-        // Calcular a direção do empurrao
-        /*
-        Vector2 pushDirection = (transform.position - (Vector3)localDamage).normalized;
-        if (Mathf.Abs(transform.position.x - localDamage.x) == Mathf.Abs(transform.position.y - localDamage.y))
-        {
-            Debug.Log("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-            // Empuxo horizontal
-            pushDirection = new Vector2(pushDirection.x, 0).normalized;
-        }/*
-        else
-        {
-            Debug.Log("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
-            // Empuxo vertical
-            pushDirection = new Vector2(pushDirection.x, 0).normalized;
-        }
-
-        // Move o jogador para trás (deslocamento gradual)
-        StartCoroutine(PushPlayerBack(pushDirection));
-        */
-
         StartCoroutine(TakeHit());
 
         Debug.Log(amount +"/" + health);
@@ -88,19 +68,6 @@ public class Health : MonoBehaviour
         if (health <= 0) { 
             StartCoroutine(TimeForRespawn());
             Debug.Log("Morri!");
-        }
-    }
-    private IEnumerator PushPlayerBack(Vector2 direction)
-    {
-        float pushed = 0f;
-
-        // Enquanto o jogador não tiver sido empurrado pela distância definida
-        while (pushed < pushBackDistance)
-        {
-            // Desloca o jogador na direção oposta à colisão
-            transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + direction * pushBackDistance, pushBackSpeed * Time.deltaTime);
-            pushed += pushBackSpeed * Time.deltaTime;
-            yield return null;
         }
     }
 

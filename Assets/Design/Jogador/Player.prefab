@@ -403,6 +403,10 @@ MonoBehaviour:
   doFirstMoviment: 1
   inicio: 0
   entrou: 1
+  kBForce: 10
+  kBCount: 0
+  kBTime: 0.5
+  isKnockRight: 0
 --- !u!114 &4736952486337970836
 MonoBehaviour:
   m_ObjectHideFlags: 0
