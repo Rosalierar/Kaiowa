@@ -1309,7 +1309,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CElenir, que tal agora demonstrar para as crian\xE7as ao vivo agora?            "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &338585293
@@ -2371,7 +2371,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Destrua
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &542499101
@@ -3088,7 +3088,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CEla pode interagir e coletar apertando o   \u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3154,7 +3154,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &636979062
@@ -3207,7 +3207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &652371460
 Transform:
   m_ObjectHideFlags: 0
@@ -3728,7 +3728,7 @@ Transform:
   m_GameObject: {fileID: 808480359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.13, y: 10.705477, z: -285.51074}
+  m_LocalPosition: {x: 440.15622, y: -88.76239, z: -16.42221}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4616,7 +4616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &922810738
 Transform:
   m_ObjectHideFlags: 0
@@ -32929,7 +32929,17 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1030251882}
+    m_ColliderPaths:
+    - - X: 1760000000
+        Y: 440000000
+      - X: -1140000000
+        Y: 440000000
+      - X: -1140000000
+        Y: 60000000
+      - X: 1760000000
+        Y: 60000000
   m_CompositePaths:
     m_Paths:
     - - {x: 175.99997, y: 6}
@@ -33253,7 +33263,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CEla consegue alcan\xE7ar a lua se apertar o     duas vezes.\u201D\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -33319,7 +33329,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1107868980
@@ -33813,7 +33823,7 @@ MonoBehaviour:
     de Elenir \xE9 o tanque d\u2019\xE1gua, isso \xE9 muito importante, para o combate
     ao fogo e n\xE3o deve ser zerado.\u201D (Aperte   )"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -33879,7 +33889,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1152526102
@@ -36664,17 +36674,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1735942262}
-    m_ColliderPaths:
-    - - X: 360000000
-        Y: -300000000
-      - X: -800000000
-        Y: -300000000
-      - X: -800000000
-        Y: -560000000
-      - X: 360000000
-        Y: -560000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 35.999973, y: -56}
@@ -44598,7 +44598,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CE pode usar o canh\xE3o d\u2019\xE1gua apertando o    .\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -44664,7 +44664,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1759749104
@@ -45342,7 +45342,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '                                               esses        "'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -45408,7 +45408,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1810774367
@@ -45602,7 +45602,7 @@ MonoBehaviour:
 
     Apague todos os fogos e resgate os animais.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -45668,7 +45668,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1884811036
@@ -45789,7 +45789,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CElenir pode utilizar uma manobra divertida apertando o    .\u201D\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -45855,7 +45855,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1897478854
@@ -46338,7 +46338,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: alvos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -46404,7 +46404,7 @@ MonoBehaviour:
   m_margin: {x: -196.1698, y: 0, z: -1073.3446, w: -506.0561}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2135506737
