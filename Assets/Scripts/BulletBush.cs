@@ -39,36 +39,33 @@ public class BulletBush : MonoBehaviour
     }
     void InicializandoBullets()
     {
-        for (int i = 0; i < 5; i++)
+        if (whoSpawn == 0) //Virar direita
         {
-            if (i == 0 && whoSpawn == 0) //Virar direita
-            {
-                rig.velocity = transform.right * speed;
-            }
-            if (i == 1 && whoSpawn== 1) // Virar Esquerda
-            {
-                rig.velocity = -transform.right * speed;
-            }
-            if (i == 2 && whoSpawn == 2) // cima esq
-            {
-                float angle = 15f; // Ângulo de 15 graus
-                float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
+            rig.velocity = transform.right * speed;
+        }
+        if (whoSpawn == 1) // Virar Esquerda
+        {
+            rig.velocity = -transform.right * speed;
+        }
+        if (whoSpawn == 2) // cima esq
+        {
+            float angle = 15f; // Ângulo de 15 graus
+            float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
 
-                // Calcular a direção usando seno e cosseno, mas invertendo a direção X
-                Vector2 direction = new Vector2(-Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
+            // Calcular a direção usando seno e cosseno, mas invertendo a direção X
+            Vector2 direction = new Vector2(-Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
-                rig.velocity = direction * speed;
-            }
-            if (i == 3 && whoSpawn == 3) // cima dir
-            {
-                float angle = 15f; // Ângulo de 15 graus
-                float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
+            rig.velocity = direction * speed;
+        }
+        if (whoSpawn == 3) // cima dir
+        {
+            float angle = 15f; // Ângulo de 15 graus
+            float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
 
-                // Calcular a direção usando seno e cosseno
-                Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
+            // Calcular a direção usando seno e cosseno
+            Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
-                rig.velocity = direction * speed;
-            }
+            rig.velocity = direction * speed;
         }
     }
     public void GetInformationsBulletpos(int localWhereSpawn, Transform shotPos)
