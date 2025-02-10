@@ -8,7 +8,7 @@ public class BulletBush : MonoBehaviour
     public Health playerHealth;
 
     private float timer;
-    public float speed;
+    public float speed = 20;
 
     private Rigidbody2D rig;
     //public GameObject left, right, upleft, upright;//DirectionLeft, DirectioRight, DirectionUpLeft, DirectionUpRight;
