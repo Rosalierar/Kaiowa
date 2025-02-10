@@ -56,7 +56,6 @@ public class DialogueLogic : MonoBehaviour
             }
             else if(index >= speaker.Length && isVovo)
             {
-                
                 finishVovo[1] = true;
                 cronometro.progressao = 2;
                 //2
@@ -66,11 +65,11 @@ public class DialogueLogic : MonoBehaviour
             //falará os dialogos
             else
             {
+                dialoguePainel.SetActive(true);
+                AtualizarTexto();
                 playerLogic = player.GetComponent<PlayerLogic>();
                 playerLogic.rb.velocity = Vector2.zero;
                 playerLogic.podesemover = false;
-                dialoguePainel.SetActive(true);
-                AtualizarTexto();
             }
         }
     }

@@ -97,7 +97,7 @@ public class PlayerLogic : MonoBehaviour
         {
             MoveSides();
         }
-        else if (kBForce == 0 || kBForce > 0)
+        else if (kBForce >= 0 && doFirstMoviment)
         {
             if (isKnockRight == true )
             {
