@@ -3047,7 +3047,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3072,7 +3072,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.68932, y: -28.547295, z: -16.42221}
+  m_LocalPosition: {x: -93.928444, y: 120.73036, z: -16.42221}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3733,7 +3733,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 453468274, guid: f60525eba21e5b6408d091f2f48ac2e8, type: 3}
+  m_Sprite: {fileID: 8934980881479442563, guid: eaee5e2f97dc2c2469514bfd1625feb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3753,7 +3753,7 @@ Transform:
   m_GameObject: {fileID: 619086133}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.203644, y: 1.4855804, z: -2738.3916}
+  m_LocalPosition: {x: -12.04, y: -0.9, z: -2738.3916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23012,7 +23012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1506796632
 Transform:
   m_ObjectHideFlags: 0
@@ -23872,7 +23872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1793490329
 Transform:
   m_ObjectHideFlags: 0
