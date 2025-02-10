@@ -97,9 +97,9 @@ public class PlayerLogic : MonoBehaviour
         {
             MoveSides();
         }
-        else
+        else if (kBForce == 0 || kBForce > 0)
         {
-            if (isKnockRight == true)
+            if (isKnockRight == true )
             {
                 rb.velocity = new Vector2(-kBForce, kBForce);
             }

@@ -22,10 +22,6 @@ public class EnemyData : MonoBehaviour
     public string enemyName;
 
 
-    // Definindo o evento de monstro derrotado
-    //public delegate void OnMonsterDefeated();
-    //public event OnMonsterDefeated MonsterDefeated;
-
     // Start is called before the first frame update
     void Start()
     {

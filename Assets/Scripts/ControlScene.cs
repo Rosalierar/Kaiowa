@@ -57,24 +57,12 @@ public class ControlScene : MonoBehaviour
 
     public void LoadScene()
     {
-        /*phase++;
-
-        if (phase == 1) {
-            score[0] = colletedCages;
-        }
-        else if (phase == 2) {
-            score[1] = colletedCages;
-        }
-        else if (phase == 3) {
-            score[2] = colletedCages;
-        }*/
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelDoJogo);
         //SceneManager.LoadScene(levelDoJogo);
     }
     public void StopFollow()
     {
         CinemachineVirtualCamera vCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CinemachineVirtualCamera>();
-        //vCam.Follow.position = vCam.transform.position;
         vCam.Follow = null;
     }
     private void OnCollectCage()
@@ -95,11 +83,6 @@ public class ControlScene : MonoBehaviour
             StartCoroutine(TimeForMessage());
         }
     }
-
-    /*private void OnCollisionEnter2D(Collider2D collision)
-    {
-        
-    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

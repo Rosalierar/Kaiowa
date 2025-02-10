@@ -9,7 +9,7 @@ public class CollectCages : MonoBehaviour
     BoxCollider2D boxCollider2D;
     ControlScene controlScene;
 
-    // Definindo o evento de jaulas abertas
+    //Definindo o evento de jaulas abertas
     public delegate void OnCollectCage();
     public event OnCollectCage CollectedCage;
 
@@ -18,6 +18,8 @@ public class CollectCages : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("JaulasAbertas", 0);
+
         anim = GetComponent<Animator>();
 
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -28,11 +30,13 @@ public class CollectCages : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J) && tocou)
         {
+            PlayerPrefs.SetInt("JaulasAbertas", PlayerPrefs.GetInt("JaulasAbertas", 0) + 1);
+
+            Debug.Log("Prefebs: " + PlayerPrefs.GetInt("JaulasAbertas"));
+
             boxCollider2D.enabled = false;
             anim.SetTrigger("open");
-            //spriteRenderer.sprite = sprites[1];
             CollectedCage?.Invoke();
-            //StartCoroutine(Collect());
         }
     }
 
