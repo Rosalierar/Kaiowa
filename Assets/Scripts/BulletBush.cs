@@ -6,53 +6,59 @@ public class BulletBush : MonoBehaviour
 {
     ControlScene controlScene;
     public Health playerHealth;
+
+
     //public GameObject left, right, upleft, upright;//DirectionLeft, DirectioRight, DirectionUpLeft, DirectionUpRight;
+
     private Rigidbody2D rig;
-    public float Force;
+    public float speed;
     private float timer;
     private float timerspawn;
     bool reiniciar = false;
+
     GameObject[] bulletsFireBush;
+
     Rigidbody2D[] rigbullets;
 
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
-        /*
-        left = GameObject.FindGameObjectWithTag("DirectionLeft");
 
-        Vector3 directionl = left.transform.position - transform.position;
-
-        rig.velocity = new Vector2(directionl.x, directionl.y).normalized * Force;
-
-        transform.rotation = Quaternion.Euler(0, 0, 0);
-        */
     }
-    /*
+    
     void InicializandoBullets()
     {
         for (int i = 0; i < bulletsFireBush.Length; i++)
         {
             if (i == 0) //Virar direita
             {
-               rigbullets[i].velocity = transform.right * Force;
+               rigbullets[i].velocity = transform.right * speed;
             }
             if (i == 1) // Virar Esquerda
             {
-                rigbullets[i].velocity = -transform.right * Force;
+                rigbullets[i].velocity = -transform.right * speed;
             }
             if (i == 2) // cima esq
             {
-                //rigbullets[i].velocity = ;
+                float angle = 15f; // Ângulo de 15 graus
+                float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
+
+                // Calcular a direção usando seno e cosseno, mas invertendo a direção X
+                Vector2 direction = new Vector2(-Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
+
+                rigbullets[i].velocity = direction * speed;
             }
             if (i == 3) // cima dir
             {
-                //rigbullets[i].velocity = ;
+                float angle = 15f; // Ângulo de 15 graus
+                float radians = angle * Mathf.Deg2Rad; // Converter o ângulo para radianos
+
+                // Calcular a direção usando seno e cosseno
+                Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
+
+                rigbullets[i].velocity = direction * speed;
             }
-            
         }
     }
-    */
     void Update()
     {
         /*

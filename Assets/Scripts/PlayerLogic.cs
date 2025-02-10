@@ -156,7 +156,7 @@ public class PlayerLogic : MonoBehaviour
         {
             entrou = true;
             anim.SetBool(doFirstMovimentHash, true);
-            if (inicio >= 5f)
+            if (inicio >= 1f)
             { 
                 doFirstMoviment = true;
                 podesemover = true;

@@ -41,7 +41,6 @@ public class PlayerDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //Apertou o Attack Pesado  
         if (Input.GetKeyDown(KeyCode.L) && !cronometro.CountDown[1]) {
 
