@@ -1123,7 +1123,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "N\xE3o"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &146554083
@@ -1303,6 +1303,92 @@ Transform:
   - {fileID: 1379856469}
   m_Father: {fileID: 853992241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &181174359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181174361}
+  - component: {fileID: 181174360}
+  m_Layer: 0
+  m_Name: Aldeia-7.png_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &181174360
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181174359}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7864129447182060091, guid: 221b304705105aa4b9c7cd9ddf9be401, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.75, y: 6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &181174361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181174359}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.01962836, w: 0.99980736}
+  m_LocalPosition: {x: -22.266235, y: 5.6000023, z: 16.42221}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 853992241}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.249}
 --- !u!1 &216397678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,7 +2305,7 @@ MonoBehaviour:
     qualquer ocasi\xE3o, quando retornar estarei exercendo a profiss\xE3o, e trarei
     orgulho ao meu povo."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2285,7 +2371,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &356058801
@@ -2648,7 +2734,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Deseja Avan\xE7a?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2714,7 +2800,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 5.625328, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &416165269
@@ -2881,7 +2967,6 @@ MonoBehaviour:
   Parte2: {fileID: 1793490328}
   Parte3: {fileID: 1456463981}
   Parte4: {fileID: 1399756712}
-  player: {fileID: 0}
   Npc: {fileID: 328485816}
 --- !u!61 &495183421
 BoxCollider2D:
@@ -3395,7 +3480,6 @@ MonoBehaviour:
   Parte2: {fileID: 1793490328}
   Parte3: {fileID: 0}
   Parte4: {fileID: 0}
-  player: {fileID: 763675921}
   Npc: {fileID: 328485816}
 --- !u!61 &570452489
 BoxCollider2D:
@@ -4556,6 +4640,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7899667636909582765, guid: ea91039dc16f90947a06637222230dac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 490894453}
+    - targetCorrespondingSourceObject: {fileID: 7899667636909582765, guid: ea91039dc16f90947a06637222230dac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1862700981}
+    - targetCorrespondingSourceObject: {fileID: 7899667636909582765, guid: ea91039dc16f90947a06637222230dac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1593010312}
+    - targetCorrespondingSourceObject: {fileID: 7899667636909582765, guid: ea91039dc16f90947a06637222230dac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 181174361}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea91039dc16f90947a06637222230dac, type: 3}
 --- !u!1 &847132594
@@ -5233,7 +5326,7 @@ MonoBehaviour:
     uma bombeira, minha Jaryi (Av\xF3) e boa parte da minha aldeia, ficou muito triste
     com minha partida, mas me desejaram sorte e me apoiaram.\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5299,7 +5392,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1016105955
@@ -23208,6 +23301,92 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1593010310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593010312}
+  - component: {fileID: 1593010311}
+  m_Layer: 0
+  m_Name: Aldeia (2)_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1593010311
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593010310}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -899773351873893243, guid: f60525eba21e5b6408d091f2f48ac2e8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 40, y: 22.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1593010312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593010310}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -45.966232, y: 3.5028572, z: 16.42221}
+  m_LocalScale: {x: 0.8432, y: 2.33, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 853992241}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657238844
 GameObject:
   m_ObjectHideFlags: 3
@@ -23334,7 +23513,6 @@ MonoBehaviour:
   Parte2: {fileID: 1793490328}
   Parte3: {fileID: 1456463981}
   Parte4: {fileID: 1399756712}
-  player: {fileID: 0}
   Npc: {fileID: 328485816}
 --- !u!4 &1662506607
 Transform:
@@ -23958,7 +24136,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24024,7 +24202,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1818717940
@@ -24035,6 +24213,92 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818717937}
   m_CullTransparentMesh: 1
+--- !u!1 &1862700979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862700981}
+  - component: {fileID: 1862700980}
+  m_Layer: 0
+  m_Name: Aldeia (2)_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1862700980
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862700979}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -899773351873893243, guid: f60525eba21e5b6408d091f2f48ac2e8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 40, y: 22.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1862700981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862700979}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60.166245, y: 3.5028572, z: 16.42221}
+  m_LocalScale: {x: 0.8432, y: 2.33, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 853992241}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1871555962
 GameObject:
   m_ObjectHideFlags: 0
@@ -24352,7 +24616,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24418,7 +24682,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1932965728
@@ -24574,7 +24838,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Voc\xEA n\xE3o poder\xE1 refazer essa a\xE7\xE3o?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
   m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24640,7 +24904,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2020589904
