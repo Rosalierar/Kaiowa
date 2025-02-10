@@ -77079,7 +77079,6 @@ GameObject:
   m_Component:
   - component: {fileID: 627823849}
   - component: {fileID: 627823853}
-  - component: {fileID: 627823854}
   m_Layer: 0
   m_Name: PointFlyFire
   m_TagString: FogoVoador
@@ -77134,6 +77133,7 @@ MonoBehaviour:
   armazenarLocalizacaoDePatrolPointPrimeiroFase2: []
   armazenarLocalizacaoDePatrolPointSegundoFase2: []
   patrolPoints: []
+<<<<<<< HEAD
 --- !u!114 &627823854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77156,6 +77156,8 @@ MonoBehaviour:
   isRight: 1
   timerHumanFire: 0
   canAtk: 1
+=======
+>>>>>>> e5f9d9afdc0838f2ec301229a52c73948718336e
 --- !u!1 &661660091
 GameObject:
   m_ObjectHideFlags: 0
