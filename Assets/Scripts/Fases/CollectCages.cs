@@ -39,13 +39,15 @@ public class CollectCages : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Estou proximo da jaula");
-        tocou = true;
+        if (collision.CompareTag("Player"))
+            tocou = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("Sai da proximidade da jaula");
-        tocou = false;
+        if (collision.CompareTag("Player"))
+            tocou = false;
     }
     
 }
