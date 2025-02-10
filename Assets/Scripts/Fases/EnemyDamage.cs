@@ -107,7 +107,8 @@ public class EnemyDamage : MonoBehaviour
 
     void AttackfireBush()
     {
-
+        anim.SetTrigger("isShot");
+        Instantiate(bullet, bulletPos.position, Quaternion.identity);
     }
 
 
