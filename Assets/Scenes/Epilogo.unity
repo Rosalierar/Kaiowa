@@ -330,7 +330,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.09803922}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14194,7 +14194,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 307740, guid: f71c1c6c013e6ae48a3e87eb296da67e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14297,6 +14297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 789663493}
+  playerLogic: {fileID: 0}
   isVovo: 0
   dialoguePainel: {fileID: 1607491638}
   btn: {fileID: 1511569547}
@@ -14462,7 +14463,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -323082847, guid: f71c1c6c013e6ae48a3e87eb296da67e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15374,7 +15375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &893046370
 Transform:
   m_ObjectHideFlags: 0
@@ -15478,7 +15479,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15503,6 +15504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerLogic: {fileID: 0}
   isVovo: 0
   dialoguePainel: {fileID: 1607491638}
   btn: {fileID: 1511569547}
@@ -16114,6 +16116,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 682314624}
     m_Modifications:
+    - target: {fileID: 291997295995953082, guid: 4af5d8edf4360174d8bf625cd8f8fec9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 786176749109369936, guid: 4af5d8edf4360174d8bf625cd8f8fec9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
@@ -16129,6 +16135,14 @@ PrefabInstance:
     - target: {fileID: 2142485222662756043, guid: 4af5d8edf4360174d8bf625cd8f8fec9, type: 3}
       propertyPath: m_Name
       value: CarasMals
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696046418688151115, guid: 4af5d8edf4360174d8bf625cd8f8fec9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406594791778327923, guid: 4af5d8edf4360174d8bf625cd8f8fec9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5461741626235302266, guid: 4af5d8edf4360174d8bf625cd8f8fec9, type: 3}
       propertyPath: m_Enabled
@@ -17070,6 +17084,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 433055076641482067, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1387368333940811316, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: player
       value: 
@@ -17077,6 +17095,18 @@ PrefabInstance:
     - target: {fileID: 3947609023207910585, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_Name
       value: CanvaConfiguracao
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187487818284854868, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187487818284854868, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187487818284854868, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4523862635570193581, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_Pivot.x
@@ -17164,6 +17194,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5045454042852579343, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244838924469939937, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17483,7 +17517,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.09803922}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
