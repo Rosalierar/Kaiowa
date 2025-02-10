@@ -24,7 +24,7 @@ public class GetHealth : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.J))
             {
                 //vida + 20 (exemplo) <= 100
-                if (playerhealth.health + vidaParaRegenerar < 100) {
+                if (playerhealth.health + vidaParaRegenerar <= 100) {
                     playerhealth.health += vidaParaRegenerar;
                     playerhealth.slider.value = playerhealth.health;
 

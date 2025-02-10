@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poderbasico: {fileID: 4543654248290363890}
-  shotPoint: {fileID: 3938794889831163931}
+  shotPoint: {fileID: 1537979189978938446}
   poderPesadoPrefab: {fileID: 4427943075293645931, guid: 75d647de073cd7d4da5e67825738699b, type: 3}
   poder: 0000
   atk: 0000
@@ -435,6 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushBackDistance: 20
   pushBackSpeed: 25
+  Force: 5
   textRespawnGameObj: {fileID: 0}
   boxCollider: {fileID: 0}
   controlScene: {fileID: 0}

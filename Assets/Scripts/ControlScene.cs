@@ -39,11 +39,7 @@ public class ControlScene : MonoBehaviour
     void Start()
     {
         // Inscrevendo no evento para monitorar a derrota de monstros
-        EnemyData[] enemies = FindObjectsOfType<EnemyData>();
-        foreach (EnemyData enemy in enemies)
-        {
-            enemy.MonsterDefeated += OnMonsterDefeated;
-        }
+        
         CollectCages[] cages = FindObjectsOfType<CollectCages>();
         foreach (CollectCages cage in cages)
         {
@@ -81,22 +77,15 @@ public class ControlScene : MonoBehaviour
         //vCam.Follow.position = vCam.transform.position;
         vCam.Follow = null;
     }
-    private void OnMonsterDefeated()
-    {
-        defeatedMonsters++;
-        Debug.Log("Monstros derrotados: " + defeatedMonsters);
-    }
     private void OnCollectCage()
     {
         colletedCages++;
-        Debug.Log("Monstros derrotados: " + defeatedMonsters);
+        Debug.Log("Jaulas abertas: " + colletedCages);
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Monstros derrotados: " + defeatedMonsters + " / Total de monstros: " + totalMonsters);
-
-        if (collision.gameObject.CompareTag(("Player")) && ((defeatedMonsters >= totalMonsters) || (PlayerPrefs.GetInt("MonstrosDerrotados") >= totalMonsters)))
+        if (collision.gameObject.CompareTag(("Player")) && (PlayerPrefs.GetInt("MonstrosDerrotados") >= totalMonsters))
         {
             StartCoroutine(TimeForScore());
         }

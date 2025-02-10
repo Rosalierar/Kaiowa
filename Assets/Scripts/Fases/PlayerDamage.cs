@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
@@ -43,11 +44,9 @@ public class PlayerDamage : MonoBehaviour
     {
         //Apertou o Attack Pesado  
         if (Input.GetKeyDown(KeyCode.L) && !cronometro.CountDown[1]) {
-
-            AtkStrong();
-            //StartCoroutine(AtivarPoderPesado());
             atk[1] = true;
             atk[0] = false;
+            AtkStrong();
 
             anim.SetTrigger("isAtk2");
             //anim atk2
@@ -58,7 +57,14 @@ public class PlayerDamage : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K) && !cronometro.CountDown[0]) {
             atk[0] = true;
             atk[1] = false;
-            StartCoroutine(AtivarPoderBasico());
+            try
+            {
+                StartCoroutine(AtivarPoderBasico());
+            }
+            catch
+            {
+                Debug.Log("nAO POSSUO A pODER");
+            }
             //anim atk1
             anim.SetTrigger("isAtk1");
             Debug.Log("atk1");
@@ -70,7 +76,13 @@ public class PlayerDamage : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Instantiate(poderPesadoPrefab, shotPoint.position, transform.rotation);
+            try
+            {
+                Instantiate(poderPesadoPrefab, shotPoint.position, transform.rotation);
+            }
+            catch {
+                Debug.Log("nAO POSSUO A PREFAB");
+            }
         }
     }
     private IEnumerator AtivarPoderBasico()

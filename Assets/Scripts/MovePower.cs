@@ -10,7 +10,6 @@ public class MovePower : MonoBehaviour
 
     public Rigidbody2D rbPoder;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +25,11 @@ public class MovePower : MonoBehaviour
             Debug.Log("Destroido depois de 10 seg");
             Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Chao"))
+            Destroy(gameObject);
     }
 }
