@@ -22,7 +22,7 @@ public class BulletBush : MonoBehaviour
 
     void Start()
     {
-
+        InicializandoBullets();
     }
     
     void InicializandoBullets()
@@ -61,47 +61,6 @@ public class BulletBush : MonoBehaviour
     }
     void Update()
     {
-        /*
-        timer += Time.deltaTime;
-
-        if (timer > 10)
-        {
-            Destroy(gameObject);
-        }
-        if (reiniciar)
-        {
-            timerspawn += Time.deltaTime;
-        }
-        CarregarCena();
-        */
+      
     }
-    /*
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
-            playerHealth.health -= 20;
-            playerHealth.slider.value = playerHealth.health;
-            if (playerHealth.health <= 0)
-            {
-                reiniciar = true;
-                StartCoroutine(playerHealth.TimeForRespawn());
-                Debug.Log("Morri!");
-                playerHealth.textRespawnGameObj.SetActive(true);
-            }
-            if (playerHealth.health > 0)
-                Destroy(gameObject);
-        }
-
-    }
-    void CarregarCena()
-    {
-        if (timerspawn > 2)
-        {
-            playerHealth.controlScene.LoadScene();
-        }
-    }
-    */
 }
