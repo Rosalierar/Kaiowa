@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class BulletBush : MonoBehaviour
 {
-    ControlScene controlScene;
-    public Health playerHealth;
+    [SerializeField] int valueDamage = 30;
 
-    private float timer;
+    private float timerBush;
+    public float CountDownBush;
+
     public float speed = 20;
 
-    private Rigidbody2D rig;
-    //public GameObject left, right, upleft, upright;//DirectionLeft, DirectioRight, DirectionUpLeft, DirectionUpRight;
-
-    bool reiniciar = false;
+    public Rigidbody2D rig;
 
     Transform bulletPos;
 
@@ -25,18 +23,20 @@ public class BulletBush : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
 
+        // Chamando a inicialização da direção
         InicializandoBullets();
     }
 
     private void Update()
     {
-        timer += Time.deltaTime;
+        timerBush += Time.deltaTime;
 
-        if (timer > 10)
+        if (timerBush > 5)
         {
             Destroy(gameObject);
         }
     }
+
     void InicializandoBullets()
     {
         if (whoSpawn == 0) // Direita
@@ -44,12 +44,12 @@ public class BulletBush : MonoBehaviour
             rig.velocity = transform.right * speed;
             Debug.Log("Bullet moving right");
         }
-        if (whoSpawn == 1) // Esquerda
+        else if (whoSpawn == 1) // Esquerda
         {
             rig.velocity = -transform.right * speed;
             Debug.Log("Bullet moving left");
         }
-        if (whoSpawn == 2) // Cima à esquerda
+        else if (whoSpawn == 2) // Cima à esquerda
         {
             float angle = 15f;
             float radians = angle * Mathf.Deg2Rad;
@@ -57,7 +57,7 @@ public class BulletBush : MonoBehaviour
             rig.velocity = direction * speed;
             Debug.Log("Bullet moving up left");
         }
-        if (whoSpawn == 3) // Cima à direita
+        else if (whoSpawn == 3) // Cima à direita
         {
             float angle = 15f;
             float radians = angle * Mathf.Deg2Rad;
@@ -65,10 +65,32 @@ public class BulletBush : MonoBehaviour
             rig.velocity = direction * speed;
             Debug.Log("Bullet moving up right");
         }
+
+        CountDownBush += Time.deltaTime;
     }
+
     public void GetInformationsBulletpos(int localWhereSpawn, Transform shotPos)
     {
         whoSpawn = localWhereSpawn;
         bulletPos = shotPos;
+
+        // Assim que as informações da posição e direção forem passadas, inicializa o movimento
+        InicializandoBullets();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Health playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
+
+            Vector2 localDamage = (transform.position - collision.transform.position).normalized;
+            Debug.Log("tomei dano");
+
+            playerHealth.TakeDamage(valueDamage, localDamage);
+
+            if (playerHealth.health > 0)
+                Destroy(gameObject);
+        }
     }
 }

@@ -7,7 +7,6 @@ public class BulletEnemies : MonoBehaviour
     ControlScene controlScene;
     public Health playerHealth;
 
-
     [SerializeField] int valueDamage;
 
     private GameObject player;
@@ -36,12 +35,6 @@ public class BulletEnemies : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        /*if (reiniciar)
-        {
-            timerspawn += Time.deltaTime;
-        }
-        CarregarCena();*/
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -58,7 +51,6 @@ public class BulletEnemies : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 
     /*void CarregarCena()
     {

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
+    public GameObject powerBush;
+    BulletBush bulletBush;
     EnemyMovement enemyMovement;
 
     EnemyData enemyData;
@@ -34,7 +36,6 @@ public class EnemyDamage : MonoBehaviour
     public Transform ArmazenarbulletPos1;
     public Transform ArmazenarbulletPos2;
     public Transform ArmazenarbulletPos3;
-
 
     //fogo humano ataque
     public bool isRight = true;
@@ -67,7 +68,7 @@ public class EnemyDamage : MonoBehaviour
             }
             if (timerBush > 10)
             {
-                bulletInstance = false;
+                //bulletInstance = false;
             }
             //COLOCAR O VOID DO METODO
         }
@@ -131,11 +132,12 @@ public class EnemyDamage : MonoBehaviour
         anim.SetTrigger("isShot");
 
         if (!bulletInstance)
-         
+        {
             Debug.Log("INSTANCIAMENTE EM PROCESSO");
 
             // Criando as balas
             // Instanciando as balas nas posições armazenadas, sem fazer parentagem
+            
             GameObject ObjbulletBush0 = Instantiate(bullet, ArmazenarbulletPos0.position, Quaternion.identity);
             BulletBush bulletBush0 = ObjbulletBush0.GetComponent<BulletBush>();
             bulletBush0.GetInformationsBulletpos(0, ArmazenarbulletPos0);
@@ -152,7 +154,9 @@ public class EnemyDamage : MonoBehaviour
             BulletBush bulletBush3 = ObjbulletBush3.GetComponent<BulletBush>();
             bulletBush3.GetInformationsBulletpos(3, ArmazenarbulletPos3);
 
-        bulletInstance = true;
+            bulletBush = powerBush.GetComponent<BulletBush>();
+            bulletInstance = true;
+        }
     }
     
 
