@@ -24,6 +24,8 @@ public class EnemyDamage : MonoBehaviour
     private float timer;
 
     //fogo arusto
+    private float timerBush = 0f;
+
     bool bulletInstance = false;
 
     int  bulletInstanceTotal;
@@ -61,6 +63,11 @@ public class EnemyDamage : MonoBehaviour
             if (distance < 10)
             {
                 AttackfireBush();
+                timerBush += Time.deltaTime;
+            }
+            if (timerBush > 10)
+            {
+                bulletInstance = false;
             }
             //COLOCAR O VOID DO METODO
         }
@@ -124,15 +131,10 @@ public class EnemyDamage : MonoBehaviour
         anim.SetTrigger("isShot");
 
         if (!bulletInstance)
-        {
+         
             Debug.Log("INSTANCIAMENTE EM PROCESSO");
 
-            // Verifique as posições de spawn para garantir que estão corretas
-            Debug.Log("ArmazenarbulletPos0: " + ArmazenarbulletPos0.position);
-            Debug.Log("ArmazenarbulletPos1: " + ArmazenarbulletPos1.position);
-            Debug.Log("ArmazenarbulletPos2: " + ArmazenarbulletPos2.position);
-            Debug.Log("ArmazenarbulletPos3: " + ArmazenarbulletPos3.position);
-
+            // Criando as balas
             GameObject ObjbulletBush0 = Instantiate(bullet, ArmazenarbulletPos0.position, Quaternion.identity);
             BulletBush bulletBush0 = ObjbulletBush0.GetComponent<BulletBush>();
             bulletBush0.transform.SetParent(ArmazenarbulletPos0);
@@ -156,7 +158,7 @@ public class EnemyDamage : MonoBehaviour
 
             bulletInstance = true;
         }
-    }
+    
 
 
 

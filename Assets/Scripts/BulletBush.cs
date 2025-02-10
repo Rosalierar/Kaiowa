@@ -42,10 +42,14 @@ public class BulletBush : MonoBehaviour
         if (whoSpawn == 0) //Virar direita
         {
             rig.velocity = transform.right * speed;
+
+            Debug.Log("Bullet moving right");
         }
         if (whoSpawn == 1) // Virar Esquerda
         {
             rig.velocity = -transform.right * speed;
+
+            Debug.Log("Bullet moving left");
         }
         if (whoSpawn == 2) // cima esq
         {
@@ -56,6 +60,8 @@ public class BulletBush : MonoBehaviour
             Vector2 direction = new Vector2(-Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
             rig.velocity = direction * speed;
+
+            Debug.Log("Bullet moving up left");
         }
         if (whoSpawn == 3) // cima dir
         {
@@ -66,6 +72,8 @@ public class BulletBush : MonoBehaviour
             Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
             rig.velocity = direction * speed;
+
+            Debug.Log("Bullet moving up right");
         }
     }
     public void GetInformationsBulletpos(int localWhereSpawn, Transform shotPos)
