@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 5956195}
   - component: {fileID: 5956196}
   - component: {fileID: 5956197}
+  - component: {fileID: 5956198}
   m_Layer: 0
   m_Name: Npc2
   m_TagString: NpcOutro
@@ -280,6 +281,28 @@ MonoBehaviour:
   finishVovo: 0000
   wordSpeed: 0
   playerisClose: 0
+--- !u!95 &5956198
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5956193}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d5c69e4a313bdf4186cb5ee50408ee3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &31851903
 GameObject:
   m_ObjectHideFlags: 0
