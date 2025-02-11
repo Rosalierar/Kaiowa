@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnabledMovePlayer : MonoBehaviour
 {
+    public bool canFight = false;
+
     ControlSound controlSound;
     Cronometro cronometro;
     PlayerLogic playerLogic;
@@ -49,6 +51,7 @@ public class EnabledMovePlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             controlSound.SoundOnOff(1);
+            canFight = true;
         }
             
     }
