@@ -26,6 +26,7 @@ TagManager:
   - Cura
   - SceneController
   - CDB
+  - BossFire
   layers:
   - Default
   - TransparentFX

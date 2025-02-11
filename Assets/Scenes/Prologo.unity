@@ -2235,7 +2235,7 @@ MonoBehaviour:
     orgulho ao meu povo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
-  m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_sharedMaterial: {fileID: -495415999922351517, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5639,7 +5639,7 @@ MonoBehaviour:
     com minha partida, mas me desejaram sorte e me apoiaram.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
-  m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_sharedMaterial: {fileID: -495415999922351517, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24631,7 +24631,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
-  m_sharedMaterial: {fileID: -495415999922351517, guid: 50087cad0459ab74989e4cbe293ae180, type: 2}
+  m_sharedMaterial: {fileID: -495415999922351517, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
