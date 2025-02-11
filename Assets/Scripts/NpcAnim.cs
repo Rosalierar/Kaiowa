@@ -6,12 +6,10 @@ public class NpcAnim : MonoBehaviour
 {
     public GameObject Farid;
     DialogueLogic2024 dialogueLogic;
+    Animator anim;
 
-    public GameObject cam1;
     public GameObject cam2;
 
-
-    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +21,6 @@ public class NpcAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Desativar();
-
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
         if (stateInfo.normalizedTime >= 0.1f)  // normalizedTime varia de 0 a 1
         {
@@ -39,11 +35,8 @@ public class NpcAnim : MonoBehaviour
             cam2.SetActive(false);
         }
     }
-
     void Desativar()
     {
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        
-
     }
 }

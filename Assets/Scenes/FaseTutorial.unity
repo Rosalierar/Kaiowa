@@ -2308,6 +2308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e1875764aeb5e4eba6b0f4f5d99768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clicouJ: 0
+  CountHelp: 0
   textoajuda: {fileID: 2127035826}
 --- !u!1 &542499097
 GameObject:
@@ -45177,7 +45179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Farid: {fileID: 921565651}
-  cam1: {fileID: 0}
   cam2: {fileID: 2098640055}
 --- !u!1 &1773382258
 GameObject:
