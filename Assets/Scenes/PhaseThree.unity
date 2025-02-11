@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: textRespawnGameObj
       value: 
       objectReference: {fileID: 1440470134}
+    - target: {fileID: 1240677539143156147, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
+      propertyPath: textoRessurgimento
+      value: 
+      objectReference: {fileID: 1440470136}
     - target: {fileID: 1419840264759422114, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5811,6 +5815,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1440470136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2725207694156902426, guid: b9ce543602a377c4ca3754e416594381, type: 3}
+  m_PrefabInstance: {fileID: 1440470133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1453152663 stripped

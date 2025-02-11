@@ -84193,6 +84193,10 @@ PrefabInstance:
       propertyPath: textRespawnGameObj
       value: 
       objectReference: {fileID: 1915009236}
+    - target: {fileID: 1240677539143156147, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
+      propertyPath: textoRessurgimento
+      value: 
+      objectReference: {fileID: 3616387081598027885}
     - target: {fileID: 1537979189978938446, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -90703,7 +90707,7 @@ PrefabInstance:
     - target: {fileID: 2725207694156902426, guid: b9ce543602a377c4ca3754e416594381, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 2bd22fbb28cd01a4eabdfc07ec96417c, type: 2}
+      objectReference: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
     - target: {fileID: 2725207694156902426, guid: b9ce543602a377c4ca3754e416594381, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
@@ -90733,6 +90737,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9ce543602a377c4ca3754e416594381, type: 3}
+--- !u!114 &3616387081598027885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2725207694156902426, guid: b9ce543602a377c4ca3754e416594381, type: 3}
+  m_PrefabInstance: {fileID: 3616387081598027884}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853182442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8022519204424583182
 PrefabInstance:
   m_ObjectHideFlags: 0

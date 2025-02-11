@@ -1,10 +1,24 @@
+
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    ///Frases de Ressurgirmento
+    
+    [SerializeField] private TMP_Text textoRessurgimento;
+
+    List<string> frasesDeRessurgir = new List<string>()
+    {
+        "Não Desista!", "Esforce-se!", "Continue!", "Não é o fim!", "Supere-se!", "Ultrapasse seus limites!",
+        "A jornada continua!", "Seja Forte!", "Lute!", "Proteja!" };
+
+    /// <summary>
+    /// //
+    /// </summary>
     PlayerLogic playerLogic;
 
     public float pushBackDistance;  // Distância que o jogador será empurrado para trás
@@ -73,6 +87,9 @@ public class Health : MonoBehaviour
 
     public IEnumerator TimeForRespawn()
     {
+        int indiceDaFrase = Random.Range(0, 10);
+        textoRessurgimento.text = frasesDeRessurgir[indiceDaFrase];
+
         animator.SetTrigger("isDeath");
         controlScene = GameObject.FindGameObjectWithTag("SceneController").GetComponent<ControlScene>();
         controlScene.StopFollow();
@@ -91,5 +108,14 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         controlScene.LoadScene();
+    }
+
+    /// <summary>
+    /// FRASES PARA RESSURGIR
+    /// </summary>
+    public void FrasesDeMorte()
+    {
+        //Random para Tela de Ressurgimento
+       
     }
 }

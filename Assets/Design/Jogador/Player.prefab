@@ -404,7 +404,7 @@ MonoBehaviour:
   inicio: 0
   entrou: 1
   kBForce: 20
-  kBCount: 0
+  kBCount: -1
   kBTime: 0.25
   isKnockRight: 0
 --- !u!114 &4736952486337970836
@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3c108f5ec1c9d40b91f47dfa37e3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textoRessurgimento: {fileID: 0}
   pushBackDistance: 20
   pushBackSpeed: 25
   Force: 5
