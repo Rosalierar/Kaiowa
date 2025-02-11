@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PainelConfController : MonoBehaviour
 {
+    bool isOpen = false;
     public string levelDeJogo;
 
     public GameObject player;
@@ -17,9 +18,18 @@ public class PainelConfController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Tab))
         {
-            playerLogic = player.GetComponent<PlayerLogic>();
-            playerLogic.podesemover = false;
-            Conf.SetActive(true);
+            if (!isOpen)
+            {
+                playerLogic = player.GetComponent<PlayerLogic>();
+                playerLogic.rb.velocity = Vector2.zero;
+                playerLogic.podesemover = false;
+                Conf.SetActive(true);
+                isOpen = true;
+            }
+            else if (isOpen)
+            {
+                CloseConf();
+            }
         }
     }
 
@@ -28,6 +38,7 @@ public class PainelConfController : MonoBehaviour
         playerLogic = player.GetComponent<PlayerLogic>();
         playerLogic.podesemover = true;
         Conf.SetActive(false);
+        isOpen = false;
     }
 
     public void RecarregarCena()

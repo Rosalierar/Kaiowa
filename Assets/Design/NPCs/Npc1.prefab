@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4427943075293645931
+--- !u!1 &2322892017705249915
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8457871937085996929}
-  - component: {fileID: 2963559781177383088}
-  - component: {fileID: -8153266852434140956}
-  - component: {fileID: 3282494847658134763}
-  - component: {fileID: 564413970036791313}
-  - component: {fileID: -840813886778571651}
-  - component: {fileID: 2579374874710228553}
+  - component: {fileID: 371783222061155971}
+  - component: {fileID: 2346411403957439072}
+  - component: {fileID: 3896383481518438334}
+  - component: {fileID: 5561795287900420247}
+  - component: {fileID: 7500910830965253372}
   m_Layer: 0
-  m_Name: PoderPesado
-  m_TagString: Untagged
+  m_Name: Npc1
+  m_TagString: NpcMulher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8457871937085996929
+--- !u!4 &371783222061155971
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427943075293645931}
+  m_GameObject: {fileID: 2322892017705249915}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.1, y: -31.7, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -37.2, y: -52.8722, z: 345.20197}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2963559781177383088
+--- !u!212 &2346411403957439072
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427943075293645931}
+  m_GameObject: {fileID: 2322892017705249915}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,47 +77,25 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 2460107432801537689, guid: 6fbef9bf0b4317f49807cb1c5f632a1a, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1725469803130691606, guid: bde06c5a715b12c4689843a411ed73fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.75, y: 1.1666666}
+  m_Size: {x: 0.6875, y: 1.03125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &-8153266852434140956
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427943075293645931}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9c9eb095afeaa544c91e908749ee7904, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!61 &3282494847658134763
+--- !u!61 &3896383481518438334
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427943075293645931}
+  m_GameObject: {fileID: 2322892017705249915}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -147,75 +123,65 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.2069416, y: -0.0058255196}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.75, y: 1.1666666}
-    newSize: {x: 2.75, y: 1.1666666}
+    oldSize: {x: 1.0625, y: 1.59375}
+    newSize: {x: 0.6875, y: 1.03125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.3361168, y: 0.70068645}
+  m_Size: {x: 1.41, y: 1.39}
   m_EdgeRadius: 0
---- !u!50 &564413970036791313
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427943075293645931}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!114 &-840813886778571651
+--- !u!114 &5561795287900420247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427943075293645931}
+  m_GameObject: {fileID: 2322892017705249915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 866c084168727ce4b91ecd19843d39da, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b09bbaa0bde7284e86b2c58771d8d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  time: 0
-  rbPoder: {fileID: 564413970036791313}
---- !u!114 &2579374874710228553
-MonoBehaviour:
+  player: {fileID: 0}
+  playerLogic: {fileID: 0}
+  isVovo: 0
+  dialoguePainel: {fileID: 0}
+  btn: {fileID: 0}
+  speakerText: {fileID: 0}
+  dialogueText: {fileID: 0}
+  speaker:
+  - Mulher da Comunidade
+  dialoguewords:
+  - "Bom dia pequena Elenir! \xC0 tarde eu termino esse pote para sua Jaryi (Av\xF3),
+    ent\xE3o passe aqui mais tarde."
+  index: 0
+  finishVovo: 0000
+  wordSpeed: 0
+  playerisClose: 0
+--- !u!95 &7500910830965253372
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427943075293645931}
+  m_GameObject: {fileID: 2322892017705249915}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55df985caf4691e4a915b7c6cb4fcdd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poderbasico: {fileID: 0}
-  shotPoint: {fileID: 0}
-  poderPesadoPrefab: {fileID: 0}
-  poder: 0001
-  atk: 0000
-  attack: 0000000032000000
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85c85709bf2f9d645bbc32ef2bf4df81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

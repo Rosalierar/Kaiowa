@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
+
 //using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueLogic2024 : MonoBehaviour
 {
+
     [SerializeField] private GameObject player;
     PlayerLogic playerLogic;
 
@@ -96,10 +99,13 @@ public class DialogueLogic2024 : MonoBehaviour
             }
             
         }
+       
     }
 
     public void TextTutorial()
     {
+        NpcAnim animNpc = GameObject.FindGameObjectWithTag("Povo").GetComponent<NpcAnim>();
+
         Debug.Log("Entrei na Funcao ");
         if (index == 0 && !finishpart2[0]&& !finishpart2[1])
         {

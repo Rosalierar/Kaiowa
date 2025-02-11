@@ -121,12 +121,20 @@ public class EnemyData : MonoBehaviour
 
             anim.SetTrigger("isDeath");
             StartCoroutine(DestroyEnemy());
+
         }
 
         Debug.Log("Take Damage:" + enemyData[0] +"/" + amount);
     }
     private IEnumerator DestroyEnemy()
     {
+        //saber se sao alvos do tutorial
+        if (gameObject.CompareTag("Ultrapassar"))
+        {
+            BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
+            boxCollider2D.enabled = false;
+        }
+
         // Aguarda a animação de ataque super terminar antes de desativar
         yield return new WaitForSeconds(1f); // Ajuste o tempo para o tempo da animação de ataque
         //MonsterDefeated?.Invoke();

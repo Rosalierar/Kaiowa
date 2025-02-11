@@ -64,8 +64,8 @@ public class TutorialController : MonoBehaviour
             SceneController.SetActive(true);
             parede.SetActive(false);
             dialogueLogic = Farid.GetComponent<DialogueLogic2024>();
-            //dialogueLogic.TextTutorial();
-            dialogueLogic.StartCoroutine(dialogueLogic.NextScene());
+
+            //dialogueLogic.StartCoroutine(dialogueLogic.NextScene());
         }
     }
 
@@ -152,19 +152,6 @@ public class TutorialController : MonoBehaviour
         AtivarProximaMensagem(textoAnterior, textoPosterior);
     }
 
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Cura") && Input.GetKeyDown(KeyCode.J) && progressoTutorial == 2)
-        {
-            cura.SetActive(false);
-            playerhealth.health += 20;
-            playerhealth.slider.value = playerhealth.health;
-
-            Debug.Log("Pegou cura");
-
-            StartCoroutine(TempoParaAparecerTexto(2,3));
-        }
-    }*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Cura") && progressoTutorial == 2)
