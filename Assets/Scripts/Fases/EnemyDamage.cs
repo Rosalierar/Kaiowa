@@ -94,10 +94,10 @@ public class EnemyDamage : MonoBehaviour
         if (enemyData.character[2])
         {
            if (!canAtk)
-            {
+           {
                 TimeForFireHumam();
-            }
-            //COLOCAR O VOID DO METODO
+           }
+           //COLOCAR O VOID DO METODO
         }
     }
 

@@ -24,7 +24,7 @@ public class BulletEnemies : MonoBehaviour
         Vector3 direction = player.transform.position - transform.position;
         rig.velocity = new Vector2(direction.x, direction.y).normalized * Force;
 
-        transform.rotation = Quaternion.Euler(0,0, 0);
+        //transform.rotation = Quaternion.Euler(0,0, 0);
     }
 
     void Update()
