@@ -5,9 +5,13 @@ using UnityEngine;
 public class SpawnBoss : MonoBehaviour
 {
     //CLASS
+    Health pLayerHealth;
     EnabledMovePlayer enabledMovePlayer;
+    PlayerLogic playerLogic;
 
     //GAMEOBJECTS 
+    [SerializeField] private GameObject cam1;
+    [SerializeField] private GameObject cam2;
     public GameObject bossPrefab;
     public GameObject bossLife;
     
@@ -22,19 +26,38 @@ public class SpawnBoss : MonoBehaviour
     void Start()
     {
         enabledMovePlayer = GameObject.Find("ParedeChefao").GetComponent<EnabledMovePlayer>();
+        pLayerHealth = GameObject.Find("Player").GetComponent<Health>();
+        playerLogic = GameObject.Find("Player").GetComponent<PlayerLogic>();
 
-      
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (enabledMovePlayer.canFight)
+       if (enabledMovePlayer.canFight && !isInstantiate)
        {
             GameObject boss = Instantiate(bossPrefab, bossPos.position, transform.rotation);
             BossMovement bossMovement = boss.GetComponent<BossMovement>();
             boss.transform.SetParent(bossPos);
             isInstantiate = true;
+
+            StartCoroutine(ActiveLifeBoss());
        }
+    }
+    private IEnumerator ActiveLifeBoss()
+    {
+        Debug.Log("OLA ESTOU AQUI");
+        cam1.SetActive(true);
+        cam2.SetActive(false);
+
+        // Aguarda a animação de ataque super terminar antes de desativar
+        yield return new WaitForSeconds(2f); // Ajuste o tempo para o tempo da animação de ataque
+
+        bossLife.SetActive(true);
+
+        yield return new WaitForSeconds(4f);
+        cam2.SetActive(true);
+        cam1.SetActive(false);
+        playerLogic.podesemover = true;
     }
 }

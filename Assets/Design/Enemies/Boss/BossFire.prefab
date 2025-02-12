@@ -25,7 +25,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4063530675132183181
 Transform:
   m_ObjectHideFlags: 0
@@ -125,14 +125,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4572784594621502200}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -169,6 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441579821683f4446b807ba7dcc688cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  bossHealth: 0
+  maxBossHealth: 2000
 --- !u!114 &9188189014961606241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,9 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962231d9d0dee0e488f31cc3e610b650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedBoss: 0
+  moveSpeedBoss: 20
   isChasing: 0
-  chaseDistance: 0
+  chaseDistance: 20
 --- !u!114 &5825685224897398156
 MonoBehaviour:
   m_ObjectHideFlags: 0
