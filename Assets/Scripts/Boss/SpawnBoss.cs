@@ -28,7 +28,6 @@ public class SpawnBoss : MonoBehaviour
         enabledMovePlayer = GameObject.Find("ParedeChefao").GetComponent<EnabledMovePlayer>();
         pLayerHealth = GameObject.Find("Player").GetComponent<Health>();
         playerLogic = GameObject.Find("Player").GetComponent<PlayerLogic>();
-
     }
 
     // Update is called once per frame
@@ -39,6 +38,7 @@ public class SpawnBoss : MonoBehaviour
             GameObject boss = Instantiate(bossPrefab, bossPos.position, transform.rotation);
             BossMovement bossMovement = boss.GetComponent<BossMovement>();
             boss.transform.SetParent(bossPos);
+            bossMovement.ArmazenarPlayerPosition(playerTransform);
             isInstantiate = true;
 
             StartCoroutine(ActiveLifeBoss());

@@ -8,10 +8,13 @@ public class BossMovement : MonoBehaviour
     Animator animatorBoss;
     Transform playerTransform;
 
-    //CONTROLLER MOVEMENT
-    [SerializeField] private float moveSpeedBoss;
+    //CONTROLLER POSITION
     [SerializeField] private bool isChasing;
     [SerializeField] private int chaseDistance;
+
+    //MOVEMENT
+    [SerializeField] private float moveSpeedBoss;
+    public bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +27,20 @@ public class BossMovement : MonoBehaviour
     {
 
     }
-
-    public void MeveLogic()
+    private void FixedUpdate()
     {
-        if (isChasing)
+        MoveLogic();
+    }
+
+    public void MoveLogic()
+    {
+        if (isChasing && canMove)
         {
             //se o jogador esta no lado esquerdo
             if (transform.position.x > playerTransform.position.x)
             {
                 //virar personagem
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(3, 3, 3);
                 //perseguir o personagem
                 transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeedBoss * Time.deltaTime);
             }
@@ -41,7 +48,7 @@ public class BossMovement : MonoBehaviour
             if (transform.position.x < playerTransform.position.x)
             {
                 //virar personagem
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-3, 3, 3);
                 //perseguir o personagem
                 transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeedBoss * Time.deltaTime);
             }
@@ -53,5 +60,9 @@ public class BossMovement : MonoBehaviour
                 isChasing = true;
             }
         }
+    }
+    public void ArmazenarPlayerPosition(Transform playerPosition)
+    {
+        playerTransform = playerPosition;
     }
 }

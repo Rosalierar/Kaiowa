@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 582694844257188599}
   - component: {fileID: 4063031478714775617}
   - component: {fileID: 6415326283263601046}
-  - component: {fileID: 7396959052245417908}
   - component: {fileID: -7472975115236126578}
+  - component: {fileID: 7396959052245417908}
   - component: {fileID: 9188189014961606241}
   - component: {fileID: 5825685224897398156}
   - component: {fileID: 5354725227978989273}
   - component: {fileID: 932183836490039928}
   - component: {fileID: 1428677562390318681}
+  - component: {fileID: -4249893783407735821}
   m_Layer: 0
   m_Name: BossFire
   m_TagString: BossFire
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -4077548011159227044, guid: 41dec186a43fc634d8a9e375aebbc1d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -129,10 +130,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -143,20 +144,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &7396959052245417908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4572784594621502200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54f82d917e0906a44a398d2e5a1246c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeMovement: 0
+  m_Constraints: 4
 --- !u!114 &-7472975115236126578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +160,20 @@ MonoBehaviour:
   slider: {fileID: 0}
   bossHealth: 0
   maxBossHealth: 2000
+--- !u!114 &7396959052245417908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572784594621502200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f82d917e0906a44a398d2e5a1246c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canWalk: 1
+  timeMovement: 0
 --- !u!114 &9188189014961606241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,9 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962231d9d0dee0e488f31cc3e610b650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedBoss: 20
   isChasing: 0
-  chaseDistance: 20
+  chaseDistance: 30
+  moveSpeedBoss: 6
+  canMove: 1
 --- !u!114 &5825685224897398156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,3 +239,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d82b78591f5cb641864719ded2654ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &-4249893783407735821
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572784594621502200}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.04149252, y: -1.5145864}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 6.6875}
+    newSize: {x: 2.5, y: 3.34375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.9708251, y: 3.658327}
+  m_EdgeRadius: 0

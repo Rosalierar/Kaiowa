@@ -5,11 +5,11 @@ using UnityEngine;
 public class BossControlMovement : MonoBehaviour
 {
     //COTROLLER MOVEMENT
-    bool canWalk = true;
+    [SerializeField] bool canWalk = true;
 
     //TIMER MOVEMENT
-    float timeStopMovement = 50f;
-    float timeCanMove = 10f;
+    float timeStopMovement = 20f;
+    float timeCanMove = 5f;
     [SerializeField] float timeMovement;
 
     //SCRIPT MOVEMENT
@@ -27,7 +27,7 @@ public class BossControlMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        StopMove(canWalk);
     }
 
     void StopMove(bool whatDo)
@@ -37,10 +37,10 @@ public class BossControlMovement : MonoBehaviour
         if (whatDo)
         {
             //nao vai poder se mexer assim que o tempo ultrapassar
-            if (timeMovement <= timeStopMovement)
+            if (timeMovement >= timeStopMovement)
             {
                 rbBoss.velocity = Vector2.zero;
-
+                bossMovement.canMove = false;
 
                 timeMovement = 0;
                 canWalk = false;
@@ -49,13 +49,13 @@ public class BossControlMovement : MonoBehaviour
         else
         {
             //vai voltar a se mexer
-            if (timeMovement <= timeCanMove)
+            if (timeMovement >= timeCanMove)
             {
-                
+                bossMovement.canMove = true;
+                timeMovement = 0;
                 canWalk = true;
             }
         }
-           
     }
 
     void ControlTimeMovement()

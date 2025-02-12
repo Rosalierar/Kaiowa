@@ -112,8 +112,18 @@ public class PlayerDamage : MonoBehaviour
             if (poder[1])
             {
                 enemyData.EnemyTakeDamage(attack[1]);
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        EnemyData enemyData = collision.gameObject.GetComponent<EnemyData>();
+
+        if (enemyData != null)
+        {
+            if (poder[1])
+                Destroy(gameObject);
         }
     }
 }
