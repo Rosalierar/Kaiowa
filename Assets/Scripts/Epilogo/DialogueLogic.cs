@@ -78,9 +78,9 @@ public class DialogueLogic : MonoBehaviour
     public void WitchoutText()
     {
         index = 0;
-        btn.SetActive(false);
         dialoguePainel.SetActive(false);
         playerLogic.podesemover = true;
+        btn.SetActive(false);
     }
     public void AtualizarTexto()
     {
