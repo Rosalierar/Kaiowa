@@ -8,8 +8,9 @@ using UnityEngine.UI;
 
 public class LastDialogueLogic : MonoBehaviour
 {
+    PlayerAnimAto5 playerAnimAto5;
+
     [SerializeField] protected GameObject player;
-    public PlayerLogic playerLogic;
 
     public GameObject dialoguePainel;
 
@@ -29,9 +30,10 @@ public class LastDialogueLogic : MonoBehaviour
 
     [SerializeField] public bool playerisClose;
 
-    public bool[] finishpart = new bool[2];
+    public bool[] finishpart = new bool[3];
 
     public bool isPart6;
+    public bool isPart5;
 
     [SerializeField] private string levelDoJogo;
 
@@ -59,7 +61,6 @@ public class LastDialogueLogic : MonoBehaviour
                 //saber se acabou as falas
                 if (index >= speaker.Length)
                 {
-                    playerLogic.podesemover = true;
                     WitchoutText();
                     StartCoroutine(WaitForNextDialogue());
                 }
@@ -69,52 +70,47 @@ public class LastDialogueLogic : MonoBehaviour
                 {
                     dialoguePainel.SetActive(true);
                     AtualizarTexto();
-                    playerLogic = player.GetComponent<PlayerLogic>();
-                    playerLogic.podesemover = false;
                 }
             }
+        }
+
+        if (isPart5)
+        {
+            TextBeforeEp();
         }
     }
     public void TextBeforeEp()
     {
         PlayerAnimAto5 dioalogueBeforeEp = GameObject.FindGameObjectWithTag("CDB").GetComponent<PlayerAnimAto5>();
 
-        if (index == 0 && !finishpart[0] && !finishpart[1])
+        if (index == 0)
         {
             speakerText.text = speaker[index];
             dialogueText.text = dialoguewords[index];
-            finishpart[0] = true;
+
             dialoguePainel.SetActive(true);
-            playerLogic = player.GetComponent<PlayerLogic>();
-            playerLogic.rb.velocity = Vector2.zero;
-            playerLogic.podesemover = false;
+            index++;
         }
 
-        else if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.O))
         {
-            if (index >= speaker.Length && finishpart[0] && finishpart[1])
+            if (index >= speaker.Length)
             {
-                 Debug.Log("COMECEI");
                 WitchoutText();
                 StartCoroutine(BlackPainel());
-                finishpart[1] = true;
-
-                /*controlScene = GameObject.FindGameObjectWithTag("SceneController").GetComponent<ControlScene>();
-                animCDB = CDB.GetComponent<Animator>();
-                animCDB.SetTrigger("isWalk");*/
             }
-            //if (index <= speaker.Length && finishpart[0])
             else
             {
-                Debug.Log("Entrei na Funcao ");
                 AtualizarTexto();
+                Debug.Log("Entrei na Funcao" + index);
                 dialoguePainel.SetActive(true);
+
                 finishpart[1] = true;
             }
         }
     }
     public void AtualizarTexto()
-    {
+    { 
         speakerText.text = speaker[index];
         dialogueText.text = dialoguewords[index];
         //portImage.sprite = portrait[index];
@@ -124,7 +120,6 @@ public class LastDialogueLogic : MonoBehaviour
     {
         index = 0;
         dialoguePainel.SetActive(false);
-        playerLogic.podesemover = true;
     }
 
     public IEnumerator BlackPainel()
@@ -139,9 +134,10 @@ public class LastDialogueLogic : MonoBehaviour
     }
     public IEnumerator SceneBeforeEp()
     {
-        yield return new WaitForSeconds(0.8f);
 
-        TextBeforeEp();
+        yield return new WaitForSeconds(0.5f);
+        isPart5 = true;
+        //TextBeforeEp();
     }
 
     IEnumerator WaitForNextDialogue()

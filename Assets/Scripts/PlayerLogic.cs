@@ -178,7 +178,6 @@ public class PlayerLogic : MonoBehaviour
         }
         if (dirX == 0 && doFirstMoviment)
         {
-            Debug.Log("n sei oq n sei o q");
             anim.SetBool("isWalking", false);
         }
         else if (!doFirstMoviment && dirX != 0)
