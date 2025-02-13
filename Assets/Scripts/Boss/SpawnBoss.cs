@@ -46,7 +46,6 @@ public class SpawnBoss : MonoBehaviour
     }
     private IEnumerator ActiveLifeBoss()
     {
-        Debug.Log("OLA ESTOU AQUI");
         cam1.SetActive(true);
         cam2.SetActive(false);
 
