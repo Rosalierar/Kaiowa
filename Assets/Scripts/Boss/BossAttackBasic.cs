@@ -15,6 +15,9 @@ public class BossAttackBasic : MonoBehaviour
 
     Animator animBoss;
 
+    bool isAtkBasic;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +42,7 @@ public class BossAttackBasic : MonoBehaviour
         if (hitLeft.collider.name == "Player" || hitRight.collider.name == "Player")
         {
             Debug.Log("Hit: " + hitLeft.collider.tag);
-            animBoss.SetTrigger("isAtkBasic");
+            animBoss.SetBool("isAtkBasic", isAtkBasic);
         }
     }
 }
