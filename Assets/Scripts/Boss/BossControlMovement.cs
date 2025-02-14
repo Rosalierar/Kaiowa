@@ -6,7 +6,6 @@ public class BossControlMovement : MonoBehaviour
 {
     //COTROLLER MOVEMENT
     [SerializeField] bool canWalk = true;
-    public bool stopForAtk = false;
 
     //TIMER MOVEMENT
     float timeStopMovement = 20f;

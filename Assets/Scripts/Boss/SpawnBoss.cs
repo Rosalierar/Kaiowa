@@ -13,12 +13,12 @@ public class SpawnBoss : MonoBehaviour
     //GAMEOBJECTS 
     [SerializeField] private GameObject cam1;
     [SerializeField] private GameObject cam2;
-    public GameObject bossPrefab;
-    public GameObject bossLife;
-    
+    [SerializeField] GameObject bossPrefab;
+    [SerializeField] GameObject bossLife;
+
     //POSITIONS
-    public Transform bossPos;
-    public Transform playerTransform;
+    [SerializeField] Transform bossPos;
+    [SerializeField] Transform playerTransform;
 
     //CONTROLLERS
     bool isInstantiate = false;
