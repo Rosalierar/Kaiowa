@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canWalk: 1
+  stopForAtk: 0
   timeMovement: 0
 --- !u!114 &9188189014961606241
 MonoBehaviour:
@@ -198,7 +199,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4572784594621502200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 348df96a252bcce4eb59eb991bc81a74, type: 3}
   m_Name: 
@@ -221,6 +222,9 @@ MonoBehaviour:
     m_Bits: 8
   distance: 10
   rayPosition: {fileID: 5499551631668449282}
+  isAtkBasic: 0
+  countDown: 0
+  hasCollision: 0
 --- !u!114 &932183836490039928
 MonoBehaviour:
   m_ObjectHideFlags: 0

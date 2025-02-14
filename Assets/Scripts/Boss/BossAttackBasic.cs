@@ -1,48 +1,109 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossAttackBasic : MonoBehaviour
 {
+    //CLASS
+    BossMovement bossMovement;
+
     [SerializeField] LayerMask layer;
     
-    Vector2 directionRight;
-    Vector2 directionLeft;
     [SerializeField] int distance;
     [SerializeField] Transform rayPosition;
-    RaycastHit2D hitRight;
-    RaycastHit2D hitLeft;
+    RaycastHit2D hit;
 
     Animator animBoss;
 
-    bool isAtkBasic;
+    [SerializeField] bool isAtkBasic;
 
+    [SerializeField] float countDown;
+
+    [SerializeField] bool hasCollision = false;
+
+    bool isFacingRight;
 
     // Start is called before the first frame update
     void Start()
     {
-        directionLeft = Vector2.left;
-        directionRight= Vector2.right;
+        bossMovement = GetComponent<BossMovement>();
+        isFacingRight = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        DetctionCollision();
+        DerectionCollision();
+        AttackBasic();
+        CheckCollision();
     }
 
-    void DetctionCollision()
+    void DerectionCollision()
     {
-        hitLeft = Physics2D.Raycast(rayPosition.position, directionLeft, distance, layer);
-        Debug.DrawRay(rayPosition.position, directionLeft * distance, Color.cyan);
+        isFacingRight = bossMovement.isFacingRight;
 
-        hitRight = Physics2D.Raycast(rayPosition.position, directionRight, distance, layer);
-        Debug.DrawRay(rayPosition.position, directionRight * distance, Color.blue);
+        Vector2 direction = isFacingRight ? Vector2.right : Vector2.left;
 
-        if (hitLeft.collider.name == "Player" || hitRight.collider.name == "Player")
+        hit = Physics2D.Raycast(rayPosition.position, direction, distance, layer);
+        Debug.DrawRay(rayPosition.position, direction * distance, Color.cyan);
+    }
+
+    void CheckCollision()
+    {
+        if (hit.collider.name == "Player")
         {
-            Debug.Log("Hit: " + hitLeft.collider.tag);
-            animBoss.SetBool("isAtkBasic", isAtkBasic);
+            if (countDown == 0f && !isAtkBasic)
+            {
+                Debug.Log("Colidiu");
+                hasCollision = true;
+            }
         }
+        else
+        {
+            Debug.Log("nao Colidiu");
+        }
+    }
+
+    void AttackBasic()
+    {
+        //ATACA QUANDO O RAY CAST DETECTA QUANDO NAO ESTA COUNDOWN
+        if (hasCollision && !isAtkBasic)
+        {
+            //PARAR PARA REALIZAR ATAQUE
+            StartCoroutine(StopMoveForATK());
+            
+            Debug.Log("Hit Esquerda: " + hit.collider.tag);
+
+            animBoss.SetTrigger("isAtkBasic");
+        } 
+        //SE JA ATACOU ESPERA 5 SEGUNDOS PARA ATACAR DE NOVO
+        if (isAtkBasic && countDown <= 5)
+        {
+            countDown += Time.deltaTime;
+           
+            if (countDown > 5)
+            {
+                countDown = 0;
+                isAtkBasic = false;
+            }
+        }
+    }
+
+    IEnumerator StopMoveForATK()
+    {
+        Debug.Log("Parou para atacar!");
+
+        bossMovement.canMove = false;
+
+        yield return new WaitForSeconds(3f);
+
+        Debug.Log("Terminou o atacar!");
+
+
+        isAtkBasic = true;
+        bossMovement.canMove = true;
+        hasCollision = false;
     }
 }

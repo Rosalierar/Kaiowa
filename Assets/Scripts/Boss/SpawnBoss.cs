@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnBoss : MonoBehaviour
 {
     //CLASS
+    SpawnBoss spawnBoss;
     Health pLayerHealth;
     EnabledMovePlayer enabledMovePlayer;
     PlayerLogic playerLogic;
@@ -25,6 +26,7 @@ public class SpawnBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnBoss = GetComponent<SpawnBoss>();
         enabledMovePlayer = GameObject.Find("ParedeChefao").GetComponent<EnabledMovePlayer>();
         pLayerHealth = GameObject.Find("Player").GetComponent<Health>();
         playerLogic = GameObject.Find("Player").GetComponent<PlayerLogic>();
@@ -40,6 +42,8 @@ public class SpawnBoss : MonoBehaviour
             boss.transform.SetParent(bossPos);
             bossMovement.ArmazenarPlayerPosition(playerTransform);
             isInstantiate = true;
+
+            spawnBoss.enabled = false;
 
             StartCoroutine(ActiveLifeBoss());
        }
