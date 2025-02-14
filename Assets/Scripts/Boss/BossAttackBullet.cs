@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class BossAttackBullet : MonoBehaviour
 {
+    [SerializeField] LayerMask layer;
+    [SerializeField] int distance;
+    [SerializeField] Transform rayPosition;
+    RaycastHit2D hit;
+
     //CLASS
     MoveBulletBoss moveBulletBoss;
     BossMovement bossMovement;
@@ -24,6 +31,7 @@ public class BossAttackBullet : MonoBehaviour
     [SerializeField] bool isCountDown;
 
     [SerializeField] bool hasCollision;
+    bool isFacingRight;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +43,9 @@ public class BossAttackBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DerectionCollision();
+        CheckCollision();
+
         if (isCountDown && timeForAtkBullet < 8)
         {
             timeForAtkBullet += Time.deltaTime;
@@ -50,9 +61,17 @@ public class BossAttackBullet : MonoBehaviour
         }
     
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void DerectionCollision()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        isFacingRight = bossMovement.isFacingRight;
+        Vector2 direction = isFacingRight ? Vector2.right : Vector2.left;
+
+        hit = Physics2D.Raycast(rayPosition.position, direction, distance, layer);
+        Debug.DrawRay(rayPosition.position, direction * distance, Color.blue);
+    }
+    void CheckCollision()
+    {
+        if (hit.collider.name == "Player")
         {
             Debug.Log("Colidiu Para Ataque Bullet");
             hasCollision = true;
