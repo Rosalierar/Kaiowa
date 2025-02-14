@@ -56,7 +56,7 @@ public class BossAttackBasic : MonoBehaviour
         {
             if (countDown == 0f && !isAtkBasic)
             {
-                Debug.Log("Colidiu");
+                Debug.Log("Colidiu para Ataque Basico");
                 hasCollision = true;
             }
         }

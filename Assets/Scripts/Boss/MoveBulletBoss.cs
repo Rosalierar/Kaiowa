@@ -9,7 +9,7 @@ public class MoveBulletBoss : MonoBehaviour
     
     //DIRECTIONS BULLETS (0 = UP, 1 = 45º, 2 = RIGHT, 3 = 135º, 4 = DOWN, 5 = -135º 6 = LEFT, 7 = -45º 
     Vector2 directionBullet;
-    float speedBullet;
+    [SerializeField] float speedBullet;
 
 
     // Start is called before the first frame update
@@ -33,5 +33,11 @@ public class MoveBulletBoss : MonoBehaviour
                 directionBullet = directions[i];
             }
         }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Debug.Log("Sai da Camera" + directionBullet);
+        Destroy(gameObject);
     }
 }

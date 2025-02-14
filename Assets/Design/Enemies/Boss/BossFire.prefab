@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 932183836490039928}
   - component: {fileID: 1428677562390318681}
   - component: {fileID: -4249893783407735821}
+  - component: {fileID: -1430208764449260382}
   m_Layer: 0
   m_Name: BossFire
   m_TagString: BossFire
@@ -175,7 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canWalk: 1
-  stopForAtk: 0
   timeMovement: 0
 --- !u!114 &9188189014961606241
 MonoBehaviour:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4572784594621502200}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 348df96a252bcce4eb59eb991bc81a74, type: 3}
   m_Name: 
@@ -239,6 +239,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255740482915f6e43aa56c35073dd59a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnBulletTransform: {fileID: 5389483822755681414}
+  directionBullet:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  bulletBossPrefab: {fileID: 2903300208575344159, guid: 42da60f2c26184b40a37b01c938a0688, type: 3}
+  isInstantiate: 0
+  index: 0
+  timeForAtkBullet: 0
+  isCountDown: 0
+  hasCollision: 0
 --- !u!114 &1428677562390318681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,6 +313,42 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.9708251, y: 3.658327}
   m_EdgeRadius: 0
+--- !u!58 &-1430208764449260382
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572784594621502200}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.09, y: 0}
+  m_Radius: 6
 --- !u!1 &5595766632708476106
 GameObject:
   m_ObjectHideFlags: 0

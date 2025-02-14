@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossAttackBullet : MonoBehaviour
@@ -16,28 +17,51 @@ public class BossAttackBullet : MonoBehaviour
     [SerializeField] GameObject bulletBossPrefab;
 
     //CONTROLLERS
-    bool isInstantiate = false;
-    int index = 0;
+    [SerializeField] bool isInstantiate = false;
+    [SerializeField] int index = 0;
 
-    float timeForAtkBullet;
-    bool isCountDown;
+    [SerializeField] float timeForAtkBullet;
+    [SerializeField] bool isCountDown;
+
+    [SerializeField] bool hasCollision;
 
     // Start is called before the first frame update
     void Start()
     {
+        bossMovement = gameObject.GetComponent<BossMovement>();
         AtribuirDirecoes();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isCountDown)
+        if (isCountDown && timeForAtkBullet < 8)
+        {
             timeForAtkBullet += Time.deltaTime;
-        else EnviarInformacoes();
+            Debug.Log("eMcOUNTdOWN");
+            if (timeForAtkBullet >= 8)
+                isCountDown = false;
+
+        }
+        else if (hasCollision)
+        {
+            Debug.Log("vAI iNSTANCIAR!");
+            EnviarInformacoes();
+        }
+    
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Colidiu Para Ataque Bullet");
+            hasCollision = true;
+        }
     }
 
     void AtribuirDirecoes()
     {
+        Debug.Log("Atribui as Direcoes");
         directionBullet[0] = transform.up; //CIMA
         directionBullet[1] = (transform.up + transform.right).normalized; //45
         directionBullet[2] = transform.right; //DIREITA
@@ -45,13 +69,16 @@ public class BossAttackBullet : MonoBehaviour
         directionBullet[4] = -transform.up; //BAIXO
         directionBullet[5] = (-transform.right + -transform.up).normalized; //-135
         directionBullet[6] = -transform.right; //ESQUERDA
-        directionBullet[7] = (-transform.up + transform.right).normalized; //-45
+        directionBullet[7] = (transform.up + -transform.right).normalized; //-45
     }
 
     void EnviarInformacoes()
     {
-        if (!isInstantiate && timeForAtkBullet > 8)
+        if (!isInstantiate && !isCountDown)
         {
+            //colocar animacao se index ==0
+            bossMovement.canMove = false;
+            Debug.Log("Spawndando:" + index);
             GameObject bulletBoss = Instantiate(bulletBossPrefab, SpawnBulletTransform.position, transform.rotation);
             MoveBulletBoss moveBulletBoss = bulletBoss.GetComponent<MoveBulletBoss>();
             bulletBoss.transform.SetParent(SpawnBulletTransform);
@@ -66,19 +93,22 @@ public class BossAttackBullet : MonoBehaviour
     {
         if (index + 1 < 8)
         {
-            timeForAtkBullet = 0;
             isCountDown = false;
             index++;
+            Debug.Log("Proximo ataque/iNSTANCIA é: " + index);
         }
         else
         {
+            Debug.Log("Instanciou todos!");
+            timeForAtkBullet = 0;
             index = 0;
             isCountDown = true;
+            bossMovement.canMove = true;
         }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
 
-        isInstantiate = true;
+        isInstantiate = false;
     }
     
 }
