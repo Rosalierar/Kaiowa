@@ -16,6 +16,8 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private float moveSpeedBoss;
     public bool canMove = true;
 
+    //SIDE FACE
+    public bool isFacingRight = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +42,9 @@ public class BossMovement : MonoBehaviour
             if (transform.position.x > playerTransform.position.x)
             {
                 //virar personagem
+                isFacingRight = false;
                 transform.localScale = new Vector3(3, 3, 3);
+                
                 //perseguir o personagem
                 transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeedBoss * Time.deltaTime);
             }
@@ -48,7 +52,9 @@ public class BossMovement : MonoBehaviour
             if (transform.position.x < playerTransform.position.x)
             {
                 //virar personagem
+                isFacingRight = true;
                 transform.localScale = new Vector3(-3, 3, 3);
+                
                 //perseguir o personagem
                 transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeedBoss * Time.deltaTime);
             }

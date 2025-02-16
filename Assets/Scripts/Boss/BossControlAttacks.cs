@@ -36,19 +36,19 @@ public class BossControlAttacks : MonoBehaviour
         switch (changeAttack)
         {
             case 0:
-                attackBasic.enabled = true;
                 attackBullet.enabled = false;
                 attackTrails.enabled = false;
+                attackBasic.enabled = true;
                 break;
             case 1: 
-                attackBullet.enabled = true;
                 attackBasic.enabled = false;
                 attackTrails.enabled = false;
+                attackBullet.enabled = true;
                 break;
             case 2:
-                attackTrails.enabled = true;
                 attackBasic.enabled = false;
                 attackBullet.enabled = false;
+                attackTrails.enabled = true;
                 break;
         }
     }

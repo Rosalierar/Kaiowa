@@ -20,7 +20,7 @@ public class MovePower : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (time > 5)
+        if (time >= 1)
         {
             Debug.Log("Destroido depois de 10 seg");
             Destroy(gameObject);

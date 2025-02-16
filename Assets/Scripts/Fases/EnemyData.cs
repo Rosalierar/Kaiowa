@@ -69,7 +69,7 @@ public class EnemyData : MonoBehaviour
         {
             character[2] = true; character[1] = false; character[0] = false; character[3] = false;
         }
-        else if (gameObject.CompareTag("FogoChefe"))
+        else if (gameObject.CompareTag("BossFire"))
         {
             character[3] = true; character[1] = false; character[2] = false; character[0] = false;
         }
@@ -100,7 +100,7 @@ public class EnemyData : MonoBehaviour
         //fogo chefe
         if (character[3])
         {
-            enemyName = "FogoChefe";
+            enemyName = "BossFire";
             enemyData[0] = 1000;
             enemyData[1] = 25;
         }

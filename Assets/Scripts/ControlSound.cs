@@ -31,7 +31,7 @@ public class ControlSound : MonoBehaviour
     {
         if (whatMusic != tf)
         {
-            Debug.Log(tf);
+            Debug.Log("Musica: " + tf);
             whatMusic = tf;
 
             playMusic.Stop();
