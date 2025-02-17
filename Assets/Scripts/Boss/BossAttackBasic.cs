@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class BossAttackBasic : MonoBehaviour
 {
-    [SerializeField] int valueDamage = 25;
+    [SerializeField] int valueDamage = 35;
 
     //CLASS
     BossMovement bossMovement;
@@ -107,11 +107,16 @@ public class BossAttackBasic : MonoBehaviour
         bossMovement.canMove = true;
         hasCollision = false;
     }
+
+    //DAR DANO AO ATACAR
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && isAtkBasic)
+
+        CapsuleCollider2D capsuleCollider2D = collision.GetComponent<CapsuleCollider2D>();
+
+        if (collision.gameObject.CompareTag("Player") && isAtkBasic && capsuleCollider2D != null)
         {
-            animBoss.SetTrigger("isAtkBasic");
+            //animBoss.SetTrigger("isAtkBasic");
 
             PlayerLogic playerLogic = GameObject.FindWithTag("Player").GetComponent<PlayerLogic>();
             Health playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
@@ -133,8 +138,8 @@ public class BossAttackBasic : MonoBehaviour
 
             playerHealth.TakeDamage(valueDamage);
 
-            if (playerHealth.health > 0)
-                Destroy(gameObject);
+            /*if (playerHealth.health > 0)
+                Destroy(gameObject);*/
         }
     }
 

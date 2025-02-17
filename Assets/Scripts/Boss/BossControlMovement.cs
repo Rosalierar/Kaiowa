@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossControlMovement : MonoBehaviour
@@ -16,6 +17,8 @@ public class BossControlMovement : MonoBehaviour
     BossMovement bossMovement;
     Rigidbody2D rbBoss;
 
+    //VALUE ATTACK
+    int valueDamage = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -57,9 +60,28 @@ public class BossControlMovement : MonoBehaviour
             }
         }
     }
-
-    void ControlTimeMovement()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerLogic playerLogic = GameObject.FindWithTag("Player").GetComponent<PlayerLogic>();
+            Health playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
 
+            Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+            playerLogic.kBCount = playerLogic.kBTime;
+
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = false;
+            }
+
+            playerHealth.TakeDamage(valueDamage);
+        }
     }
 }
