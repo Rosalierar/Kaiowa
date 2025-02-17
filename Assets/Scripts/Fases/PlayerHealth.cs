@@ -63,9 +63,11 @@ public class Health : MonoBehaviour
     private IEnumerator TakeHit()
     {
         invincible = true;
+        Physics2D.IgnoreLayerCollision(8, 8, true);
 
         yield return new WaitForSeconds(1.5f);
 
+        Physics2D.IgnoreLayerCollision(8, 8, false);
         invincible = false;
     }
     public void TakeDamage(int amount)
