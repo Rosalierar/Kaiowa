@@ -99,15 +99,20 @@ public class PlayerLogic : MonoBehaviour
         }
         else if (kBForce >= 0 && doFirstMoviment)
         {
-            if (isKnockRight == true )
+            Health health = GetComponent<Health>();
+            if (!health.invincible)
             {
-                rb.velocity = new Vector2(-kBForce, kBForce);
+                if (isKnockRight)
+                {
+                    rb.velocity = new Vector2(-kBForce, kBForce);
+                }
+
+                if (!isKnockRight)
+                {
+                    rb.velocity = new Vector2(kBForce, kBForce);
+                }
             }
 
-            if (isKnockRight == false)
-            {
-                rb.velocity = new Vector2(kBForce, kBForce);
-            }
         }
 
         kBCount -= Time.deltaTime;
