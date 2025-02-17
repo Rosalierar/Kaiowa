@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7850325316828646283}
   - component: {fileID: 2034604926605853734}
   - component: {fileID: 3185080140641779882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PequenoBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

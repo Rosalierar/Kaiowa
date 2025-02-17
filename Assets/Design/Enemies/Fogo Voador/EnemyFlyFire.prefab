@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2700956557710618335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1123823141554816607}
   - component: {fileID: 5154954937819089700}
   - component: {fileID: 2328031269533068260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyFlyFire
   m_TagString: FogoVoador
   m_Icon: {fileID: 0}
@@ -203,10 +203,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f003d481d438074b9e035f757c7531a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerBush: {fileID: 0}
   playerHealth: {fileID: 0}
   bullet: {fileID: 8598113280753931974, guid: 2c7be5f2e948599408799f97856cb343, type: 3}
   bulletPos: {fileID: 2700956557710618335}
   playerTransform: {fileID: 0}
+  timerBush: 0
+  ArmazenarbulletPos0: {fileID: 0}
+  ArmazenarbulletPos1: {fileID: 0}
+  ArmazenarbulletPos2: {fileID: 0}
+  ArmazenarbulletPos3: {fileID: 0}
   isRight: 1
   timerHumanFire: 0
   canAtk: 1

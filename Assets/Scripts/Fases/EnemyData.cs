@@ -17,7 +17,7 @@ public class EnemyData : MonoBehaviour
 
     float speed;
     private float dazedTime;
-    public float startDazedTime;
+    public float startDazedTime = 1;
 
     public string enemyName;
 

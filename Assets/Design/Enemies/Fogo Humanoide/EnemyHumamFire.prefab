@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 851230413971304659}
   - component: {fileID: 4673281038599072202}
   - component: {fileID: 1327796620235828897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyHumamFire
   m_TagString: FogoHumanoide
   m_Icon: {fileID: 0}
@@ -174,10 +174,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f003d481d438074b9e035f757c7531a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerBush: {fileID: 0}
   playerHealth: {fileID: 0}
   bullet: {fileID: 0}
   bulletPos: {fileID: 0}
   playerTransform: {fileID: 0}
+  timerBush: 0
   ArmazenarbulletPos0: {fileID: 0}
   ArmazenarbulletPos1: {fileID: 0}
   ArmazenarbulletPos2: {fileID: 0}

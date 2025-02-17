@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletBush : MonoBehaviour
 {
-    [SerializeField] int valueDamage = 30;
+    [SerializeField] int valueDamage = 25;
 
     private float timerBush;
 

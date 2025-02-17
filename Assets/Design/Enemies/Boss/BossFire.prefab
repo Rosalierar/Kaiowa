@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 1428677562390318681}
   - component: {fileID: -4249893783407735821}
   - component: {fileID: -1430208764449260382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BossFire
   m_TagString: BossFire
   m_Icon: {fileID: 0}
@@ -163,6 +163,7 @@ MonoBehaviour:
   slider: {fileID: 0}
   bossHealth: 0
   maxBossHealth: 2000
+  startDazedTime: 1
 --- !u!114 &7396959052245417908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3518cc49e7b694fbc5857d4f532bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  valueDamage: 25
   layer:
     serializedVersion: 2
     m_Bits: 8
@@ -363,7 +365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5389483822755681414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5499551631668449282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RaycastPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
