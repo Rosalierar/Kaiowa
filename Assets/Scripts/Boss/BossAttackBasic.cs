@@ -103,15 +103,16 @@ public class BossAttackBasic : MonoBehaviour
 
         Debug.Log("Terminou o atacar!");
 
-
         isAtkBasic = true;
         bossMovement.canMove = true;
         hasCollision = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && isAtkBasic)
         {
+            animBoss.SetTrigger("isAtkBasic");
+
             PlayerLogic playerLogic = GameObject.FindWithTag("Player").GetComponent<PlayerLogic>();
             Health playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
 

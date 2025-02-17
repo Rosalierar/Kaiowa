@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor.AnimatedValues;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
@@ -15,6 +16,7 @@ public class BossAttackBullet : MonoBehaviour
     //CLASS
     MoveBulletBoss moveBulletBoss;
     BossMovement bossMovement;
+    Animator animBoss;
 
     //POSITIONS
     [SerializeField] Transform SpawnBulletTransform;
@@ -59,7 +61,6 @@ public class BossAttackBullet : MonoBehaviour
             Debug.Log("vAI iNSTANCIAR!");
             EnviarInformacoes();
         }
-    
     }
     void DerectionCollision()
     {
@@ -95,7 +96,9 @@ public class BossAttackBullet : MonoBehaviour
     {
         if (!isInstantiate && !isCountDown)
         {
-            //colocar animacao se index ==0
+            if (index == 0)
+                animBoss.SetTrigger("isAtkBullet");
+
             bossMovement.canMove = false;
             Debug.Log("Spawndando:" + index);
             GameObject bulletBoss = Instantiate(bulletBossPrefab, SpawnBulletTransform.position, transform.rotation);
