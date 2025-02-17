@@ -130,9 +130,9 @@ TextureImporter:
       name: Boss Attack short_0
       rect:
         serializedVersion: 2
-        x: 77
+        x: 0
         y: 0
-        width: 80
+        width: 157
         height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -151,10 +151,10 @@ TextureImporter:
       name: Boss Attack short_1
       rect:
         serializedVersion: 2
-        x: 224
+        x: 157
         y: 0
-        width: 81
-        height: 107
+        width: 157
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,9 +172,9 @@ TextureImporter:
       name: Boss Attack short_2
       rect:
         serializedVersion: 2
-        x: 392
+        x: 314
         y: 0
-        width: 70
+        width: 157
         height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: Boss Attack short_3
       rect:
         serializedVersion: 2
-        x: 552
+        x: 471
         y: 0
-        width: 67
-        height: 104
+        width: 157
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: Boss Attack short_4
       rect:
         serializedVersion: 2
-        x: 638
+        x: 628
         y: 0
-        width: 68
-        height: 81
+        width: 157
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,9 +235,9 @@ TextureImporter:
       name: Boss Attack short_5
       rect:
         serializedVersion: 2
-        x: 709
+        x: 785
         y: 0
-        width: 67
+        width: 157
         height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: Boss Attack short_6
       rect:
         serializedVersion: 2
-        x: 785
+        x: 942
         y: 0
-        width: 89
-        height: 54
+        width: 157
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,69 +269,6 @@ TextureImporter:
       bones: []
       spriteID: e68ca996081008d80800000000000000
       internalID: -8250592866303555474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss Attack short_7
-      rect:
-        serializedVersion: 2
-        x: 866
-        y: 0
-        width: 67
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71a69dcc3cee20160800000000000000
-      internalID: 6990412096355265047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss Attack short_8
-      rect:
-        serializedVersion: 2
-        x: 1001
-        y: 11
-        width: 29
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74d1a830e0d7e4590800000000000000
-      internalID: -7688070014732460729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss Attack short_9
-      rect:
-        serializedVersion: 2
-        x: 1017
-        y: 0
-        width: 73
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f753a00d9ca2b230800000000000000
-      internalID: 3653172038071441395
       vertices: []
       indices: 
       edges: []
@@ -354,9 +291,6 @@ TextureImporter:
       Boss Attack short_4: 7877232788738974139
       Boss Attack short_5: 1923190502454712816
       Boss Attack short_6: -8250592866303555474
-      Boss Attack short_7: 6990412096355265047
-      Boss Attack short_8: -7688070014732460729
-      Boss Attack short_9: 3653172038071441395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
