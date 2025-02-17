@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
     public float impulseForce;
     public float invincibleTime = 1.5f;
 
-    bool invincible = false;
+    public bool invincible = false;
 
     public Slider slider;
 
@@ -63,11 +63,11 @@ public class Health : MonoBehaviour
     private IEnumerator TakeHit()
     {
         invincible = true;
-        Physics2D.IgnoreLayerCollision(8, 8, true);
+        Physics2D.IgnoreLayerCollision(8, 9, true);
 
         yield return new WaitForSeconds(1.5f);
 
-        Physics2D.IgnoreLayerCollision(8, 8, false);
+        Physics2D.IgnoreLayerCollision(8, 9, false);
         invincible = false;
     }
     public void TakeDamage(int amount)

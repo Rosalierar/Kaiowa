@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665218}
   - component: {fileID: 1665219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointFlyFire (0)
   m_TagString: FogoVoador
   m_Icon: {fileID: 0}
@@ -54919,7 +54919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327397603}
   - component: {fileID: 327397604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointFlyFire (2)
   m_TagString: FogoVoador
   m_Icon: {fileID: 0}
@@ -54989,7 +54989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 334654810}
   - component: {fileID: 334654811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointHumamFire (2)
   m_TagString: FogoHumanoide
   m_Icon: {fileID: 0}
@@ -55743,7 +55743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 725343886}
   - component: {fileID: 725343887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointHumamFire (0)
   m_TagString: FogoHumanoide
   m_Icon: {fileID: 0}
@@ -56732,7 +56732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1029036665}
   - component: {fileID: 1029036666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointBushFire (0)
   m_TagString: FogoArbusto
   m_Icon: {fileID: 0}
@@ -57047,7 +57047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215281743}
   - component: {fileID: 1215281744}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointBushFire (1)
   m_TagString: FogoArbusto
   m_Icon: {fileID: 0}
@@ -57869,7 +57869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471595445}
   - component: {fileID: 1471595446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointHumamFire (3)
   m_TagString: FogoHumanoide
   m_Icon: {fileID: 0}
@@ -58202,7 +58202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622146362}
   - component: {fileID: 1622146363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointHumamFire (1)
   m_TagString: FogoHumanoide
   m_Icon: {fileID: 0}
@@ -58573,7 +58573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800038261}
   - component: {fileID: 1800038262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointFlyFire (1)
   m_TagString: FogoVoador
   m_Icon: {fileID: 0}
@@ -58869,7 +58869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1856324784}
   - component: {fileID: 1856324785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointHumamFire (4)
   m_TagString: FogoHumanoide
   m_Icon: {fileID: 0}
@@ -79491,7 +79491,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -341754871
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -79793,7 +79793,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 22
-      m_TileSpriteIndex: 22
+      m_TileSpriteIndex: 29
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -81763,7 +81763,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -83018,8 +83018,8 @@ Tilemap:
     m_Data: {fileID: 547056766, guid: 4009e26c78ba0ac4cb65f436f218d4de, type: 3}
   - m_RefCount: 21
     m_Data: {fileID: -1137631761, guid: 04d5325ac497bc5459b672c3516a33c3, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 111545002, guid: 6c19223a5fc046443812ca4778b54650, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: 139697406, guid: 60722d13ebedac34799259af700c1441, type: 3}
   - m_RefCount: 3
@@ -83043,7 +83043,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 2094302937, guid: 6c19223a5fc046443812ca4778b54650, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 1472377635, guid: 04d5325ac497bc5459b672c3516a33c3, type: 3}
+    m_Data: {fileID: 111545002, guid: 6c19223a5fc046443812ca4778b54650, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -881432224, guid: 04d5325ac497bc5459b672c3516a33c3, type: 3}
   - m_RefCount: 5
@@ -83056,8 +83056,8 @@ Tilemap:
     m_Data: {fileID: 1508248048, guid: 027cd4dfb7e11964985efde240d9c15d, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -6677147428341255438, guid: 027cd4dfb7e11964985efde240d9c15d, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1472377635, guid: 04d5325ac497bc5459b672c3516a33c3, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1857450820, guid: 027cd4dfb7e11964985efde240d9c15d, type: 3}
   - m_RefCount: 2
