@@ -10,11 +10,12 @@ public class BossHealth : MonoBehaviour
     Animator animatorBoss;
 
     //GAME OBJECTS
+    public GameObject HealthBoss;
     public Slider slider;
 
     //VIDA
     public int bossHealth;
-    public int maxBossHealth = 2000;
+    public int maxBossHealth = 100;
 
     //STUN
     private float dazedTime;
@@ -31,6 +32,7 @@ public class BossHealth : MonoBehaviour
     {
         
     }
+
     public void TakeDamage(int amount)
     {
         animatorBoss.SetTrigger("isHit");
@@ -67,6 +69,8 @@ public class BossHealth : MonoBehaviour
 
     private IEnumerator DestroyEnemy()
     {
+        HealthBoss.SetActive(false);
+
         // Aguarda a animação de ataque super terminar antes de desativar
         yield return new WaitForSeconds(1f); // Ajuste o tempo para o tempo da animação de ataque
 

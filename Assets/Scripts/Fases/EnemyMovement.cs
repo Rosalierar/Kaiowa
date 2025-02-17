@@ -85,12 +85,6 @@ public class EnemyMovement : MonoBehaviour
                 //perseguir o personagem
                 transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeedEnemy * Time.deltaTime);
             }
-
-            /*if (Vector2.Distance(transform.position, playerTransform.position) < playerDistance)
-            {
-                ExplosionTimer explosionTimer = GetComponent<ExplosionTimer>();
-                StartCoroutine(explosionTimer.TimerExplosionFireBush());
-            }*/
         }
         else
         {
