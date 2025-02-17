@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public bool humanFireFacingRight;
 
+    Rigidbody2D rig;
     SpawnEnemy spawnEnemy;
     EnemyData enemyData;
     bool[] whoEnemy = new bool[4];
@@ -50,6 +51,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (whoEnemy[0])
         {
             MovementBushFire();
@@ -94,6 +96,7 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
+    
     public void ArmazenarLocalizacaoPlayer(Transform player)
     {
        playerTransform = player;
