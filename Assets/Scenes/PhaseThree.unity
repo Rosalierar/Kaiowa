@@ -89443,6 +89443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4249893783407735821, guid: 9877cb3e8e48c2840be0c3911553ddbf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4063530675132183181, guid: 9877cb3e8e48c2840be0c3911553ddbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 196.62
@@ -89486,6 +89490,10 @@ PrefabInstance:
     - target: {fileID: 4572784594621502200, guid: 9877cb3e8e48c2840be0c3911553ddbf, type: 3}
       propertyPath: m_Name
       value: BossFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572784594621502200, guid: 9877cb3e8e48c2840be0c3911553ddbf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
