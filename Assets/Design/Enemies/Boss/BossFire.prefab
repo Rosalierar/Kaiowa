@@ -137,7 +137,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -164,7 +164,7 @@ MonoBehaviour:
   HealthBoss: {fileID: 0}
   slider: {fileID: 0}
   bossHealth: 0
-  maxBossHealth: 2000
+  maxBossHealth: 1000
   startDazedTime: 1
 --- !u!114 &7396959052245417908
 MonoBehaviour:

@@ -15,7 +15,7 @@ public class BossHealth : MonoBehaviour
 
     //VIDA
     public int bossHealth;
-    public int maxBossHealth = 500;
+    public int maxBossHealth = 1000;
 
     //STUN
     private float dazedTime;
