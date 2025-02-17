@@ -15,7 +15,7 @@ public class BossHealth : MonoBehaviour
 
     //VIDA
     public int bossHealth;
-    public int maxBossHealth = 100;
+    public int maxBossHealth = 500;
 
     //STUN
     private float dazedTime;
@@ -33,21 +33,9 @@ public class BossHealth : MonoBehaviour
 
     }
 
-    public void TakeDamage(int amount)
-    {
-        animatorBoss.SetTrigger("isHit");
-        bossHealth -= amount;
-        slider.value = bossHealth;
-
-        if (bossHealth <= 0)
-        {
-            //Anim de morte 
-            Destroy(gameObject);
-        }
-    }
     public void BossTakeDamage(int amount)
     {
-        //animatorBoss.SetTrigger("isHit");
+        //animatorBoss.SetTrigger("isHurt");
 
         dazedTime = startDazedTime;
         bossHealth -= amount;
