@@ -30,7 +30,7 @@ public class BossHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(int amount)
@@ -47,7 +47,7 @@ public class BossHealth : MonoBehaviour
     }
     public void BossTakeDamage(int amount)
     {
-        animatorBoss.SetTrigger("isHit");
+        //animatorBoss.SetTrigger("isHit");
 
         dazedTime = startDazedTime;
         bossHealth -= amount;
@@ -76,5 +76,11 @@ public class BossHealth : MonoBehaviour
 
         //Debug.Log("Monstros derrotados: " + controlScene.defeatedMonsters);
         Destroy(gameObject);
+    }
+
+    public void PegarSlider(GameObject painelBossHealth, Slider sliderBoss)
+    {
+        HealthBoss = painelBossHealth;
+        slider = sliderBoss;
     }
 }

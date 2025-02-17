@@ -3320,7 +3320,7 @@ Transform:
   m_GameObject: {fileID: 414297273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 198.2, y: -4.91, z: -0.28087637}
+  m_LocalPosition: {x: 198.2, y: -10.84, z: -0.28087637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3342,6 +3342,7 @@ MonoBehaviour:
   cam2: {fileID: 1612765213}
   bossPrefab: {fileID: 4572784594621502200, guid: 9877cb3e8e48c2840be0c3911553ddbf, type: 3}
   bossLife: {fileID: 2081965837}
+  sliderBoss: {fileID: 1278646353}
   bossPos: {fileID: 414297274}
   playerTransform: {fileID: 1217250460}
 --- !u!1 &496599133
@@ -5082,9 +5083,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 2000
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 2000
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
