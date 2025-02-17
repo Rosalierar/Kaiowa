@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,10 @@ public class BossHealth : MonoBehaviour
     //VIDA
     public int bossHealth;
     public int maxBossHealth = 2000;
+
+    //STUN
+    private float dazedTime;
+    public float startDazedTime = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -37,5 +42,35 @@ public class BossHealth : MonoBehaviour
             //Anim de morte 
             Destroy(gameObject);
         }
+    }
+    public void BossTakeDamage(int amount)
+    {
+        animatorBoss.SetTrigger("isHit");
+
+        dazedTime = startDazedTime;
+        bossHealth -= amount;
+        slider.value = bossHealth;
+
+        if (bossHealth <= 0)
+        {
+            PlayerPrefs.SetInt("MonstrosDerrotados", PlayerPrefs.GetInt("MonstrosDerrotados", 0) + 1);
+
+            Debug.Log("Prefebs: " + PlayerPrefs.GetInt("MonstrosDerrotados"));
+
+            animatorBoss.SetTrigger("isDeath");
+            StartCoroutine(DestroyEnemy());
+
+        }
+
+        Debug.Log("Take Damage:" + bossHealth + "/" + amount);
+    }
+
+    private IEnumerator DestroyEnemy()
+    {
+        // Aguarda a animação de ataque super terminar antes de desativar
+        yield return new WaitForSeconds(1f); // Ajuste o tempo para o tempo da animação de ataque
+
+        //Debug.Log("Monstros derrotados: " + controlScene.defeatedMonsters);
+        Destroy(gameObject);
     }
 }

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2533815953633081965}
   - component: {fileID: 5197637309898468982}
   - component: {fileID: 4320210122235329078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BushFire
   m_TagString: FogoArbusto
   m_Icon: {fileID: 0}
@@ -246,6 +246,7 @@ MonoBehaviour:
   bullet: {fileID: 2903300208575344159, guid: fee9e8b63395cb048947edb821680706, type: 3}
   bulletPos: {fileID: 7761150015395786481}
   playerTransform: {fileID: 0}
+  timerBush: 0
   ArmazenarbulletPos0: {fileID: 7761150015395786481}
   ArmazenarbulletPos1: {fileID: 2289005104713585670}
   ArmazenarbulletPos2: {fileID: 6278543741073397285}
@@ -267,7 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: 0000000000000000
   character: 00000000
-  startDazedTime: 0
+  startDazedTime: 1
   enemyName: 
 --- !u!114 &4320210122235329078
 MonoBehaviour:
@@ -335,7 +336,7 @@ GameObject:
   - component: {fileID: 5480442394699072288}
   - component: {fileID: 3170089063082337364}
   - component: {fileID: 2526260529299079891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletBushpos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +371,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueDamage: 30
-  CountDownBush: 0
   speed: 10
   rig: {fileID: 0}
 --- !u!212 &3170089063082337364
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 91966981368283117}
   - component: {fileID: 2898550886957890565}
   - component: {fileID: 7369455414867123806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletBushpos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueDamage: 30
-  CountDownBush: 0
   speed: 10
   rig: {fileID: 0}
 --- !u!212 &2898550886957890565
@@ -597,7 +596,7 @@ GameObject:
   - component: {fileID: 5241649756829683738}
   - component: {fileID: 8429548188599628453}
   - component: {fileID: 4957331467539306532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletBushpos3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +631,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueDamage: 30
-  CountDownBush: 0
   speed: 10
   rig: {fileID: 0}
 --- !u!212 &8429548188599628453
@@ -728,7 +726,7 @@ GameObject:
   - component: {fileID: 6873422048614091215}
   - component: {fileID: 4140852926331883611}
   - component: {fileID: 2862740963320427876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletBushpos0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +761,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueDamage: 30
-  CountDownBush: 0
   speed: 10
   rig: {fileID: 0}
 --- !u!212 &4140852926331883611

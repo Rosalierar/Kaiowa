@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 80401300922037476}
   - component: {fileID: 5047256462402216520}
   - component: {fileID: -5441466758215220551}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArbustoTiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}

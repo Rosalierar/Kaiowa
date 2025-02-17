@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class BossAttackBasic : MonoBehaviour
 {
+    [SerializeField] int valueDamage = 25;
+
     //CLASS
     BossMovement bossMovement;
 
@@ -106,4 +108,33 @@ public class BossAttackBasic : MonoBehaviour
         bossMovement.canMove = true;
         hasCollision = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerLogic playerLogic = GameObject.FindWithTag("Player").GetComponent<PlayerLogic>();
+            Health playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
+
+            Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+            //Vector2 localDamage = (transform.position - collision.transform.position).normalized;
+            playerLogic.kBCount = playerLogic.kBTime;
+
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                Debug.Log("Dano vindo da direita?" + playerLogic.isKnockRight);
+                playerLogic.isKnockRight = false;
+            }
+
+            playerHealth.TakeDamage(valueDamage);
+
+            if (playerHealth.health > 0)
+                Destroy(gameObject);
+        }
+    }
+
 }
