@@ -109,23 +109,23 @@ public class PlayerDamage : MonoBehaviour
 
             if (enemyName != "BossFire")
             {
+                Debug.Log("Nao sou o chefe");
                 if (poder[0])
                     enemyData.EnemyTakeDamage(attack[0]);
                 if (poder[1])
                 {
                     enemyData.EnemyTakeDamage(attack[1]);
-                    //Destroy(gameObject);
                 }
             }
             else
             {
-                BossHealth booshealth = new BossHealth();
+                BossHealth booshealth = collision.gameObject.GetComponent<BossHealth>();
                 if (poder[0])
                     booshealth.BossTakeDamage(attack[0]);
                 if (poder[1])
                 {
+                    Debug.Log("Sou o chefe");
                     booshealth.BossTakeDamage(attack[1]);
-                    //Destroy(gameObject);
                 }
             }
         }

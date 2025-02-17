@@ -25,6 +25,7 @@ public class BossHealth : MonoBehaviour
     void Start()
     {
         animatorBoss = GetComponent<Animator>();
+        bossHealth = maxBossHealth;
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class BossHealth : MonoBehaviour
 
     public void BossTakeDamage(int amount)
     {
-        //animatorBoss.SetTrigger("isHurt");
+        animatorBoss.SetTrigger("isHurt");
 
         dazedTime = startDazedTime;
         bossHealth -= amount;
@@ -68,6 +69,7 @@ public class BossHealth : MonoBehaviour
 
     public void PegarSlider(GameObject painelBossHealth, Slider sliderBoss)
     {
+        Debug.Log("tENHO AS vIDAS");
         HealthBoss = painelBossHealth;
         slider = sliderBoss;
     }
