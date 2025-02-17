@@ -107,12 +107,26 @@ public class PlayerDamage : MonoBehaviour
 
             Debug.Log("Atacando: " + enemyName);
 
-            if (poder[0])
-                enemyData.EnemyTakeDamage(attack[0]);
-            if (poder[1])
+            if (enemyName != "BossFire")
             {
-                enemyData.EnemyTakeDamage(attack[1]);
-                //Destroy(gameObject);
+                if (poder[0])
+                    enemyData.EnemyTakeDamage(attack[0]);
+                if (poder[1])
+                {
+                    enemyData.EnemyTakeDamage(attack[1]);
+                    //Destroy(gameObject);
+                }
+            }
+            else
+            {
+                BossHealth booshealth = new BossHealth();
+                if (poder[0])
+                    booshealth.BossTakeDamage(attack[0]);
+                if (poder[1])
+                {
+                    booshealth.BossTakeDamage(attack[1]);
+                    //Destroy(gameObject);
+                }
             }
         }
     }

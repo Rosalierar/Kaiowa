@@ -113,6 +113,11 @@ public class EnemyData : MonoBehaviour
         dazedTime = startDazedTime;
         enemyData[0] -= amount;
 
+        if (character[3])
+        {
+
+        }
+
         if (enemyData[0] <= 0)
         {
             PlayerPrefs.SetInt("MonstrosDerrotados", PlayerPrefs.GetInt("MonstrosDerrotados", 0) +1);
