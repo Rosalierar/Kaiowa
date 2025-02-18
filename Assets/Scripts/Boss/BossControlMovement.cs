@@ -60,6 +60,8 @@ public class BossControlMovement : MonoBehaviour
             }
         }
     }
+
+    //DAR DANO AO SE APROXIMAR DEMAIS DO BOSS
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

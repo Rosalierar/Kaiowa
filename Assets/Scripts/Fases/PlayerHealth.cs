@@ -118,6 +118,5 @@ public class Health : MonoBehaviour
     public void FrasesDeMorte()
     {
         //Random para Tela de Ressurgimento
-       
     }
 }
