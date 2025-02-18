@@ -73,12 +73,13 @@ public class BossAttackBasic : MonoBehaviour
         //ATACA QUANDO O RAY CAST DETECTA QUANDO NAO ESTA COUNDOWN
         if (hasCollision && !isAtkBasic)
         {
+            animBoss.SetTrigger("isAtkBasic");
+
             //PARAR PARA REALIZAR ATAQUE
             StartCoroutine(StopMoveForATK());
             
             Debug.Log("Hit Esquerda: " + hit.collider.tag);
 
-            animBoss.SetTrigger("isAtkBasic");
         } 
         //SE JA ATACOU ESPERA 5 SEGUNDOS PARA ATACAR DE NOVO
         if (isAtkBasic && countDown <= 5)
@@ -95,6 +96,8 @@ public class BossAttackBasic : MonoBehaviour
 
     IEnumerator StopMoveForATK()
     {
+        animBoss.SetTrigger("isAtkBasic");
+
         Debug.Log("Parou para atacar!");
 
         bossMovement.canMove = false;
