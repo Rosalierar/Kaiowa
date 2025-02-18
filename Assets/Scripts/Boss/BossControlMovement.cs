@@ -20,11 +20,15 @@ public class BossControlMovement : MonoBehaviour
     //VALUE ATTACK
     int valueDamage = 20;
 
+    //ANIMACAO BOSS
+    Animator animaBoss;
+
     // Start is called before the first frame update
     void Start()
     {
         bossMovement = GetComponent<BossMovement>();
-        rbBoss = GetComponent<Rigidbody2D>();   
+        rbBoss = GetComponent<Rigidbody2D>();
+        animaBoss = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,6 +46,7 @@ public class BossControlMovement : MonoBehaviour
             //nao vai poder se mexer assim que o tempo ultrapassar
             if (timeMovement >= timeStopMovement)
             {
+                animaBoss.SetBool("isWalking", false);
                 rbBoss.velocity = Vector2.zero;
                 bossMovement.canMove = false;
 
@@ -54,6 +59,7 @@ public class BossControlMovement : MonoBehaviour
             //vai voltar a se mexer
             if (timeMovement >= timeCanMove)
             {
+                animaBoss.SetBool("isWalking", true);
                 bossMovement.canMove = true;
                 timeMovement = 0;
                 canWalk = true;

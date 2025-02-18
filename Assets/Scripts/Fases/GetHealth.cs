@@ -28,6 +28,11 @@ public class GetHealth : MonoBehaviour
                     playerhealth.health += vidaParaRegenerar;
                     playerhealth.slider.value = playerhealth.health;
 
+                    /*if (GameObject.Find("CuraGO")?.GetComponent<BattleCure>() is BattleCure battleCure)
+                    {
+                        battleCure.pegouCura = true;
+                    }*/
+
                     Debug.Log("recuperei vida");
                     Destroy(gameObject);
                 }
@@ -35,9 +40,15 @@ public class GetHealth : MonoBehaviour
                     playerhealth.health = 100;
                     playerhealth.slider.value = playerhealth.health;
 
+                    /*if (GameObject.Find("CuraGO")?.GetComponent<BattleCure>() is BattleCure battleCure)
+                    {
+                        battleCure.pegouCura = true;
+                    }*/
+
                     Debug.Log("recuperei vida");
                     Destroy(gameObject);
                 }
+               
             }
         }
     }
