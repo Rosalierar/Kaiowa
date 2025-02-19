@@ -89,6 +89,51 @@ public class PlayerLogic : MonoBehaviour
         KnockLogic();
         CheckArea();
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(GroundCheck.position, groundDist);
+    }
+
+    public void SetPodeMover(bool podeMover)
+    {
+        podesemover = podeMover;
+    }
+    public void ClicouNaTecla(bool clicou)
+    {
+        entrou = clicou;
+    }
+    void GetInputMove()
+    {
+        dirX = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Jump();
+        }
+    }
+    #region Checks
+    void CheckArea()
+    {
+        isGroundCheck = Physics2D.OverlapCircle(GroundCheck.position, groundDist, groundLayer);
+    }
+
+    //verificar direcao de onde esta olhando
+    void DirectionCheck()
+    {
+        if (doFirstMoviment && podesemover)
+        {
+            if (facingRight && dirX < 0)
+            {
+                Flip();
+            }
+            if (!facingRight && dirX > 0)
+            {
+                Flip();
+            }
+        }
+    }
+
+    #endregion Checks
 
     #region Konck
     void KnockLogic()
@@ -118,52 +163,6 @@ public class PlayerLogic : MonoBehaviour
         kBCount -= Time.deltaTime;
     }
     #endregion knock 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(GroundCheck.position, groundDist);
-    }
-
-    public void SetPodeMover(bool podeMover)
-    {
-        podesemover = podeMover;
-    }
-    public void ClicouNaTecla(bool clicou)
-    {
-        entrou = clicou;
-    }
-    void GetInputMove()
-    {
-        dirX = Input.GetAxisRaw("Horizontal");
-
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Jump();
-        }
-    }
-
-    #region Checks
-    void CheckArea()
-    {
-        isGroundCheck = Physics2D.OverlapCircle(GroundCheck.position, groundDist, groundLayer);
-    }
-
-    //verificar direcao de onde esta olhando
-    void DirectionCheck()
-    {
-        if (doFirstMoviment && podesemover)
-        {
-            if (facingRight && dirX < 0)
-            {
-                Flip();
-            }
-            if (!facingRight && dirX > 0)
-            {
-                Flip();
-            }
-        }
-    }
-
-    #endregion Checks
 
     #region MoverHorinzontal
 
