@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor.AnimatedValues;
 using UnityEngine;
 
 public class BossAttackBasic : MonoBehaviour
@@ -10,6 +11,9 @@ public class BossAttackBasic : MonoBehaviour
 
     //CLASS
     BossMovement bossMovement;
+
+    //PROPRIETIES
+    PolygonCollider2D polygon;
 
     [SerializeField] LayerMask layer;
     
@@ -31,6 +35,7 @@ public class BossAttackBasic : MonoBehaviour
     void Start()
     {
         bossMovement = GetComponent<BossMovement>();
+        animBoss = GetComponent<Animator>();
         isFacingRight = false;
     }
 
@@ -77,15 +82,14 @@ public class BossAttackBasic : MonoBehaviour
             StartCoroutine(StopMoveForATK());
             
             Debug.Log("Hit Esquerda: " + hit.collider.tag);
-            animBoss.SetTrigger("isAtkBasic");
 
         } 
-        //SE JA ATACOU ESPERA 5 SEGUNDOS PARA ATACAR DE NOVO
-        if (isAtkBasic && countDown <= 5)
+        //SE JA ATACOU ESPERA 6 SEGUNDOS PARA ATACAR DE NOVO
+        if (isAtkBasic && countDown <= 6 && !hasCollision)
         {
             countDown += Time.deltaTime;
            
-            if (countDown > 5)
+            if (countDown > 6)
             {
                 countDown = 0;
                 isAtkBasic = false;
@@ -95,19 +99,28 @@ public class BossAttackBasic : MonoBehaviour
 
     IEnumerator StopMoveForATK()
     {
-        //animBoss.SetTrigger("isAtkBasic");
-
-        Debug.Log("Parou para atacar!");
+        polygon = GetComponent<PolygonCollider2D>();
 
         bossMovement.canMove = false;
-
-        yield return new WaitForSeconds(3f);
-
-        Debug.Log("Terminou o atacar!");
-
+        Debug.Log("Parou para atacar!");
         isAtkBasic = true;
+        animBoss.SetTrigger("isAtkBasic");
+
+        AnimatorStateInfo stateInfo = animBoss.GetCurrentAnimatorStateInfo(0);
+        {
+            if (stateInfo.normalizedTime >= 0.7f)  // normalizedTime varia de 0 a 1
+            {
+                polygon.enabled = true;
+            }
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        polygon.enabled = false;
         bossMovement.canMove = true;
         hasCollision = false;
+
+        Debug.Log("Terminou o atacar!");
     }
 
     //DAR DANO AO ATACAR
@@ -115,10 +128,8 @@ public class BossAttackBasic : MonoBehaviour
     {
         CapsuleCollider2D capsuleCollider2D = collision.GetComponent<CapsuleCollider2D>();
 
-        if (collision.gameObject.CompareTag("Player") && isAtkBasic && capsuleCollider2D != null)
+        if (collision.gameObject.CompareTag("Player") && isAtkBasic)
         {
-            //animBoss.SetTrigger("isAtkBasic");
-
             PlayerLogic playerLogic = GameObject.FindWithTag("Player").GetComponent<PlayerLogic>();
             Health playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
 
@@ -138,9 +149,6 @@ public class BossAttackBasic : MonoBehaviour
             }
 
             playerHealth.TakeDamage(valueDamage);
-
-            /*if (playerHealth.health > 0)
-                Destroy(gameObject);*/
         }
     }
 

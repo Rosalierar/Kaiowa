@@ -48,7 +48,6 @@ public class SpawnEnemy : MonoBehaviour
 
                 EnemyDamage enemyDamage = enemy.GetComponent<EnemyDamage>();
                 enemyDamage.ArmazenarLocalizacaoPlayer(playerTransform);
-
             }
         }
         catch

@@ -41,6 +41,7 @@ public class BossAttackBullet : MonoBehaviour
     void Start()
     {
         bossMovement = gameObject.GetComponent<BossMovement>();
+        animBoss = GetComponent<Animator>();
         AtribuirDirecoes();
     }
 
@@ -59,6 +60,16 @@ public class BossAttackBullet : MonoBehaviour
         }
         else if (hasCollision)
         {
+            if (animBoss == null)
+            {
+                Debug.Log("ANIMACAO ESTA NULA");
+            }
+            if (!animationPlayed)
+            {
+                animBoss.SetTrigger("isAtkBullet");
+                animationPlayed = true; // Garantir que a animação só seja chamada uma vez
+            }
+
             Debug.Log("vAI iNSTANCIAR!");
             EnviarInformacoes();
         }
@@ -101,13 +112,6 @@ public class BossAttackBullet : MonoBehaviour
     {
         if (!isInstantiate && !isCountDown)
         {
-            /*// Verifique se a animação já foi tocada
-            if (!animationPlayed)
-            {
-                animBoss.SetTrigger("isAtkBullet");
-                animationPlayed = true; // Garantir que a animação só seja chamada uma vez
-            }*/
-
             bossMovement.canMove = false;
             Debug.Log("Spawndando:" + index);
             GameObject bulletBoss = Instantiate(bulletBossPrefab, SpawnBulletTransform.position, transform.rotation);
