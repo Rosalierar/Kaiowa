@@ -91319,7 +91319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8244838924469939937, guid: b3dc18e4cbb690e4188ec04f8da2e90b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -91489,7 +91489,7 @@ PrefabInstance:
     - target: {fileID: 2725207694156902426, guid: b9ce543602a377c4ca3754e416594381, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
+      objectReference: {fileID: 11400000, guid: c7d69e6ab3e78374db3009fe55d5b455, type: 2}
     - target: {fileID: 2725207694156902426, guid: b9ce543602a377c4ca3754e416594381, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
