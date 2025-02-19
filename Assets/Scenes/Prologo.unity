@@ -2235,7 +2235,7 @@ MonoBehaviour:
     orgulho ao meu povo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7d69e6ab3e78374db3009fe55d5b455, type: 2}
-  m_sharedMaterial: {fileID: -495415999922351517, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
+  m_sharedMaterial: {fileID: -7969225913911279362, guid: c7d69e6ab3e78374db3009fe55d5b455, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3665,6 +3665,7 @@ GameObject:
   - component: {fileID: 595003068}
   - component: {fileID: 595003070}
   - component: {fileID: 595003069}
+  - component: {fileID: 595003071}
   m_Layer: 5
   m_Name: Caminhao
   m_TagString: Untagged
@@ -3729,6 +3730,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595003067}
   m_CullTransparentMesh: 1
+--- !u!95 &595003071
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595003067}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d83ae6202d5ea346bdda15b4ab30dca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &615635421
 GameObject:
   m_ObjectHideFlags: 0
@@ -5768,7 +5791,7 @@ MonoBehaviour:
     com minha partida, mas me desejaram sorte e me apoiaram.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7d69e6ab3e78374db3009fe55d5b455, type: 2}
-  m_sharedMaterial: {fileID: -495415999922351517, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
+  m_sharedMaterial: {fileID: -7969225913911279362, guid: c7d69e6ab3e78374db3009fe55d5b455, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23423,8 +23446,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2093460218}
   - {fileID: 1640490810}
+  - {fileID: 2093460218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1456463981
@@ -25061,7 +25084,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7d69e6ab3e78374db3009fe55d5b455, type: 2}
-  m_sharedMaterial: {fileID: -495415999922351517, guid: 57d05d4b23d73ee428d1879bc90de355, type: 2}
+  m_sharedMaterial: {fileID: -7969225913911279362, guid: c7d69e6ab3e78374db3009fe55d5b455, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
