@@ -5,6 +5,9 @@ using UnityEngine.Rendering;
 
 public class PlayerLogic : MonoBehaviour
 {
+    //CLASSES
+    Health health;
+
     //pegar Propriedades
     public Rigidbody2D rb;
     [SerializeField] public SpriteRenderer spritePlayer;
@@ -60,6 +63,15 @@ public class PlayerLogic : MonoBehaviour
         doFirstMovimentHash = Animator.StringToHash("doFirstMove");
 
         jumpless = totalJump;
+
+        try
+        {
+           health = GetComponent<Health>();
+        }
+        catch
+        {
+            Debug.Log("é Null");
+        }
     }
 
     // Update is called once per frame
@@ -144,20 +156,15 @@ public class PlayerLogic : MonoBehaviour
         }
         else if (kBForce >= 0 && doFirstMoviment)
         {
-            Health health = GetComponent<Health>();
-            if (!health.invincible)
+            if (isKnockRight)
             {
-                if (isKnockRight)
-                {
-                    rb.velocity = new Vector2(-kBForce, kBForce);
-                }
-
-                if (!isKnockRight)
-                {
-                    rb.velocity = new Vector2(kBForce, kBForce);
-                }
+                rb.velocity = new Vector2(-kBForce, kBForce);
             }
 
+            if (!isKnockRight)
+            {
+                rb.velocity = new Vector2(kBForce, kBForce);
+            }
         }
 
         kBCount -= Time.deltaTime;
