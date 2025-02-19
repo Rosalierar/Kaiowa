@@ -18,10 +18,13 @@ public class BossMovement : MonoBehaviour
 
     //SIDE FACE
     public bool isFacingRight = false;
+
+    //ANIMATION
+    Animator animBoss;
     // Start is called before the first frame update
     void Start()
     {
-
+        animBoss = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -47,6 +50,7 @@ public class BossMovement : MonoBehaviour
                 
                 //perseguir o personagem
                 transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeedBoss * Time.deltaTime);
+                animBoss.SetBool("isWalking", true);
             }
             //se o jogador esta no lado direito
             if (transform.position.x < playerTransform.position.x)
@@ -57,6 +61,7 @@ public class BossMovement : MonoBehaviour
                 
                 //perseguir o personagem
                 transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeedBoss * Time.deltaTime);
+                animBoss.SetBool("isWalking", true);
             }
         }
         else

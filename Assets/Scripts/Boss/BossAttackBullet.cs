@@ -96,8 +96,6 @@ public class BossAttackBullet : MonoBehaviour
     {
         if (!isInstantiate && !isCountDown)
         {
-            if (index == 0)
-                animBoss.SetTrigger("isAtkBullet");
 
             bossMovement.canMove = false;
             Debug.Log("Spawndando:" + index);
@@ -106,6 +104,11 @@ public class BossAttackBullet : MonoBehaviour
             bulletBoss.transform.SetParent(SpawnBulletTransform);
             moveBulletBoss.GetDirections(directionBullet, index);
             isInstantiate = true;
+
+            if (index == 0)
+            {
+                animBoss.SetTrigger("isAtkBullet");
+            }
 
             StartCoroutine(CountDown());
         }

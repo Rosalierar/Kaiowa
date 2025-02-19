@@ -96,7 +96,7 @@ public class BossAttackBasic : MonoBehaviour
 
     IEnumerator StopMoveForATK()
     {
-        animBoss.SetTrigger("isAtkBasic");
+        //animBoss.SetTrigger("isAtkBasic");
 
         Debug.Log("Parou para atacar!");
 
