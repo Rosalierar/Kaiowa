@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
-using UnityEditor.AnimatedValues;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class BossAttackBullet : MonoBehaviour
 {
