@@ -35,6 +35,8 @@ public class BossAttackBullet : MonoBehaviour
     [SerializeField] bool hasCollision;
     bool isFacingRight;
 
+    bool animationPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,15 +47,14 @@ public class BossAttackBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DerectionCollision();
-        CheckCollision();
-
         if (isCountDown && timeForAtkBullet < 8)
         {
             timeForAtkBullet += Time.deltaTime;
             Debug.Log("eMcOUNTdOWN");
             if (timeForAtkBullet >= 8)
+            {
                 isCountDown = false;
+            }
 
         }
         else if (hasCollision)
@@ -61,6 +62,10 @@ public class BossAttackBullet : MonoBehaviour
             Debug.Log("vAI iNSTANCIAR!");
             EnviarInformacoes();
         }
+
+        DerectionCollision();
+        CheckCollision();
+
     }
     void DerectionCollision()
     {
@@ -96,6 +101,12 @@ public class BossAttackBullet : MonoBehaviour
     {
         if (!isInstantiate && !isCountDown)
         {
+            /*// Verifique se a animação já foi tocada
+            if (!animationPlayed)
+            {
+                animBoss.SetTrigger("isAtkBullet");
+                animationPlayed = true; // Garantir que a animação só seja chamada uma vez
+            }*/
 
             bossMovement.canMove = false;
             Debug.Log("Spawndando:" + index);
@@ -104,12 +115,8 @@ public class BossAttackBullet : MonoBehaviour
             bulletBoss.transform.SetParent(SpawnBulletTransform);
             moveBulletBoss.GetDirections(directionBullet, index);
             isInstantiate = true;
-
-            if (index == 0)
-            {
-                animBoss.SetTrigger("isAtkBullet");
-            }
-
+            
+            
             StartCoroutine(CountDown());
         }
     }
@@ -120,6 +127,7 @@ public class BossAttackBullet : MonoBehaviour
         {
             isCountDown = false;
             index++;
+
             Debug.Log("Proximo ataque/iNSTANCIA é: " + index);
         }
         else
@@ -129,6 +137,7 @@ public class BossAttackBullet : MonoBehaviour
             index = 0;
             isCountDown = true;
             bossMovement.canMove = true;
+            animationPlayed = false;
         }
 
         yield return new WaitForSeconds(0.2f);

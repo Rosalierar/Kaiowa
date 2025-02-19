@@ -73,12 +73,11 @@ public class BossAttackBasic : MonoBehaviour
         //ATACA QUANDO O RAY CAST DETECTA QUANDO NAO ESTA COUNDOWN
         if (hasCollision && !isAtkBasic)
         {
-            animBoss.SetTrigger("isAtkBasic");
-
             //PARAR PARA REALIZAR ATAQUE
             StartCoroutine(StopMoveForATK());
             
             Debug.Log("Hit Esquerda: " + hit.collider.tag);
+            animBoss.SetTrigger("isAtkBasic");
 
         } 
         //SE JA ATACOU ESPERA 5 SEGUNDOS PARA ATACAR DE NOVO
@@ -114,7 +113,6 @@ public class BossAttackBasic : MonoBehaviour
     //DAR DANO AO ATACAR
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         CapsuleCollider2D capsuleCollider2D = collision.GetComponent<CapsuleCollider2D>();
 
         if (collision.gameObject.CompareTag("Player") && isAtkBasic && capsuleCollider2D != null)
