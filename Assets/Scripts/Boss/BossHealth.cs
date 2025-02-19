@@ -16,6 +16,7 @@ public class BossHealth : MonoBehaviour
     //VIDA
     public int bossHealth;
     public int maxBossHealth = 1000;
+    public bool killBoss = false;
 
     //STUN
     private float dazedTime;
@@ -49,6 +50,11 @@ public class BossHealth : MonoBehaviour
             Debug.Log("Prefebs: " + PlayerPrefs.GetInt("MonstrosDerrotados"));
 
             animatorBoss.SetTrigger("isDeath");
+
+            killBoss = true;
+            ChangeSong changeSong = GameObject.FindWithTag("QuadIC").GetComponent<ChangeSong>();
+            changeSong.killBoss = killBoss;
+
             StartCoroutine(DestroyEnemy());
 
         }
@@ -60,7 +66,7 @@ public class BossHealth : MonoBehaviour
     {
         HealthBoss.SetActive(false);
 
-        // Aguarda a animação de ataque super terminar antes de desativar
+        // Aguarda a animação de ataque super terminar antes de desativard
         yield return new WaitForSeconds(1f); // Ajuste o tempo para o tempo da animação de ataque
 
         //Debug.Log("Monstros derrotados: " + controlScene.defeatedMonsters);

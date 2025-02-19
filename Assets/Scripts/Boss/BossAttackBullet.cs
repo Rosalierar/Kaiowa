@@ -48,11 +48,11 @@ public class BossAttackBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isCountDown && timeForAtkBullet < 8)
+        if (isCountDown && timeForAtkBullet < 7)
         {
             timeForAtkBullet += Time.deltaTime;
             Debug.Log("eMcOUNTdOWN");
-            if (timeForAtkBullet >= 8)
+            if (timeForAtkBullet >= 7)
             {
                 isCountDown = false;
             }

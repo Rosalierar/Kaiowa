@@ -47,8 +47,8 @@ public class BossControlAttacks : MonoBehaviour
                 break;
             case 2:
                 attackBasic.enabled = false;
-                attackBullet.enabled = false;
-                attackTrails.enabled = true;
+                attackBullet.enabled = true;
+                //attackTrails.enabled = true;
                 break;
         }
     }

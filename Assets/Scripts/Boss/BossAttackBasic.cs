@@ -12,9 +12,6 @@ public class BossAttackBasic : MonoBehaviour
     //CLASS
     BossMovement bossMovement;
 
-    //PROPRIETIES
-    PolygonCollider2D polygon;
-
     [SerializeField] LayerMask layer;
     
     [SerializeField] int distance;
@@ -99,28 +96,13 @@ public class BossAttackBasic : MonoBehaviour
 
     IEnumerator StopMoveForATK()
     {
-        polygon = GetComponent<PolygonCollider2D>();
-
         bossMovement.canMove = false;
         Debug.Log("Parou para atacar!");
         isAtkBasic = true;
         animBoss.SetTrigger("isAtkBasic");
 
-        /*AnimatorStateInfo stateInfo = animBoss.GetCurrentAnimatorStateInfo(0);
-        {
-            if (stateInfo.normalizedTime >= 0.9f)  // normalizedTime varia de 0 a 1
-            {
-                polygon.enabled = true;
-            }
-            if (stateInfo.normalizedTime >= 1f)  // normalizedTime varia de 0 a 1
-            {
-                polygon.enabled = false;
-            }
-        }*/
-
         yield return new WaitForSeconds(2f);
 
-        //polygon.enabled = false;
         bossMovement.canMove = true;
         hasCollision = false;
 

@@ -24,7 +24,7 @@ public class ControlScene : MonoBehaviour
 
     //BoxCollider2D boxCollider;
 
-    [SerializeField] private int totalMonsters;
+    public int totalMonsters;
     public int defeatedMonsters;
 
     int phase = 0;
