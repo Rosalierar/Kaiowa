@@ -106,17 +106,21 @@ public class BossAttackBasic : MonoBehaviour
         isAtkBasic = true;
         animBoss.SetTrigger("isAtkBasic");
 
-        AnimatorStateInfo stateInfo = animBoss.GetCurrentAnimatorStateInfo(0);
+        /*AnimatorStateInfo stateInfo = animBoss.GetCurrentAnimatorStateInfo(0);
         {
-            if (stateInfo.normalizedTime >= 0.7f)  // normalizedTime varia de 0 a 1
+            if (stateInfo.normalizedTime >= 0.9f)  // normalizedTime varia de 0 a 1
             {
                 polygon.enabled = true;
             }
-        }
+            if (stateInfo.normalizedTime >= 1f)  // normalizedTime varia de 0 a 1
+            {
+                polygon.enabled = false;
+            }
+        }*/
 
         yield return new WaitForSeconds(2f);
 
-        polygon.enabled = false;
+        //polygon.enabled = false;
         bossMovement.canMove = true;
         hasCollision = false;
 
