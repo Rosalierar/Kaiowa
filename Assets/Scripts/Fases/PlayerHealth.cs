@@ -62,13 +62,13 @@ public class Health : MonoBehaviour
     }
     private IEnumerator TakeHit()
     {
-        invincible = true;
         Physics2D.IgnoreLayerCollision(8, 9, true);
+        invincible = true;
 
         yield return new WaitForSeconds(1.5f);
 
-        Physics2D.IgnoreLayerCollision(8, 9, false);
         invincible = false;
+        Physics2D.IgnoreLayerCollision(8, 9, false);
     }
     public void TakeDamage(int amount)
     {
@@ -76,7 +76,7 @@ public class Health : MonoBehaviour
         animator.SetTrigger("isHit");
         health -= amount;
         slider.value = health;
-        
+
         StartCoroutine(TakeHit());
 
         Debug.Log(amount +"/" + health);
