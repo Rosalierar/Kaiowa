@@ -517,6 +517,8 @@ MonoBehaviour:
   PaineldeVida: {fileID: 0}
   CDB: {fileID: 0}
   cronometro: {fileID: 0}
+  dialogueLogic2024: {fileID: 0}
+  dialogue2Logic2024: {fileID: 0}
   dialoguePainel: {fileID: 0}
   dialoguePainelTuto: {fileID: 0}
   Partes: []
@@ -3092,7 +3094,6 @@ Transform:
   - {fileID: 779108608}
   - {fileID: 1965104548}
   - {fileID: 1784409814}
-  - {fileID: 101460554}
   m_Father: {fileID: 922810738}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &624768470
@@ -3113,6 +3114,8 @@ MonoBehaviour:
   PaineldeVida: {fileID: 1434990036}
   CDB: {fileID: 485269680}
   cronometro: {fileID: 1915265244}
+  dialogueLogic2024: {fileID: 0}
+  dialogue2Logic2024: {fileID: 0}
   dialoguePainel: {fileID: 1549799565}
   dialoguePainelTuto: {fileID: 985755325}
   Partes: []
@@ -4880,6 +4883,7 @@ Transform:
   - {fileID: 1188989413}
   - {fileID: 531897159}
   - {fileID: 1405576999}
+  - {fileID: 101460554}
   - {fileID: 624768469}
   - {fileID: 982906208}
   - {fileID: 1895787484}
@@ -36131,6 +36135,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527642592}
   m_CullTransparentMesh: 1
+--- !u!114 &1528003237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7455071639316800763, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
+  m_PrefabInstance: {fileID: 2600564283910511608}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cced6b52a93084cbfd6e8469e4428e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1544801084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47163,7 +47178,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 624768469}
+    m_TransformParent: {fileID: 922810738}
     m_Modifications:
     - target: {fileID: 682101987388171118, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
       propertyPath: m_Controller
@@ -47179,15 +47194,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7343130215952080728, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -490.22998
+      value: 46.265137
       objectReference: {fileID: 0}
     - target: {fileID: 7343130215952080728, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1346
+      value: 8.640015
       objectReference: {fileID: 0}
     - target: {fileID: 7343130215952080728, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6786222
+      value: -5.59079
       objectReference: {fileID: 0}
     - target: {fileID: 7343130215952080728, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -47231,7 +47246,7 @@ PrefabInstance:
       objectReference: {fileID: 531897160}
     - target: {fileID: 7455071639316800763, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7455071639316800763, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
       propertyPath: portImage
@@ -47257,6 +47272,14 @@ PrefabInstance:
       propertyPath: dialoguePainel
       value: 
       objectReference: {fileID: 1549799565}
+    - target: {fileID: 7455071639316800763, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
+      propertyPath: dialogueLogic2024
+      value: 
+      objectReference: {fileID: 624768470}
+    - target: {fileID: 7455071639316800763, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
+      propertyPath: dialogue2Logic2024
+      value: 
+      objectReference: {fileID: 1528003237}
     - target: {fileID: 7455071639316800763, guid: 0765e0e2d332a4645a2fda9c68fdcb2d, type: 3}
       propertyPath: dialoguePainelTuto
       value: 

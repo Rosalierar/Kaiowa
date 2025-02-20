@@ -25,8 +25,8 @@ public class DialogueLogic2024 : MonoBehaviour
     Animator animCDB;
     public Cronometro cronometro;
 
-    DialogueLogic2024 dialogueLogic2024;
-    DialogueLogic2024 dialogue2Logic2024;
+    public DialogueLogic2024 dialogueLogic2024;
+    public DialogueLogic2024 dialogue2Logic2024;
 
     [SerializeField] private GameObject dialoguePainel;
     [SerializeField] private GameObject dialoguePainelTuto;
@@ -58,9 +58,13 @@ public class DialogueLogic2024 : MonoBehaviour
     void Start()
     {
         cronometro = GameObject.FindGameObjectWithTag("Cronometro").GetComponent<Cronometro>();
-        dialogueLogic2024 = GetComponent<DialogueLogic2024>();
-        dialogue2Logic2024 = GameObject.FindGameObjectWithTag("NpcHomem").GetComponent<DialogueLogic2024>();
-        dialogue2Logic2024.enabled = false;
+        dialogueLogic2024 = GameObject.FindGameObjectWithTag("Povo").GetComponent<DialogueLogic2024>();
+        dialogue2Logic2024 = GameObject.Find("Farid").GetComponent<DialogueLogic2024>();
+        //dialogue2Logic2024.enabled = false;
+        if (dialogue2Logic2024 == null)
+        {
+            Debug.Log("Nullo");
+        }
 
         finishpart2[0] = false;
     }
@@ -76,7 +80,7 @@ public class DialogueLogic2024 : MonoBehaviour
                 finishpart1[0] = true;
                 WitchoutText();
 
-                Anim = GameObject.FindGameObjectWithTag("NpcHomem").GetComponent<Animator>();
+                Anim = GameObject.Find("Farid").GetComponent<Animator>();
 
                 Anim.SetTrigger("Walk");
             }
@@ -92,7 +96,6 @@ public class DialogueLogic2024 : MonoBehaviour
             if (index >= speaker.Length && encostou && !finishpart1[1])
             {
                 finishpart1[1] = true;
-                dialogue2Logic2024.enabled = false;
                 WitchoutText();
                 StartCoroutine(WaitForNextDialogue());
                 Partes[1].SetActive(true);
@@ -146,6 +149,7 @@ public class DialogueLogic2024 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (gameObject.CompareTag("NpcHomem") && other.CompareTag("QuadIC")) {
+            dialogueLogic2024.enabled = false;
             encostou = true;
             dialogue2Logic2024.enabled = true;
             Debug.Log("entrei");
@@ -168,6 +172,7 @@ public class DialogueLogic2024 : MonoBehaviour
     }
     IEnumerator WaitForNextDialogue()
     {
+        dialogue2Logic2024.enabled = false;
         blackPainel.SetActive(true);
 
         yield return new WaitForSeconds(3f);
