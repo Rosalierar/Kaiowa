@@ -146,9 +146,9 @@ public class DialogueLogic2024 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (gameObject.CompareTag("NpcHomem") && other.CompareTag("QuadIC")) {
-            Debug.Log("entrei");
             encostou = true;
             dialogue2Logic2024.enabled = true;
+            Debug.Log("entrei");
         }
     }
     private void OnTriggerExit2D(Collider2D other)
