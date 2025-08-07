@@ -10,7 +10,8 @@ using UnityEngine.UI;
 
 public class DialogueLogic2024 : MonoBehaviour
 {
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] audioClip;
     [SerializeField] private GameObject player;
     PlayerLogic playerLogic;
 
@@ -84,7 +85,7 @@ public class DialogueLogic2024 : MonoBehaviour
 
                 Anim.SetTrigger("Walk");
             }
-            //falará os dialogos
+            //falarï¿½ os dialogos
             else if (index <= speaker.Length && !finishpart1[0])
             {
                 playerLogic = player.GetComponent<PlayerLogic>();
@@ -172,14 +173,17 @@ public class DialogueLogic2024 : MonoBehaviour
     }
     IEnumerator WaitForNextDialogue()
     {
+        audioSource.Stop();
         dialogue2Logic2024.enabled = false;
         blackPainel.SetActive(true);
 
         yield return new WaitForSeconds(3f);
 
+        audioSource.clip = audioClip[1];
         blackPainel.SetActive(false);
         PaineldeVida.SetActive(true);
         Part1.SetActive(false);
+        audioSource.Play();
         //StopAllCoroutines();
     }
 

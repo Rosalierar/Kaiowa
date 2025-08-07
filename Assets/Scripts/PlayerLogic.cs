@@ -70,7 +70,7 @@ public class PlayerLogic : MonoBehaviour
         }
         catch
         {
-            Debug.Log("é Null");
+            Debug.Log("ï¿½ Null");
         }
     }
 
@@ -218,7 +218,7 @@ public class PlayerLogic : MonoBehaviour
         if (isGroundCheck && rb.velocity.y <= 0)
             jumpless = totalJump;
 
-        if (jumpless <=0)
+        if (jumpless == 0)
             canJump = false;
         else 
             canJump = true;
