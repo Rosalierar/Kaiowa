@@ -370,6 +370,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
+      propertyPath: kBTime
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
+      propertyPath: kBForce
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2298506027793087855, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: m_Size.x
       value: 2.8117085

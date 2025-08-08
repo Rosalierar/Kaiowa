@@ -51,6 +51,8 @@ public class PlayerLogic : MonoBehaviour
     public float kBTime;
     public bool isKnockRight;
 
+    public bool canKB;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +84,7 @@ public class PlayerLogic : MonoBehaviour
         GetInputMove();
         if (entrou && !doFirstMoviment)
         {
-           inicio += Time.unscaledDeltaTime;
+            inicio += Time.unscaledDeltaTime;
         }
 
         if (rb.velocity.y > 0)
@@ -94,6 +96,7 @@ public class PlayerLogic : MonoBehaviour
             rb.gravityScale = fallGravityScale;
         }
         JumpAnim();
+        
     }
 
     private void FixedUpdate()
@@ -156,15 +159,16 @@ public class PlayerLogic : MonoBehaviour
         }
         else if (kBForce >= 0 && doFirstMoviment)
         {
-            if (isKnockRight)
+            if (isKnockRight && canKB)
             {
-                rb.velocity = new Vector2(-kBForce, kBForce);
+                rb.AddForce(new Vector2(-kBForce, kBForce), ForceMode2D.Impulse);
             }
 
-            if (!isKnockRight)
+            if (!isKnockRight && canKB)
             {
-                rb.velocity = new Vector2(kBForce, kBForce);
+                rb.AddForce(new Vector2(kBForce, kBForce), ForceMode2D.Impulse);
             }
+
         }
 
         kBCount -= Time.deltaTime;

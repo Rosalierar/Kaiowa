@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
 
     List<string> frasesDeRessurgir = new List<string>()
     {
-        "Não Desista!", "Esforce-se!", "Continue!", "Não é o fim!", "Supere-se!", "Ultrapasse seus limites!",
+        "Nï¿½o Desista!", "Esforce-se!", "Continue!", "Nï¿½o ï¿½ o fim!", "Supere-se!", "Ultrapasse seus limites!",
         "A jornada continua!", "Seja Forte!", "Lute!", "Proteja!" };
 
     /// <summary>
@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
     /// </summary>
     PlayerLogic playerLogic;
 
-    public float pushBackDistance;  // Distância que o jogador será empurrado para trás
+    public float pushBackDistance;  // Distï¿½ncia que o jogador serï¿½ empurrado para trï¿½s
     public float pushBackSpeed;
     public float Force = 5f;
 
@@ -72,7 +72,12 @@ public class Health : MonoBehaviour
     }
     public void TakeDamage(int amount)
     {
+        playerLogic.canKB = false;
+        
         if (invincible) return;
+
+        playerLogic.canKB = true;
+
         animator.SetTrigger("isHit");
         health -= amount;
         slider.value = health;
@@ -98,8 +103,8 @@ public class Health : MonoBehaviour
         gameObject.transform.localScale = new Vector3(4, 4, 4);
         boxCollider.enabled = false;
 
-        // Aguarda a animação de ataque super terminar antes de desativar
-        yield return new WaitForSeconds(2f); // Ajuste o tempo para o tempo da animação de ataque
+        // Aguarda a animaï¿½ï¿½o de ataque super terminar antes de desativar
+        yield return new WaitForSeconds(2f); // Ajuste o tempo para o tempo da animaï¿½ï¿½o de ataque
 
         textRespawnGameObj.SetActive(true);
         StartCoroutine(StartCoroutine());

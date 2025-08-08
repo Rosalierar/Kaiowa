@@ -84192,7 +84192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1240677539143156147, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: impulseForce
-      value: 50
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1240677539143156147, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: pushBackDistance
@@ -84255,12 +84255,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1762502607}
     - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
+      propertyPath: entrou
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: kBTime
-      value: 0.25
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: kBForce
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2290788858318124589, guid: 00c8e30d5c811184a98c909dabd21a86, type: 3}
       propertyPath: isKnockRight

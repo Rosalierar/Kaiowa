@@ -104,7 +104,7 @@ public class EnemyDamage : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
-        {
+        {            
             playerLogic.kBCount = playerLogic.kBTime;
 
             if (collision.transform.position.x <= transform.position.x)
@@ -161,7 +161,7 @@ public class EnemyDamage : MonoBehaviour
             Debug.Log("INSTANCIAMENTE EM PROCESSO");
 
             // Criando as balas
-            // Instanciando as balas nas posições armazenadas, sem fazer parentagem
+            // Instanciando as balas nas posiï¿½ï¿½es armazenadas, sem fazer parentagem
             
             GameObject ObjbulletBush0 = Instantiate(bullet, ArmazenarbulletPos0.position, Quaternion.identity);
             BulletBush bulletBush0 = ObjbulletBush0.GetComponent<BulletBush>();
